@@ -1,5 +1,4 @@
 ---
-import "@fontsource/kumbh-sans";
 import "flowbite";
 const { title } = Astro.props;
 ---
@@ -28,7 +27,7 @@ const { title } = Astro.props;
 <style is:global>
 	@tailwind base;
 	@tailwind components;
-	
+
 	:root {
 		--primary: #4694a1;
 		--secondary: #deecee;
@@ -66,29 +65,43 @@ const { title } = Astro.props;
   }
 
   h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 62px;
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 80px;
   }
   h2 {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 52px;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 56px;
   }
   h3 {
     font-size: 32px;
-    font-weight: 600;
-    line-height: 42px;
+    font-weight: 400;
+    line-height: 46px;
   }
   h4 {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 32px;
   }
   h5 {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 23px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    overflow-wrap: break-word;
   }
 
   @layer components {
