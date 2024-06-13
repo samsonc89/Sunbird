@@ -1,6 +1,6 @@
 ---
+import "@fontsource/kumbh-sans";
 import "flowbite";
-
 const { title } = Astro.props;
 ---
 
@@ -11,7 +11,14 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+		<script
+			is:inline
+			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+		></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
 		<title>{title}</title>
 	</head>
 	<body>
@@ -19,31 +26,75 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	@tailwind base;
+	@tailwind components;
+	
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--primary: #4694a1;
+		--secondary: #deecee;
+		--tertiary: #fbfbfb;
+		--accent-primary: #efa044;
+		--accent-secondary: #3f3a64;
+		--accent-tertiary: #a8d6e5;
+		--primary-text: #3c545a;
+		--secondary-text: #4a556c;
+		--tertiary-text: #a5a5a5;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	* {
+		margin: 0;
+		padding: 0;
 	}
+
+	body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+  }
+
+  html {
+	font-family: "Kumbh Sans", sans-serif;
+    background: #fff;
+    background-size: 224px;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 62px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 52px;
+  }
+  h3 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+  }
+
+  @layer components {
+    .max-container {
+      max-width: 1192px;
+      margin: 0 auto;
+    }
+  }
 </style>
