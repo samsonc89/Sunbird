@@ -1,1 +1,88 @@
+---
 import { Image } from "astro:assets";
+import Button from "./Button.astro";
+---
+
+<nav class="bg-[--light-gray]">
+  <div
+    class="w-full items-center flex justify-between flex-wrap p-4 max-w-screen-xl mt-12 mx-auto max-container"
+  >
+    <div class="flex justify-between max-sm:w-full items-center">
+      <a href="/EscoSupplies">
+<h4 class="p-2 mt-4">Logo</h4>
+      </a>
+
+      <!-- Hamburger -->
+      <button
+        data-collapse-toggle="navbar-cta"
+        type="button"
+        class="inline-flex items-center p-2 mt-4 w-10 h-10 justify-center text-sm text-[--primary-text] rounded-lg lg:hidden hover:bg-[--primary] focus:outline-none focus:ring-2 focus:ring-[--secondary-text]"
+        aria-controls="navbar-cta"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <div class="hidden max-lg:block">
+          <span class="material-symbols-outlined"> menu</span>
+        </div>
+      </button>
+    </div>
+    <!-- Navlinks -->
+    <div
+      class="items-center gap-6 justify-between hidden lg:flex lg:w-auto lg:order-1 w-full mt-4 px-4 uppercase max-lg:border-0"
+      id="navbar-cta"
+    >
+      <ul
+        class="flex flex-col font-medium p-4 lg:p-0 mt-2 border-2 border-[--light-blue] rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 gap-2 max-md:shadow-xl w-full"
+      >
+        <li>
+          <a href="/SunbirdSpeechTherapy/services"
+            class="block py-2 px-3 lg:p-0 group transition-all duration-300 ease-in-out hover:-translate-y-1"
+            aria-current="page">
+            <span class="transition-all duration-500 ease-out hover:text-[--dark]"
+            >Services</span>
+          </a>
+        </li>
+        <li>
+          <a href="/SunbirdSpeechTherapy/about"
+            class="block py-2 px-3 lg:p-0 group transition-all duration-300 ease-in-out hover:-translate-y-1"
+            aria-current="page">
+            <span class="transition-all duration-500 ease-out hover:text-[--dark]"
+            >About</span>
+          </a>
+        </li>
+        <li>
+          <a href="/SunbirdSpeechTherapy/testimonials"          
+          class="block py-2 px-3 lg:p-0 group transition-all duration-300 ease-in-out hover:-translate-y-1"
+          aria-current="page">
+          <span class="transition-all duration-500 ease-out hover:text-[--dark]"
+          >Testimonials</span>
+          </a>
+        </li>
+        <li>
+          <a href="/SunbirdSpeechTherapy/faq"            
+          class="block py-2 px-3 lg:p-0 group transition-all duration-300 ease-in-out hover:-translate-y-1"
+          aria-current="page">
+          <span class="transition-all duration-500 ease-out hover:text-[--dark]"
+          >FAQ</span>
+          </a>
+        </li>
+      </ul>
+      
+      <div class="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse up">
+        <div class="max-lg:hidden">
+          <a href="/EscoSupplies/contact"
+          ><Button id="scheduleBtn" isfilled theme="primary">
+            Contact
+          </Button></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    * {
+      /* border: 1px solid red; */
+    }
+  </style>
+</nav>

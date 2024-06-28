@@ -1,0 +1,43 @@
+---
+import Button from "./Button.astro";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+const { text, title, caption, imagePath, altText, extraClass } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/images/*.{jpeg,jpg,png,gif}"
+);
+if (!images[imagePath])
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "/src/images/*.{jpeg,jpg,png,gif}"`
+  );
+---
+
+<section
+  class=`flex flex-col lg:flex-row justify-center items-center lg:px-4 gap-6 md:gap-12 ${extraClass}`
+>
+  <div class="flex-1 max-lg:px-4">
+    <div class="flex flex-col gap-2 md:gap-6 mb-4 md:mb-10">
+      <h4 class="caption">{caption}</h4>
+      <h1>{title}</h1>
+      <p class="body md:mr-4">{text}</p>
+    </div>
+
+    <a href="/contact"><Button>Schedule A Call</Button></a>
+  </div>
+  <div class="md:flex-1 lg:w-1/2 h-[30rem] lg:aspect-square">
+    <div
+      class="hero-image relative w-full h-full lg:rounded-3xl lg:overflow-hidden"
+    >
+      <!-- <img src={imagePath} alt={altText} /> -->
+      <Image
+        src={images[imagePath]()}
+        alt={altText}
+        class="h-full object-cover"
+      />
+
+      <slot />
+    </div>
+  </div>
+</section>

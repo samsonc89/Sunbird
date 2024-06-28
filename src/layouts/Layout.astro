@@ -1,4 +1,5 @@
 ---
+import Navbar from "../components/Navbar.astro";
 import "flowbite";
 const { title } = Astro.props;
 ---
@@ -10,6 +11,10 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
 		<script
 			is:inline
 			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
@@ -21,12 +26,16 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+    <Navbar />
+    <main class="mt-12 max-sm:mt-12">
+      <slot />
+    </main>
 	</body>
 </html>
 <style is:global>
 	@tailwind base;
 	@tailwind components;
+  @tailwind utilities;
 
 	:root {
 		--primary: #4694a1;
@@ -38,6 +47,7 @@ const { title } = Astro.props;
 		--primary-text: #3c545a;
 		--secondary-text: #4a556c;
 		--tertiary-text: #a5a5a5;
+    --white: #FFFFFF
 	}
 
 	*,
@@ -138,10 +148,6 @@ const { title } = Astro.props;
 
   .padding-b {
     @apply sm:pb-24 pb-12;
-  }
-
-  .info-text {
-    @apply font-montserrat text-slate-gray text-lg leading-7;
   }
 }
 </style>
