@@ -1,0 +1,106 @@
+---
+//things we might want in a button
+// 1. type: button | submit;
+// 2. size: sm, md, lg;
+// 3. theme: colortheme;
+// 4. isfilled?;
+// 5. classes ; button attributes;
+
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<"button"> {
+    type?: "button" | "submit";
+    size?: "sm" | "md" | "lg";
+    isfilled?: boolean;
+    theme?: 
+    | "primary" 
+    | "secondary"
+    | "tertiary"
+    | "accent-primary"
+    | "accent-secondary"
+    | "accent-tertiary"
+    | "primary-text"
+    | "secondary-text"
+    | "tertiary-text";
+    classes?: string;
+}
+
+const {
+    type = "button",
+    size = "md",
+    isfilled,
+    theme,
+    classes,
+    ...rest 
+} = Astro.props;
+
+const background = `var(--${theme})`;
+const foreground = theme === "secondary" ? "var(---primary)" : "var(---secondary)";
+---
+
+<button 
+class:list={[classes, { filled: isfilled }]} 
+{type} 
+data-size={size} 
+{...rest}
+> 
+<slot />
+</button>
+
+<style 
+define:vars={{
+    foreground,
+    background,
+}}
+>
+    button {
+        /* resets */
+        font: inherit;
+        cursor: pointer;
+
+        /* variables */
+        --bkg:var(--background);
+        --color: var(--foreground);
+
+        /* default styles */
+        display: flex;
+        gap: 0.2rem;
+        background-color: var(--primary);
+        color: var(--secondary);
+        border-radius: .5rem;
+        padding: 0.75rem 2em;
+        font-family: "roboto";
+        font-weight: 500;
+        transition: box-shadow .2s cubic-bezier(0.075, 0.82, 0.165, 1), opacity .2s cubic-bezier(0.075, 0.82, 0.165, 1), scale .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    button.filled {
+        background-color: var(--bkg);
+        color: var(--primary);
+        border: 1px solid var(--secondary);
+    }
+
+    button:focus {
+        outline-color: transparent;
+    }
+
+    button:hover {
+        opacity: 0.8;
+        scale: 1.05;
+    }
+
+    button:focus-visible {
+        box-shadow: 0 0 0 0.1em var(--tertiary),
+        0 0 0 0.3em var(--bkg);
+    }
+
+    [data-size='sm'] {
+        font-size: 0.8rem;
+    }
+    [data-size='md'] {
+        font-size: 1.0rem;
+    }
+    [data-size='lg'] {
+        font-size: 1.5rem;
+    }
+</style>
