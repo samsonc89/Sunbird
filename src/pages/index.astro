@@ -1,11 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "flowbite";
-
+import Image from "astro/components/Image.astro";
+import hero from "../assets/images/hero.png";
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="Sunbird Speech Therapy">
-
+    <section class="bg-[--primary]">
+        <div class="mt-12 max-container flex justify-between">
+            <div class="">
+                <h5 class="opacity-40 text-white">
+                    Nurturing The Teacher in Every Parent
+                </h5>
+                <h1 class="text-white">Welcome to Sunbird Speech Therapy!</h1>
+                <h5 class="text-white">
+                    Your go-to provider for pediatric speech and language
+                    services and resources. In-home services available in Bay
+                    Area locations and online services available statewide.
+                </h5>
+                <Button id="scheduleBtn" type="submit"
+                    >Schedule a free consultation
+                </Button>
+            </div>
+            <div class="">
+                <Image src={hero} alt="hero_img" height={545} width={545} />
+            </div>
+        </div>
+    </section>
 </Layout>
 
 <style>
