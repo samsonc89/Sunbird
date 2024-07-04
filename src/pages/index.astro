@@ -9,18 +9,19 @@ import { philosophy } from "../assets";
 ---
 
 <Layout title="Sunbird Speech Therapy">
+
     <!-- Hero -->
 
     <section class="bg-[--primary]">
-        <div class="max-container flex">
-            <div class="mt-12">
+        <div class="max-container flex justify-between py-20 gap-8">
+            <div class="basis-1/2">
                 <h5 class="opacity-40 text-white">
                     Nurturing The Teacher in Every Parent
                 </h5>
-                <h1 class="text-white py-4">
+                <h1 class="text-white pb-4">
                     Welcome to Sunbird Speech Therapy!
                 </h1>
-                <h5 class="text-white pb-4 pr-10">
+                <h5 class="text-white py-4">
                     Your go-to provider for pediatric speech and language
                     services and resources. In-home services available in Bay
                     Area locations and online services available statewide.
@@ -29,10 +30,10 @@ import { philosophy } from "../assets";
                     >Schedule a free consultation
                 </Button>
             </div>
-            <div class="my-12">
-                <Image src={hero} alt="hero_img" height={545} width={545} />
+            <div class="basis-1/2 aspect-square relative overflow-hidden">
+                <Image src={hero} alt="hero_img" class="absolute -top-16" />
             </div>
-        </div>
+        </div> 
     </section>
 
     <!-- Services -->
@@ -107,8 +108,13 @@ import { philosophy } from "../assets";
 
     <section>
         <div class="max-container py-16">
-            <div class="flex gap-8">
-                <div class="flex-col justify-between gap-12">
+            <div class="flex justify-between">
+                
+                <div class="basis-1/2 overflow-hidden">
+                    <Image src={philosophy} alt="philosophy_img" class="" />
+                </div>
+
+                <div class="flex-col basis-1/2 justify-between gap-12">
                     <h4 class="capitalize text-[--primary-text] py-6">
                         our philosophy
                     </h4>
@@ -134,13 +140,6 @@ import { philosophy } from "../assets";
                         their child`s communication journey.
                     </p>
                 </div>
-
-                <Image
-                    src={philosophy}
-                    alt="philosophy_img"
-                    height={545}
-                    width={545}
-                />
             </div>
         </div>
     </section>
