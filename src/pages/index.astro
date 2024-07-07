@@ -9,152 +9,141 @@ import { philosophy } from "../assets";
 ---
 
 <Layout title="Sunbird Speech Therapy">
+  <!-- Hero -->
 
-    <!-- Hero -->
+  <section class="bg-[--primary]">
+    <div class="max-container flex justify-between py-20 gap-8">
+      <div class="basis-1/2">
+        <h5 class="opacity-40 text-white">
+          Nurturing The Teacher in Every Parent
+        </h5>
+        <h1 class="text-white pb-4">Welcome to Sunbird Speech Therapy!</h1>
+        <h5 class="text-white py-4">
+          Your go-to provider for pediatric speech and language services and
+          resources. In-home services available in Bay Area locations and online
+          services available statewide.
+        </h5>
+        <Button id="scheduleBtn" type="submit" class="my-6"
+          >Schedule a free consultation
+        </Button>
+      </div>
+      <div class="basis-1/2 aspect-square relative overflow-hidden">
+        <Image src={hero} alt="hero_img" class="absolute -top-16" />
+      </div>
+    </div>
+  </section>
 
-    <section class="bg-[--primary]">
-        <div class="max-container flex justify-between py-20 gap-8">
-            <div class="basis-1/2">
-                <h5 class="opacity-40 text-white">
-                    Nurturing The Teacher in Every Parent
-                </h5>
-                <h1 class="text-white pb-4">
-                    Welcome to Sunbird Speech Therapy!
-                </h1>
-                <h5 class="text-white py-4">
-                    Your go-to provider for pediatric speech and language
-                    services and resources. In-home services available in Bay
-                    Area locations and online services available statewide.
-                </h5>
-                <Button id="scheduleBtn" type="submit" class="my-6"
-                    >Schedule a free consultation
-                </Button>
-            </div>
-            <div class="basis-1/2 aspect-square relative overflow-hidden">
-                <Image src={hero} alt="hero_img" class="absolute -top-16" />
-            </div>
-        </div> 
-    </section>
+  <!-- Services -->
 
-    <!-- Services -->
+  <section class="bg-[--secondary]">
+    <div class="max-container py-12">
+      <Image src={vector} alt="vector" class="py-6" />
 
-    <section class="bg-[--secondary]">
-        <div class="max-container py-12">
-            <Image src={vector} alt="vector" class="py-6" />
+      <h2 class="text-[--primary-text] py-6">Services</h2>
 
-            <h2 class="text-[--primary-text] py-6">Services</h2>
+      <div class="flex gap-16">
+        <div class="p-6">
+          <span
+            class="material-symbols-outlined text-5xl text-[--accent-primary]"
+          >
+            chat_bubble
+          </span>
 
-            <div class="flex gap-16">
-                <div class="p-6">
-                    <span
-                        class="material-symbols-outlined text-5xl text-[--accent-primary]"
-                    >
-                        chat_bubble
-                    </span>
+          <h4 class="text-[--black] my-4">Consultation</h4>
 
-                    <h4 class="text-[--black] my-4">Consultation</h4>
-
-                    <h5 class="text-[--secondary-text] my-6">
-                        If you have concerns about your child`s speech or
-                        language development, or if you have any questions about
-                        our services, please schedule a free 15-minute
-                        consultation.
-                    </h5>
-                </div>
-
-                <div class="p-6">
-                    <span
-                        class="material-symbols-outlined text-5xl text-[--accent-primary]"
-                    >
-                        library_books
-                    </span>
-
-                    <h4 class="text-[--black] my-4">Evaluation</h4>
-
-                    <h5 class="text-[--secondary-text] my-6">
-                        We conduct comprehensive speech and language evaluations
-                        using both formal and informal assessments to determine
-                        your child`s current skills and needs.
-                    </h5>
-                </div>
-
-                <div class="p-6">
-                    <span
-                        class="material-symbols-outlined text-5xl text-[--accent-primary]"
-                    >
-                        supervisor_account
-                    </span>
-
-                    <h4 class="text-[--black] my-4">Therapy</h4>
-
-                    <h5 class="text-[--secondary-text] my-6">
-                        Based on the initial evaluation, we will create a
-                        personalized plan with specific goals for your child.
-                        Therapy sessions are available online, in-home <a
-                            class=""
-                            href="/FAQ"
-                        >
-                            <span class="text-[--accent-primary] font-semibold">
-                                See FAQ
-                            </span>
-                        </a> or through a hybrid model.
-                    </h5>
-                </div>
-            </div>
+          <h5 class="text-[--secondary-text] my-6">
+            If you have concerns about your child`s speech or language
+            development, or if you have any questions about our services, please
+            schedule a free 15-minute consultation.
+          </h5>
         </div>
-    </section>
 
-    <!-- Philosophy -->
+        <div class="p-6">
+          <span
+            class="material-symbols-outlined text-5xl text-[--accent-primary]"
+          >
+            library_books
+          </span>
 
-    <section>
-        <div class="max-container py-16">
-            <div class="flex justify-between">
-                
-                <div class="basis-1/2 overflow-hidden">
-                    <Image src={philosophy} alt="philosophy_img" class="" />
-                </div>
+          <h4 class="text-[--black] my-4">Evaluation</h4>
 
-                <div class="flex-col basis-1/2 justify-between gap-12">
-                    <h4 class="capitalize text-[--primary-text] py-6">
-                        our philosophy
-                    </h4>
-
-                    <p class="py-4 text-[--secondary-text]">
-                        At Sunbird, we are committed to helping every child
-                        build confidence through the art of effective
-                        communication. We firmly believe that a robust language
-                        foundation impacts far more than just speech; it fosters
-                        self-expression, meaningful relationships, and academic
-                        success.
-                    </p>
-
-                    <p class=" py-4 text-[--secondary-text]">
-                        We empower each child to unlock their potential through
-                        play-based activities, creating a nurturing atmosphere
-                        that honors their unique personality and learning style.
-                    </p>
-
-                    <p class=" py-4 text-[--secondary-text]">
-                        The essence of our approach lies in collaborating with
-                        parents to provide step-by-step guidance in supporting
-                        their child`s communication journey.
-                    </p>
-                </div>
-            </div>
+          <h5 class="text-[--secondary-text] my-6">
+            We conduct comprehensive speech and language evaluations using both
+            formal and informal assessments to determine your child`s current
+            skills and needs.
+          </h5>
         </div>
-    </section>
+
+        <div class="p-6">
+          <span
+            class="material-symbols-outlined text-5xl text-[--accent-primary]"
+          >
+            supervisor_account
+          </span>
+
+          <h4 class="text-[--black] my-4">Therapy</h4>
+
+          <h5 class="text-[--secondary-text] my-6">
+            Based on the initial evaluation, we will create a personalized plan
+            with specific goals for your child. Therapy sessions are available
+            online, in-home <a class="" href="/FAQ">
+              <span class="text-[--accent-primary] font-semibold">
+                See FAQ
+              </span>
+            </a> or through a hybrid model.
+          </h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+
+  <section>
+    <div class="max-container py-16">
+      <div class="flex gap-8 justify-between">
+        <div class="basis-1/2 overflow-hidden">
+          <Image src={philosophy} alt="philosophy_img" class="" />
+        </div>
+
+        <div class="flex-col basis-1/2 justify-between gap-12">
+          <h4 class="capitalize text-[--primary-text] py-6">our philosophy</h4>
+
+          <p class="py-4 text-[--secondary-text]">
+            At Sunbird, we are committed to helping every child build confidence
+            through the art of effective communication. We firmly believe that a
+            robust language foundation impacts far more than just speech; it
+            fosters self-expression, meaningful relationships, and academic
+            success.
+          </p>
+
+          <p class="py-4 text-[--secondary-text]">
+            We empower each child to unlock their potential through play-based
+            activities, creating a nurturing atmosphere that honors their unique
+            personality and learning style.
+          </p>
+
+          <p class="py-4 text-[--secondary-text]">
+            The essence of our approach lies in collaborating with parents to
+            provide step-by-step guidance in supporting their child`s
+            communication journey.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
-    * {
-        /* border: 1px solid red; */
-    }
+  * {
+    /* border: 1px solid red; */
+  }
 
-    .material-symbols-outlined {
-        font-variation-settings:
-            "FILL" 0,
-            "wght" 400,
-            "GRAD" 0,
-            "opsz" 24;
-    }
+  .material-symbols-outlined {
+    font-variation-settings:
+      "FILL" 0,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
+  }
 </style>
