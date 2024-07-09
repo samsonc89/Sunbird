@@ -2,8 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import "flowbite";
 import Image from "astro/components/Image.astro";
-import hero from "../assets/images/hero.png";
-import vector from "../assets/images/vector.png";
+import { hero, vector, rana } from "../assets";
 import Button from "../components/Button.astro";
 import { philosophy } from "../assets";
 ---
@@ -14,15 +13,15 @@ import { philosophy } from "../assets";
   <section class="bg-[--primary]">
     <div class="max-container flex justify-between py-20 gap-8">
       <div class="basis-1/2">
-        <h5 class="opacity-40 text-white">
+        <h6 class="opacity-40 text-white">
           Nurturing The Teacher in Every Parent
-        </h5>
+        </h6>
         <h1 class="text-white pb-4">Welcome to Sunbird Speech Therapy!</h1>
-        <h5 class="text-white py-4">
+        <h6 class="text-white py-4">
           Your go-to provider for pediatric speech and language services and
           resources. In-home services available in Bay Area locations and online
           services available statewide.
-        </h5>
+        </h6>
         <Button id="scheduleBtn" type="submit" class="my-6"
           >Schedule a free consultation
         </Button>
@@ -51,11 +50,11 @@ import { philosophy } from "../assets";
 
           <h4 class="text-[--black] my-4">Consultation</h4>
 
-          <h5 class="text-[--secondary-text] my-6">
+          <h6 class="text-[--secondary-text] my-6">
             If you have concerns about your child`s speech or language
             development, or if you have any questions about our services, please
             schedule a free 15-minute consultation.
-          </h5>
+          </h6>
         </div>
 
         <div class="p-6">
@@ -67,11 +66,11 @@ import { philosophy } from "../assets";
 
           <h4 class="text-[--black] my-4">Evaluation</h4>
 
-          <h5 class="text-[--secondary-text] my-6">
+          <h6 class="text-[--secondary-text] my-6">
             We conduct comprehensive speech and language evaluations using both
             formal and informal assessments to determine your child`s current
             skills and needs.
-          </h5>
+          </h6>
         </div>
 
         <div class="p-6">
@@ -83,7 +82,7 @@ import { philosophy } from "../assets";
 
           <h4 class="text-[--black] my-4">Therapy</h4>
 
-          <h5 class="text-[--secondary-text] my-6">
+          <h6 class="text-[--secondary-text] my-6">
             Based on the initial evaluation, we will create a personalized plan
             with specific goals for your child. Therapy sessions are available
             online, in-home <a class="" href="/FAQ">
@@ -91,7 +90,7 @@ import { philosophy } from "../assets";
                 See FAQ
               </span>
             </a> or through a hybrid model.
-          </h5>
+          </h6>
         </div>
       </div>
     </div>
@@ -129,6 +128,53 @@ import { philosophy } from "../assets";
             communication journey.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+
+  <section class="bg-[--primary]">
+    <div class="max-container py-16 flex gap-8">
+      <div class="flex-col basis-1/2 justify-between gap-12">
+        <p class="py-4 text-white">
+          Hello! I am a bilingual (English/Arabic) Speech-Language Pathologist
+          and the founder of Sunbird Speech Therapy. Recognizing the unique
+          journey of each child, I am committed to fostering a supportive
+          environment where your child`s communication skills can flourish.
+        </p>
+
+        <p class="py-4 text-white">
+          With over 10 years of experience, I`ve had the privilege of supporting
+          children of all ages, from infants to young adults. My professional
+          background encompasses early intervention programs, schools and
+          pediatric hospitals. These varied settings have provided me with
+          invaluable insights, which I integrate into my practice.
+        </p>
+
+        <p class="py-4 text-white">
+          It`s an honor to be a part of your child`s developmental journey, and
+          I look forward to contributing to their success alongside you!
+        </p>
+
+        <p class="flex mt-36">
+          <a
+            class="body font-semibold text-white group transition-all duration-300 ease-in-out hover:-translate-y-1"
+            href="/about"
+          >
+            <span
+              class="bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out opacity-75"
+            >
+              Read more about me →
+            </span>
+          </a>
+        </p>
+      </div>
+
+      <div class="basis-1/2 aspect-square relative overflow-hidden">
+        <h2 class="text-white py-2">Meet Rana Barghouty</h2>
+        <h5 class="text-white pb-4">MA, CCC-SLP, LSLS Cert. AVT</h5>
+        <Image src={rana} alt="rana_img" class="w-full" />
       </div>
     </div>
   </section>
