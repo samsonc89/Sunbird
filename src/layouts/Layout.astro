@@ -6,70 +6,70 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-  />
-		<script
-			is:inline
-			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
-		></script>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
-			rel="stylesheet"
-		/>
-		<title>{title}</title>
-	</head>
-	<body>
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
     <Navbar />
     <main>
       <slot />
     </main>
-	</body>
+  </body>
 </html>
 <style is:global>
-	@tailwind base;
-	@tailwind components;
+  @tailwind base;
+  @tailwind components;
   @tailwind utilities;
 
-	:root {
-		--primary: #4694a1;
-		--secondary: #deecee;
-		--tertiary: #fbfbfb;
-		--accent-primary: #efa044;
-		--accent-secondary: #3f3a64;
-		--accent-tertiary: #a8d6e5;
-		--primary-text: #3c545a;
-		--secondary-text: #4a556c;
-		--tertiary-text: #a5a5a5;
-    --white: #FFFFFF;
-    --black: #28373A;
-	}
+  :root {
+    --primary: #4694a1;
+    --secondary: #deecee;
+    --tertiary: #fbfbfb;
+    --primary-accent: #efa044;
+    --secondary-accent: #3f3a64;
+    --tertiary-accent: #a8d6e5;
+    --primary-text: #3c545a;
+    --secondary-text: #4a556c;
+    --tertiary-text: #a5a5a5;
+    --white: #ffffff;
+    --black: #28373a;
+  }
 
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-	}
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-	* {
-		margin: 0;
-		padding: 0;
-	}
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-	body {
+  body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     height: 100%;
   }
 
   html {
-	font-family: "Kumbh Sans", sans-serif;
+    font-family: "Kumbh Sans", sans-serif;
     background: #fff;
     background-size: 224px;
     height: 100%;
@@ -125,35 +125,46 @@ const { title } = Astro.props;
       max-width: 1192px;
       margin: 0 auto;
     }
+
+    .border-quote {
+      background:
+        linear-gradient(to right, #a8d6e5 4px, transparent 4px) 0 0,
+        linear-gradient(to left, #a8d6e5 4px, transparent 4px) 100% 100%,
+        linear-gradient(to bottom, #a8d6e5 4px, transparent 4px) 0 0,
+        linear-gradient(to top, #a8d6e5 4px, transparent 4px) 100% 100%;
+
+      background-repeat: no-repeat;
+      background-size: 272px 163px;
+    }
   }
 
   @layer utilities {
-  .padding {
-    @apply sm:px-16 px-8 sm:py-24 py-12;
-  }
+    .padding {
+      @apply sm:px-16 px-8 sm:py-24 py-12;
+    }
 
-  .padding-x {
-    @apply sm:px-16 px-8;
-  }
+    .padding-x {
+      @apply sm:px-16 px-8;
+    }
 
-  .padding-y {
-    @apply sm:py-24 py-12;
-  }
+    .padding-y {
+      @apply sm:py-24 py-12;
+    }
 
-  .padding-l {
-    @apply sm:pl-16 pl-8;
-  }
+    .padding-l {
+      @apply sm:pl-16 pl-8;
+    }
 
-  .padding-r {
-    @apply sm:pr-16 pr-8;
-  }
+    .padding-r {
+      @apply sm:pr-16 pr-8;
+    }
 
-  .padding-t {
-    @apply sm:pt-24 pt-12;
-  }
+    .padding-t {
+      @apply sm:pt-24 pt-12;
+    }
 
-  .padding-b {
-    @apply sm:pb-24 pb-12;
+    .padding-b {
+      @apply sm:pb-24 pb-12;
+    }
   }
-}
 </style>
