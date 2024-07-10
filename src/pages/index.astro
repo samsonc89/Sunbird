@@ -2,9 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import "flowbite";
 import Image from "astro/components/Image.astro";
-import { hero, vector, rana } from "../assets";
+import { hero, vector, rana, philosophy } from "../assets";
 import Button from "../components/Button.astro";
-import { philosophy } from "../assets";
+// import TestimonialCard from "../components/TestimonialCard.astro";
+// import Carousel from "../components/CarouselComponent.astro";
 ---
 
 <Layout title="Sunbird Speech Therapy">
@@ -43,12 +44,12 @@ import { philosophy } from "../assets";
       <div class="flex gap-16">
         <div class="p-6">
           <span
-            class="material-symbols-outlined text-5xl text-[--accent-primary]"
+            class="material-symbols-outlined text-5xl text-[--primary-accent]"
           >
             chat_bubble
           </span>
 
-          <h4 class="text-[--black] my-4">Consultation</h4>
+          <h4 class="text-black my-4">Consultation</h4>
 
           <h6 class="text-[--secondary-text] my-6">
             If you have concerns about your child`s speech or language
@@ -59,12 +60,12 @@ import { philosophy } from "../assets";
 
         <div class="p-6">
           <span
-            class="material-symbols-outlined text-5xl text-[--accent-primary]"
+            class="material-symbols-outlined text-5xl text-[--primary-accent]"
           >
             library_books
           </span>
 
-          <h4 class="text-[--black] my-4">Evaluation</h4>
+          <h4 class="text-black my-4">Evaluation</h4>
 
           <h6 class="text-[--secondary-text] my-6">
             We conduct comprehensive speech and language evaluations using both
@@ -75,18 +76,18 @@ import { philosophy } from "../assets";
 
         <div class="p-6">
           <span
-            class="material-symbols-outlined text-5xl text-[--accent-primary]"
+            class="material-symbols-outlined text-5xl text-[--primary-accent]"
           >
             supervisor_account
           </span>
 
-          <h4 class="text-[--black] my-4">Therapy</h4>
+          <h4 class="text-black my-4">Therapy</h4>
 
           <h6 class="text-[--secondary-text] my-6">
             Based on the initial evaluation, we will create a personalized plan
             with specific goals for your child. Therapy sessions are available
             online, in-home <a class="" href="/FAQ">
-              <span class="text-[--accent-primary] font-semibold">
+              <span class="text-[--primary-accent] font-semibold">
                 See FAQ
               </span>
             </a> or through a hybrid model.
@@ -179,22 +180,49 @@ import { philosophy } from "../assets";
     </div>
   </section>
 
-    <!-- Quote -->
+  <!-- Quote -->
 
-    <section>
-      <div class="max-container py-16">
-        <div class="px-12 py-8 border-quote">
-          <div class="">
-            <p class="py-4 font-semibold text-[--secondary-text] text-center">“If parents everywhere understood that a word spoken to a young child is not simply a word but a building block for that child`s brain, nurturing a stable, empathetic, intelligent adult, and had the support to make it happen, what a different world this would be.”</p>
-            <p class="py-4 text-center font-medium text-[--secondary-text]"><span class="font-bold">- Dana Suskind,</span><span class="italic"> Thirty Million Words: Building a Child`s Brain,</span><br>(2015)</br></p>
-          </div>
-        </div>
+  <section>
+    <div class="max-container py-16">
+      <div class="px-12 py-8 border-quote">
+        <p class="py-4 font-semibold text-[--secondary-text] text-center">
+          “If parents everywhere understood that a word spoken to a young child
+          is not simply a word but a building block for that child`s brain,
+          nurturing a stable, empathetic, intelligent adult, and had the support
+          to make it happen, what a different world this would be.”
+        </p>
+        <p class="py-4 text-center font-medium text-[--secondary-text]">
+          <span class="font-bold">- Dana Suskind,</span><span class="italic">
+            Thirty Million Words: Building a Child`s Brain,</span
+          ><br />(2015)
+        </p>
       </div>
-    </section>
-      <!-- Testimonials -->
-      <!-- FAQ -->
-      <!-- Calendly -->
+    </div>
+  </section>
 </Layout>
+
+<!-- Testimonials -->
+
+<section class="bg-[--secondary]">
+  <div class="max-container py-12">
+    <Image src={vector} alt="vector" class="py-6" />
+    <h2 class="text-[--primary-text] py-6">Testimonials</h2>
+
+    <div class="flex gap-16">
+      <div class="shadow-xl bg-white">
+        <!-- <TestimonialCard /> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="carousel">
+    <Carousel />
+  </section> -->
+  
+<!-- FAQ -->
+
+<!-- Calendly -->
 
 <style>
   * {

@@ -1,0 +1,207 @@
+---
+import testimonials from "../data/testimonials.json";
+import TestimonialCard from "../components/TestimonialCard.astro";
+---
+
+<section class="flex flex-col overflow-hidden items-center gap-4 md:gap-8">
+  <p class="caption">Testimonials</p>
+  <h2>What our clients say</h2>
+  <div
+    id="carousel-example"
+    class="relative max-md:px-4 w-full lg:w-3/4 mx-auto"
+  >
+    <!-- Carousel wrapper -->
+    <div
+      class="relative overflow-hidden lg:w-3/4 mx-auto rounded-lg min-h-[22rem]"
+    >
+      {
+        testimonials.map((card, index) => (
+          <TestimonialCard
+            name={card.title}
+            text={card.content}
+            imagePath={card.imagePath}
+            altText={card.altText}
+            index={index + 1}
+          />
+        ))
+      }
+    </div>
+    <!-- Slider indicators -->
+    <div
+      class="absolute z-30 flex -translate-x-1/2 bottom-0 md:bottom-8 left-1/2 space-x-3 rtl:space-x-reverse"
+    >
+      <button
+        id="carousel-indicator-1"
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="true"
+        aria-label="Slide 1"></button>
+      <button
+        id="carousel-indicator-2"
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 2"></button>
+      <button
+        id="carousel-indicator-3"
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 3"></button>
+      <button
+        id="carousel-indicator-4"
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 4"></button>
+      <button
+        id="carousel-indicator-5"
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 5"></button>
+    </div>
+
+    <!-- Slider controls -->
+    <button
+      type="button"
+      class="absolute -top-10 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      id="data-carousel-prev"
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-zinc-300 group-hover:bg-zinc-400 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 1 1 5l4 4"></path>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button
+      type="button"
+      class="absolute -top-10 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      id="data-carousel-next"
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-zinc-300 group-hover:bg-zinc-400 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 9 4-4-4-4"></path>
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+  </div>
+</section>
+
+<script>
+  import { Carousel } from "flowbite";
+  const carouselElement = document.getElementById("carousel-example");
+
+  //Add and subtract items ass needed, just make sure to add to appropriate ID on the HTML
+  const items = [
+    {
+      position: 0,
+      el: document.getElementById("carousel-item-1"),
+    },
+    {
+      position: 1,
+      el: document.getElementById("carousel-item-2"),
+    },
+    {
+      position: 2,
+      el: document.getElementById("carousel-item-3"),
+    },
+    {
+      position: 3,
+      el: document.getElementById("carousel-item-4"),
+    },
+    {
+      position: 4,
+      el: document.getElementById("carousel-item-5"),
+    },
+  ];
+
+  // options with default values
+  const options = {
+    defaultPosition: 0,
+    interval: 3000,
+
+    //Add and subtract items ass needed, just make sure to add to appropriate ID on the HTML
+    indicators: {
+      activeClasses: "bg-zinc-200",
+      inactiveClasses: "bg-zinc-400 hover:bg-zinc-300",
+      items: [
+        {
+          position: 0,
+          el: document.getElementById("carousel-indicator-1"),
+        },
+        {
+          position: 1,
+          el: document.getElementById("carousel-indicator-2"),
+        },
+        {
+          position: 2,
+          el: document.getElementById("carousel-indicator-3"),
+        },
+        {
+          position: 3,
+          el: document.getElementById("carousel-indicator-4"),
+        },
+        {
+          position: 4,
+          el: document.getElementById("carousel-indicator-5"),
+        },
+      ],
+    },
+  };
+
+  // instance options object
+  const instanceOptions = {
+    id: "carousel-example",
+    override: true,
+  };
+
+  const carousel = new Carousel(
+    // carouselElement,
+    // items,
+    // options,
+    // instanceOptions
+  );
+
+  //This starts the cycle
+  carousel.cycle();
+
+  const $prevButton = document.getElementById("data-carousel-prev");
+  const $nextButton = document.getElementById("data-carousel-next");
+
+//   $prevButton.addEventListener("click", () => {
+//     carousel.prev();
+//   });
+
+//   $nextButton.addEventListener("click", () => {
+//     carousel.next();
+//   });
+</script>
