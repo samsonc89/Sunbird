@@ -13,7 +13,7 @@ import Carousel from "../components/CarouselComponent.astro";
   <!-- Hero -->
 
   <section class="bg-[--primary]">
-    <div class="max-container max-xl:px-6 flex justify-between py-20 gap-8 ">
+    <div class="max-container max-xl:px-6 flex justify-between py-20 gap-8">
       <div class="basis-1/2">
         <h6 class="opacity-40 text-white">
           Nurturing The Teacher in Every Parent
@@ -201,37 +201,38 @@ import Carousel from "../components/CarouselComponent.astro";
     </div>
   </section>
 
-<!-- Testimonials -->
+  <!-- Testimonials -->
 
-<section class="bg-[--secondary]">
-  <div class="max-container py-12">
-    <Image src={vector} alt="vector" class="py-6" />
-    <h2 class="text-[--primary-text] py-6">Testimonials</h2>
+  <!-- <section class="bg-[--secondary]">
+    <div class="max-container py-12">
+      <Image src={vector} alt="vector" class="py-6" />
+      <h2 class="text-[--primary-text] py-6">Testimonials</h2>
 
-    <div class="flex gap-16">
-      <div class="shadow-xl bg-white">
-        <TestimonialCard />
+      <div class="flex gap-16">
+        <div class="shadow-xl bg-white">
+          <TestimonialCard />
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section> -->
 
-<div class="carousel">
+  <div class="carousel">
     <Carousel />
   </div>
 
-<!-- FAQ -->
+  <!-- FAQ -->
 
+  <!-- <Questions /> -->
 
-<!-- <Questions /> -->
+  <!-- Calendly -->
 
-<!-- Calendly -->
-
-<section class="py-12">
-  <div class="max-container py-16 flex justify-center bg-[--primary] rounded-2xl">
-    <Image src={calendly} alt="calendly_img" />
-  </div>
-</section>
+  <section class="py-12">
+    <div
+      class="max-container py-16 flex justify-center bg-[--primary] rounded-2xl"
+    >
+      <Image src={calendly} alt="calendly_img" />
+    </div>
+  </section>
 </Layout>
 <style>
   * {
