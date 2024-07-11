@@ -5,8 +5,8 @@ import Image from "astro/components/Image.astro";
 import { hero, vector, rana, philosophy, calendly } from "../assets";
 import Button from "../components/Button.astro";
 import Questions from "../components/Questions.astro";
-// import TestimonialCard from "../components/TestimonialCard.astro";
-// import Carousel from "../components/CarouselComponent.astro";
+import TestimonialCard from "../components/TestimonialCard.astro";
+import Carousel from "../components/CarouselComponent.astro";
 ---
 
 <Layout title="Sunbird Speech Therapy">
@@ -210,15 +210,15 @@ import Questions from "../components/Questions.astro";
 
     <div class="flex gap-16">
       <div class="shadow-xl bg-white">
-        <!-- <TestimonialCard /> -->
+        <TestimonialCard />
       </div>
     </div>
   </div>
 </section>
 
-<!-- <section class="carousel">
+<div class="carousel">
     <Carousel />
-  </section> -->
+  </div>
 
 <!-- FAQ -->
 
