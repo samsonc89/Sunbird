@@ -138,10 +138,6 @@ import TestimonialCard from "../components/TestimonialCard.astro";
       position: 3,
       el: document.getElementById("carousel-item-4"),
     },
-    {
-      position: 4,
-      el: document.getElementById("carousel-item-5"),
-    },
   ];
 
   // options with default values
@@ -170,10 +166,6 @@ import TestimonialCard from "../components/TestimonialCard.astro";
           position: 3,
           el: document.getElementById("carousel-indicator-4"),
         },
-        {
-          position: 4,
-          el: document.getElementById("carousel-indicator-5"),
-        },
       ],
     },
   };
@@ -185,10 +177,10 @@ import TestimonialCard from "../components/TestimonialCard.astro";
   };
 
   const carousel = new Carousel(
-    // carouselElement,
-    // items,
-    // options,
-    // instanceOptions
+    carouselElement,
+    items,
+    options,
+    instanceOptions
   );
 
   //This starts the cycle
@@ -197,11 +189,11 @@ import TestimonialCard from "../components/TestimonialCard.astro";
   const $prevButton = document.getElementById("data-carousel-prev");
   const $nextButton = document.getElementById("data-carousel-next");
 
-//   $prevButton.addEventListener("click", () => {
-//     carousel.prev();
-//   });
+  $prevButton.addEventListener("click", () => {
+    carousel.prev();
+  });
 
-//   $nextButton.addEventListener("click", () => {
-//     carousel.next();
-//   });
+  $nextButton.addEventListener("click", () => {
+    carousel.next();
+  });
 </script>

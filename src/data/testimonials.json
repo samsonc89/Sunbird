@@ -4,21 +4,21 @@
       "id": 1,
       "title": "Tony Fields",
       "content": "Our gas station badly needed an upgrade in our lighting and  Conserve Energy helped us save thousands in our out of pocket costs!",
-      "imagePath": "/src/images/test1.png",
+      "imagePath": "/src/assets/images/test1.png",
       "altText": "This is placeholder text"
     },
     {
       "id": 2,
       "title": "Susan Caldwell",
       "content": "The decision to switch to LED lighting with Conserve Energy was one of the best we've made. The quality of the LED lights is evident, providing a superior lighting experience. The savings on our energy bills have been substantial, making it a win-win for our business",
-      "imagePath": "/src/images/test2.png",
+      "imagePath": "/src/assets/images/test2.png",
       "altText": "This is placeholder text"
     },
     {
       "id": 3,
       "title": "Jay Singh",
       "content": "Conserve Energy gave us the complete package for our lighting upgrade. The assessment was quick and professional. They handled all the paperwork, and installation was seamless! ",
-      "imagePath": "/src/images/test3.png",
+      "imagePath": "/src/assets/images/test3.png",
       "altText": "This is placeholder text"
     }
   ]
