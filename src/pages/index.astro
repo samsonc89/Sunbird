@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import "flowbite";
 import Image from "astro/components/Image.astro";
-import { hero, vector, rana, philosophy } from "../assets";
+import { hero, vector, rana, philosophy, calendly } from "../assets";
 import Button from "../components/Button.astro";
 import Questions from "../components/Questions.astro";
 // import TestimonialCard from "../components/TestimonialCard.astro";
@@ -227,10 +227,15 @@ import Questions from "../components/Questions.astro";
 
 <!-- Calendly -->
 
+<section class="py-12">
+  <div class="max-container py-16 flex justify-center bg-[--primary] rounded-2xl">
+    <Image src={calendly} alt="calendly_img" />
+  </div>
+</section>
 </Layout>
 <style>
   * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .material-symbols-outlined {
