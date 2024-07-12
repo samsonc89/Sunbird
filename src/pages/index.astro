@@ -137,7 +137,9 @@ import Carousel from "../components/CarouselComponent.astro";
 
   <section class="bg-[--primary]">
     <div class="max-container py-16 flex gap-8">
-      <div class="flex-col basis-1/2 justify-between gap-12">
+      <div class="flex-col basis-1/2 justify-between gap-12 pr-16">
+        <h2 class="text-white py-2">Meet Rana Barghouty</h2>
+        <h5 class="text-white pb-4">MA, CCC-SLP, LSLS Cert. AVT</h5>
         <p class="py-4 text-white">
           Hello! I am a bilingual (English/Arabic) Speech-Language Pathologist
           and the founder of Sunbird Speech Therapy. Recognizing the unique
@@ -158,7 +160,7 @@ import Carousel from "../components/CarouselComponent.astro";
           I look forward to contributing to their success alongside you!
         </p>
 
-        <p class="flex mt-36">
+        <p class="flex mt-8">
           <a
             class="body font-semibold text-white group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end"
             href="/about"
@@ -173,9 +175,7 @@ import Carousel from "../components/CarouselComponent.astro";
       </div>
 
       <div class="basis-1/2 aspect-square relative overflow-hidden">
-        <h2 class="text-white py-2">Meet Rana Barghouty</h2>
-        <h5 class="text-white pb-4">MA, CCC-SLP, LSLS Cert. AVT</h5>
-        <Image src={rana} alt="rana_img" class="w-full" />
+        <Image src={rana} alt="rana_img" class="w-full h-full" />
       </div>
     </div>
   </section>
