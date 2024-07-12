@@ -6,6 +6,7 @@ import { hero, vector, rana, philosophy, calendly } from "../assets";
 import Button from "../components/Button.astro";
 import Questions from "../components/Questions.astro";
 import Carousel from "../components/CarouselComponent.astro";
+import Quote from "../components/Quote.astro";
 ---
 
 <Layout title="Sunbird Speech Therapy">
@@ -183,21 +184,7 @@ import Carousel from "../components/CarouselComponent.astro";
   <!-- Quote -->
 
   <section>
-    <div class="max-container py-16">
-      <div class="px-12 py-8 border-quote">
-        <p class="py-4 font-semibold text-[--secondary-text] text-center">
-          “If parents everywhere understood that a word spoken to a young child
-          is not simply a word but a building block for that child`s brain,
-          nurturing a stable, empathetic, intelligent adult, and had the support
-          to make it happen, what a different world this would be.”
-        </p>
-        <p class="py-4 text-center font-medium text-[--secondary-text]">
-          <span class="font-bold">- Dana Suskind,</span><span class="italic">
-            Thirty Million Words: Building a Child`s Brain,</span
-          ><br />(2015)
-        </p>
-      </div>
-    </div>
+    <Quote />
   </section>
 
   <!-- Testimonials -->
