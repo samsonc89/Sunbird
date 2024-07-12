@@ -5,7 +5,6 @@ import Image from "astro/components/Image.astro";
 import { hero, vector, rana, philosophy, calendly } from "../assets";
 import Button from "../components/Button.astro";
 import Questions from "../components/Questions.astro";
-import TestimonialCard from "../components/TestimonialCard.astro";
 import Carousel from "../components/CarouselComponent.astro";
 ---
 
@@ -203,22 +202,15 @@ import Carousel from "../components/CarouselComponent.astro";
 
   <!-- Testimonials -->
 
-  <!-- <section class="bg-[--secondary]">
+  <section class="bg-[--secondary]">
     <div class="max-container py-12">
       <Image src={vector} alt="vector" class="py-6" />
       <h2 class="text-[--primary-text] py-6">Testimonials</h2>
-
-      <div class="flex gap-16">
-        <div class="shadow-xl bg-white">
-          <TestimonialCard />
-        </div>
+          <div class="py-12">
+            <Carousel />
       </div>
     </div>
-  </section> -->
-
-  <div class="carousel">
-    <Carousel />
-  </div>
+  </section>
 
   <!-- FAQ -->
 
@@ -236,7 +228,7 @@ import Carousel from "../components/CarouselComponent.astro";
 </Layout>
 <style>
   * {
-    /* border: 1px solid red; */
+    border: 1px solid red;
   }
 
   .material-symbols-outlined {

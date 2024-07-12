@@ -2,6 +2,7 @@
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
+
 const { imagePath, altText, name, text, index } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/images/*.{jpeg,jpg,png,gif}"
@@ -14,7 +15,7 @@ if (!images[imagePath])
 
 <div
   id=`carousel-item-${index}`
-  class="card hidden w-full duration-700 px-4 ease-in-out"
+  class="w-full hidden duration-700 px-4 ease-in-out"
 >
   <Image
     src={images[imagePath]()}
@@ -26,3 +27,9 @@ if (!images[imagePath])
   <h5 class="text-center mt-8">{name}</h5>
   <p class="body text-center mt-4">"{text}"</p>
 </div>
+
+<style>
+  * {
+    /* border: 1px solid red; */
+  }
+</style>
