@@ -14,36 +14,49 @@ import Calendly from "../components/Calendly.astro";
   <!-- Hero -->
 
   <section class="bg-[--primary]">
-    <div class="max-container max-xl:px-6 flex justify-between py-20 gap-8">
+    <div
+      class="max-container max-xl:px-6 flex justify-between py-20 max-md:py-8 gap-8 max-lg:flex-col max-md:text-center"
+    >
       <div class="basis-1/2">
-        <h6 class="opacity-40 text-white">
+        <h6 class="opacity-40 text-white max-md:py-4">
           Nurturing The Teacher in Every Parent
         </h6>
-        <h1 class="text-white pb-4">Welcome to Sunbird Speech Therapy!</h1>
+        <h1 class="text-white pb-4 max-md:text-4xl">
+          Welcome to Sunbird Speech Therapy!
+        </h1>
         <h6 class="text-white py-4">
           Your go-to provider for pediatric speech and language services and
           resources. In-home services available in Bay Area locations and online
           services available statewide.
         </h6>
-        <Button id="scheduleBtn" type="submit" class="my-6"
-          >Schedule a free consultation
-        </Button>
+        <div class="max-md:justify-center flex">
+          <Button id="scheduleBtn" type="submit" class="my-6"
+            >Schedule a free consultation
+          </Button>
+        </div>
       </div>
-      <div class="basis-1/2 aspect-square relative overflow-hidden">
+      <div
+        class="basis-1/2 aspect-square relative overflow-hidden max-lg:hidden"
+      >
         <Image src={hero} alt="hero_img" class="absolute -top-16" />
       </div>
     </div>
   </section>
+  <div class="basis-1/2 aspect-square relative overflow-hidden hidden max-lg:block">
+    <Image src={hero} alt="hero_img" class="absolute -top-16" />
+  </div>
 
   <!-- Services -->
 
   <section class="bg-[--secondary]" id="services">
-    <div class="max-container py-12">
-      <Image src={vector} alt="vector" class="py-6" />
+    <div class="max-container py-12 max-xl:px-6 max-md:text-center">
+      <div class="flex max-md:justify-center">
+        <Image src={vector} alt="vector" class="py-6" />
+      </div>
 
       <h2 class="text-[--primary-text] py-6">Services</h2>
 
-      <div class="flex gap-16">
+      <div class="flex gap-16 max-lg:gap-2 max-md:flex-col">
         <div class="p-6">
           <span
             class="material-symbols-outlined text-5xl text-[--primary-accent]"
@@ -205,18 +218,18 @@ import Calendly from "../components/Calendly.astro";
   <!-- <Questions /> -->
 
   <!-- Calendly -->
-   
+
   <section>
     <Calendly />
   </section>
 
-  <section class="py-12">
+  <!-- <section class="py-12">
     <div
       class="max-container py-16 flex justify-center bg-[--primary] rounded-2xl"
     >
       <Image src={calendly} alt="calendly_img" />
     </div>
-  </section>
+  </section> -->
 </Layout>
 <style>
   * {
