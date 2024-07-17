@@ -5,9 +5,9 @@ import Button from "./Button.astro";
 
 <nav class="">
   <div
-    class="w-full items-center flex justify-between flex-wrap p-4 max-w-screen-xl mx-auto max-container"
+    class="w-full items-center flex justify-between max-lg:flex-wrap p-4 max-w-screen-xl mx-auto max-container"
   >
-    <div class="flex justify-between max-sm:w-full items-center">
+    <div class="flex justify-between w-full items-center">
       <a href="/Sunbird">
         <h4 class="p-2 mt-4">Logo</h4>
       </a>
@@ -16,7 +16,7 @@ import Button from "./Button.astro";
       <button
         data-collapse-toggle="navbar-cta"
         type="button"
-        class="inline-flex items-center p-2 mt-4 w-10 h-10 justify-center text-sm text-[--primary-text] rounded-lg lg:hidden hover:bg-[--primary] focus:outline-none focus:ring-2 focus:ring-[--secondary-text]"
+        class="inline-flex items-center p-2 mt-4 w-10 h-10 justify-center text-sm text-[--primary-text] rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-[--primary]"
         aria-controls="navbar-cta"
         aria-expanded="false"
       >
@@ -32,7 +32,7 @@ import Button from "./Button.astro";
       id="navbar-cta"
     >
       <ul
-        class="flex font-medium p-4 lg:p-0 mt-2 border-2 rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 gap-2 max-md:shadow-xl w-full"
+        class="flex font-medium p-4 lg:p-0 mt-2 border-8 border-[--primary] rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 gap-2 max-md:shadow-xl w-full max-lg:flex-col"
       >
         <li>
           <a
@@ -82,6 +82,18 @@ import Button from "./Button.astro";
             >
           </a>
         </li>
+
+        <div
+        class="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse up"
+      >
+        <div class="max-lg:block hidden">
+          <a href="/EscoSupplies/contact"
+            ><Button id="scheduleBtn" isfilled theme="primary-accent">
+              Contact
+            </Button></a
+          >
+        </div>
+      </div>
       </ul>
 
       <div
