@@ -54,7 +54,7 @@ import Calendly from "../components/Calendly.astro";
         <Image src={vector} alt="vector" class="py-6" />
       </div>
 
-      <h2 class="text-[--primary-text] py-6">Services</h2>
+      <h2 class="text-[--primary-text] py-6 max-md:text-4xl">Services</h2>
 
       <div class="flex gap-16 max-lg:gap-2 max-md:flex-col">
         <div class="p-6">
@@ -115,16 +115,16 @@ import Calendly from "../components/Calendly.astro";
   <!-- Philosophy -->
 
   <section>
-    <div class="max-container py-16">
-      <div class="flex gap-8">
+    <div class="max-container py-16 max-md:py-0">
+      <div class="flex gap-8 max-md:flex-col">
         <div class="basis-1/2 overflow-hidden">
           <Image src={philosophy} alt="philosophy_img" class="h-full" />
         </div>
 
-        <div class="flex-col basis-1/2 justify-between gap-12">
-          <h4 class="capitalize text-[--primary-text] py-6">our philosophy</h4>
+        <div class="flex-col basis-1/2 justify-between gap-12 max-md:text-center max-xl:px-6 max-md:pb-16">
+          <h4 class="capitalize text-[--primary-text] py-6 max-md:text-4xl">our philosophy</h4>
 
-          <p class="py-4 text-[--secondary-text]">
+          <p class="py-4 text-[--secondary-text] max-md:text-base">
             At Sunbird, we are committed to helping every child build confidence
             through the art of effective communication. We firmly believe that a
             robust language foundation impacts far more than just speech; it
@@ -132,13 +132,13 @@ import Calendly from "../components/Calendly.astro";
             success.
           </p>
 
-          <p class="py-4 text-[--secondary-text]">
+          <p class="py-4 text-[--secondary-text] max-md:text-base">
             We empower each child to unlock their potential through play-based
             activities, creating a nurturing atmosphere that honors their unique
             personality and learning style.
           </p>
 
-          <p class="py-4 text-[--secondary-text]">
+          <p class="py-4 text-[--secondary-text] max-md:text-base">
             The essence of our approach lies in collaborating with parents to
             provide step-by-step guidance in supporting their child`s
             communication journey.
@@ -233,7 +233,7 @@ import Calendly from "../components/Calendly.astro";
 </Layout>
 <style>
   * {
-    /* border: 1px solid red; */
+    border: 1px solid red;
   }
 
   .material-symbols-outlined {
