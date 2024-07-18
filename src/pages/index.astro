@@ -151,18 +151,26 @@ import Calendly from "../components/Calendly.astro";
   <!-- About -->
 
   <section class="bg-[--primary]">
-    <div class="max-container py-16 flex gap-8">
-      <div class="flex-col basis-1/2 justify-between gap-12 pr-16">
-        <h2 class="text-white py-2">Meet Rana Barghouty</h2>
-        <h5 class="text-white pb-4">MA, CCC-SLP, LSLS Cert. AVT</h5>
-        <p class="py-4 text-white">
+    <div class="max-container py-16 flex gap-8 max-xl:px-6 max-md:flex-col">
+      <div class="flex-col basis-1/2 justify-between gap-12 pr-16 max-md:p-0 max-md:text-center">
+        <div class="">
+        <h2 class="text-white py-2 max-md:text-4xl">Meet <br class="min-md:hidden">Rana Barghouty</br></h2>
+        <h5 class="text-white pb-4 max-md:text-base opacity-75">MA, CCC-SLP, LSLS Cert. AVT</h5>
+        </div>
+
+
+        <div class="max-md:block hidden justify-between w-full pl-4">
+          <Image src={rana} alt="rana_img" class="w-full h-full" />
+        </div>
+
+        <p class="py-4 text-white max-md:text-base">
           Hello! I am a bilingual (English/Arabic) Speech-Language Pathologist
           and the founder of Sunbird Speech Therapy. Recognizing the unique
           journey of each child, I am committed to fostering a supportive
           environment where your child`s communication skills can flourish.
         </p>
 
-        <p class="py-4 text-white">
+        <p class="py-4 text-white max-md:text-base max-md:hidden">
           With over 10 years of experience, I`ve had the privilege of supporting
           children of all ages, from infants to young adults. My professional
           background encompasses early intervention programs, schools and
@@ -170,18 +178,18 @@ import Calendly from "../components/Calendly.astro";
           invaluable insights, which I integrate into my practice.
         </p>
 
-        <p class="py-4 text-white">
+        <p class="py-4 text-white max-md:text-base max-md:hidden">
           It`s an honor to be a part of your child`s developmental journey, and
           I look forward to contributing to their success alongside you!
         </p>
 
         <p class="flex mt-8">
           <a
-            class="body font-semibold text-white group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end"
-            href="/about"
+            class="body font-semibold text-white group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end max-md:justify-center"
+            href="Sunbird/about"
           >
             <span
-              class="bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out opacity-75 flex justify-end"
+              class="bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out opacity-75 max-md:text-base"
             >
               Read more about me →
             </span>
@@ -189,7 +197,7 @@ import Calendly from "../components/Calendly.astro";
         </p>
       </div>
 
-      <div class="basis-1/2 aspect-square relative overflow-hidden">
+      <div class="basis-1/2 aspect-square relative overflow-hidden max-md:hidden">
         <Image src={rana} alt="rana_img" class="w-full h-full" />
       </div>
     </div>
@@ -204,9 +212,11 @@ import Calendly from "../components/Calendly.astro";
   <!-- Testimonials -->
 
   <section class="bg-[--secondary]">
-    <div class="max-container py-12">
-      <Image src={vector} alt="vector" class="py-6" />
-      <h2 class="text-[--primary-text] py-6">Testimonials</h2>
+    <div class="max-container py-12 max-md:px-6">
+      <div class="flex max-md:justify-center">
+        <Image src={vector} alt="vector" class="py-6" />
+      </div>
+      <h2 class="text-[--primary-text] py-6 max-md:text-4xl max-md:text-center">Testimonials</h2>
       <div class="py-12">
         <Carousel />
       </div>
@@ -222,18 +232,10 @@ import Calendly from "../components/Calendly.astro";
   <section>
     <Calendly />
   </section>
-
-  <!-- <section class="py-12">
-    <div
-      class="max-container py-16 flex justify-center bg-[--primary] rounded-2xl"
-    >
-      <Image src={calendly} alt="calendly_img" />
-    </div>
-  </section> -->
 </Layout>
 <style>
   * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .material-symbols-outlined {
