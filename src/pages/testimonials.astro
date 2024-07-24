@@ -25,16 +25,16 @@ const metaData = {
                 data-carousel="static"
             >
                 <!-- Carousel wrapper -->
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                   
+                <div class="relative h-96 overflow-hidden rounded-lg md:h-96">
                     <!-- Item 1 -->
                     <div
                         class="hidden duration-700 ease-in-out"
                         data-carousel-item="active"
                     >
+                        <p class="w-1/2">hello there</p>
                         <img
                             src="/src/assets/images/test1.png"
-                            class="absolute block w-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            class="absolute block w-1/2 translate-x-1/4 -translate-y-1/2 top-1/2"
                             alt="..."
                         />
                     </div>
@@ -45,7 +45,7 @@ const metaData = {
                     >
                         <img
                             src="/src/assets/images/test2.png"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            class="absolute block w-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                             alt="..."
                         />
                     </div>
@@ -56,7 +56,7 @@ const metaData = {
                     >
                         <img
                             src="/src/assets/images/test3.png"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            class="absolute block w-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                             alt="..."
                         />
                     </div>
@@ -85,35 +85,35 @@ const metaData = {
                 </div>
                 <!-- Slider indicators -->
                 <div
-                    class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2"
+                    class="absolute z-30 flex -translate-x-1/2 space-x-0 rtl:space-x-reverse bottom-5 left-1/2"
                 >
                     <button
                         type="button"
-                        class="w-3 h-3 rounded-full"
+                        class="w-6 h-3"
                         aria-current="true"
                         aria-label="Slide 1"
                         data-carousel-slide-to="0"></button>
                     <button
                         type="button"
-                        class="w-3 h-3 rounded-full"
+                        class="w-6 h-3"
                         aria-current="false"
                         aria-label="Slide 2"
                         data-carousel-slide-to="1"></button>
                     <button
                         type="button"
-                        class="w-3 h-3 rounded-full"
+                        class="w-6 h-3"
                         aria-current="false"
                         aria-label="Slide 3"
                         data-carousel-slide-to="2"></button>
                     <button
                         type="button"
-                        class="w-3 h-3 rounded-full"
+                        class="w-6 h-3"
                         aria-current="false"
                         aria-label="Slide 4"
                         data-carousel-slide-to="3"></button>
                     <button
                         type="button"
-                        class="w-3 h-3 rounded-full"
+                        class="w-6 h-3"
                         aria-current="false"
                         aria-label="Slide 5"
                         data-carousel-slide-to="4"></button>
@@ -300,6 +300,6 @@ const metaData = {
 
 <style>
     * {
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 </style>
