@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import Calendly from "../components/Calendly.astro";
+import { test1, test2, test3 } from "../assets";
 import testimonials from "../data/testimonials.json";
 import TestimonialCard from "../components/TestimonialCard.astro";
 
@@ -15,7 +16,7 @@ const metaData = {
 <Layout title={metaData.title} metaDescription={metaData.description}>
     <section class="bg-[--secondary]">
         <div class="max-container py-16">
-            <h2>Testimonials</h2>
+            <h2 class="max-md:text-center max-md:text-2xl">Testimonials</h2>
 
             <!-- Carousel -->
 
@@ -31,12 +32,20 @@ const metaData = {
                         class="hidden duration-700 ease-in-out"
                         data-carousel-item="active"
                     >
-                        <p class="w-1/2">hello there</p>
-                        <img
+                        <div class="">
+                            <!-- <img
                             src="/src/assets/images/test1.png"
                             class="absolute block w-1/2 translate-x-1/4 -translate-y-1/2 top-1/2"
                             alt="..."
-                        />
+                        /> -->
+                            <Image
+                                src={test1}
+                                alt="test1"
+                                class=""
+                            />
+
+                            <p class="">hello there</p>
+                        </div>
                     </div>
                     <!-- Item 2 -->
                     <div
@@ -61,59 +70,69 @@ const metaData = {
                         />
                     </div>
                     <!-- Item 4 -->
-                    <!-- <div
+                    <div
                         class="hidden duration-700 ease-in-out"
                         data-carousel-item
                     >
-                        <img
+                    <Image
+                    src={test1}
+                    alt="test1"
+                    class="translate-x-3/4 overflow-hidden"
+                />
+                        <!-- <img
                             src="/docs/images/carousel/carousel-4.svg"
                             class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                             alt="..."
-                        />
-                    </div> -->
+                        /> -->
+                    </div>
                     <!-- Item 5 -->
-                    <!-- <div
+                    <div
                         class="hidden duration-700 ease-in-out"
                         data-carousel-item
                     >
-                        <img
+                        <!-- <img
                             src="/docs/images/carousel/carousel-5.svg"
                             class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                             alt="..."
-                        />
-                    </div> -->
+                        /> -->
+                        <Image
+                        src={test2}
+                        alt="test1"
+                        class="translate-x-2/4 overflow-hidden"
+                    />
+                    </div>
                 </div>
                 <!-- Slider indicators -->
                 <div
-                    class="absolute z-30 flex -translate-x-1/2 space-x-0 rtl:space-x-reverse bottom-5 left-1/2"
+                    class="absolute flex -translate-x-1/2 translate-y-14 space-x-0 rtl:space-x-reverse bottom-5 left-1/2 bg-[--secondary-accent]"
                 >
                     <button
                         type="button"
-                        class="w-6 h-3"
+                        class="w-14 h-2 max-md:w-8"
                         aria-current="true"
                         aria-label="Slide 1"
                         data-carousel-slide-to="0"></button>
                     <button
                         type="button"
-                        class="w-6 h-3"
+                        class="w-14 h-2 max-md:w-8"
                         aria-current="false"
                         aria-label="Slide 2"
                         data-carousel-slide-to="1"></button>
                     <button
                         type="button"
-                        class="w-6 h-3"
+                        class="w-14 h-2 max-md:w-8"
                         aria-current="false"
                         aria-label="Slide 3"
                         data-carousel-slide-to="2"></button>
                     <button
                         type="button"
-                        class="w-6 h-3"
+                        class="w-14 h-2 max-md:w-8"
                         aria-current="false"
                         aria-label="Slide 4"
                         data-carousel-slide-to="3"></button>
                     <button
                         type="button"
-                        class="w-6 h-3"
+                        class="w-14 h-2 max-md:w-8"
                         aria-current="false"
                         aria-label="Slide 5"
                         data-carousel-slide-to="4"></button>
@@ -300,6 +319,6 @@ const metaData = {
 
 <style>
     * {
-        /* border: 1px solid red; */
+        border: 1px solid red;
     }
 </style>
