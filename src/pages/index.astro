@@ -8,7 +8,7 @@ import Questions from "../components/Questions.astro";
 import Carousel from "../components/CarouselComponent.astro";
 import Quote from "../components/Quote.astro";
 import Calendly from "../components/Calendly.astro";
-import Accordion from "../components/Accordion.astro";
+import FAQ from "../components/FAQ.astro";
 ---
 
 <Layout title="Sunbird Speech Therapy">
@@ -240,7 +240,7 @@ import Accordion from "../components/Accordion.astro";
           Testimonials
         </h2>
         <div class="py-12">
-          <Carousel />
+          <!-- <Carousel /> -->
         </div>
       </div>
     </section>
@@ -248,7 +248,13 @@ import Accordion from "../components/Accordion.astro";
     <!-- FAQ -->
     <section class="bg-white">
       <div class="max-container py-12 max-xl:px-6">
-        <Accordion />
+        <div class="flex justify-between">
+          <h2>Common Questions</h2>
+          <h3>View all FAQs</h3>
+        </div>
+        <div class="m-8">
+          <FAQ />
+        </div>
       </div>
     </section>
 
