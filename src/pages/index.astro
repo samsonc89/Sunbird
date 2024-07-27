@@ -8,6 +8,7 @@ import Questions from "../components/Questions.astro";
 import Carousel from "../components/CarouselComponent.astro";
 import Quote from "../components/Quote.astro";
 import Calendly from "../components/Calendly.astro";
+import Accordion from "../components/Accordion.astro";
 ---
 
 <Layout title="Sunbird Speech Therapy">
@@ -169,100 +170,107 @@ import Calendly from "../components/Calendly.astro";
         <h2 class="text-white py-4 max-md:text-4xl max-xl:text-6xl">
           Meet <br class="min-lg:hidden" />Rana Barghouty
         </h2>
-      <h5 class="text-white pb-4 max-md:text-base opacity-75">
-        MA, CCC-SLP, LSLS Cert. AVT
-      </h5>
+        <h5 class="text-white pb-4 max-md:text-base opacity-75">
+          MA, CCC-SLP, LSLS Cert. AVT
+        </h5>
+
+        <div
+          class="max-xl:block hidden justify-between w-full max-md:pl-4 max-xl:pl-12"
+        >
+          <Image src={rana} alt="rana_img" class="w-full h-full" />
+        </div>
+
+        <p class="py-4 text-white max-md:text-base">
+          Hello! I am a bilingual (English/Arabic) Speech-Language Pathologist
+          and the founder of Sunbird Speech Therapy. Recognizing the unique
+          journey of each child, I am committed to fostering a supportive
+          environment where your child`s communication skills can flourish.
+        </p>
+
+        <p class="py-4 text-white max-md:text-base max-md:hidden">
+          With over 10 years of experience, I`ve had the privilege of supporting
+          children of all ages, from infants to young adults. My professional
+          background encompasses early intervention programs, schools and
+          pediatric hospitals. These varied settings have provided me with
+          invaluable insights, which I integrate into my practice.
+        </p>
+
+        <p class="py-4 text-white max-md:text-base max-md:hidden">
+          It`s an honor to be a part of your child`s developmental journey, and
+          I look forward to contributing to their success alongside you!
+        </p>
+
+        <p class="flex mt-8">
+          <a
+            class="body font-semibold text-white group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end max-xl:justify-center"
+            href="Sunbird/about"
+          >
+            <span
+              class="bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out opacity-75 max-md:text-base"
+            >
+              Read more about me →
+            </span>
+          </a>
+        </p>
+      </div>
 
       <div
-        class="max-xl:block hidden justify-between w-full max-md:pl-4 max-xl:pl-12"
+        class="basis-1/2 aspect-square relative overflow-hidden max-xl:hidden"
       >
         <Image src={rana} alt="rana_img" class="w-full h-full" />
       </div>
+    </div>
 
-      <p class="py-4 text-white max-md:text-base">
-        Hello! I am a bilingual (English/Arabic) Speech-Language Pathologist and
-        the founder of Sunbird Speech Therapy. Recognizing the unique journey of
-        each child, I am committed to fostering a supportive environment where
-        your child`s communication skills can flourish.
-      </p>
+    <!-- Quote -->
 
-      <p class="py-4 text-white max-md:text-base max-md:hidden">
-        With over 10 years of experience, I`ve had the privilege of supporting
-        children of all ages, from infants to young adults. My professional
-        background encompasses early intervention programs, schools and
-        pediatric hospitals. These varied settings have provided me with
-        invaluable insights, which I integrate into my practice.
-      </p>
+    <section>
+      <Quote />
+    </section>
 
-      <p class="py-4 text-white max-md:text-base max-md:hidden">
-        It`s an honor to be a part of your child`s developmental journey, and I
-        look forward to contributing to their success alongside you!
-      </p>
+    <!-- Testimonials -->
 
-      <p class="flex mt-8">
-        <a
-          class="body font-semibold text-white group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end max-xl:justify-center"
-          href="Sunbird/about"
+    <section class="bg-[--secondary]">
+      <div class="max-container py-12 max-xl:px-6">
+        <div class="flex max-md:justify-center">
+          <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
+        </div>
+        <h2
+          class="text-[--primary-text] py-6 max-md:text-4xl max-md:text-center max-md:p-4"
         >
-          <span
-            class="bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out opacity-75 max-md:text-base"
-          >
-            Read more about me →
-          </span>
-        </a>
-      </p>
-    </div>
+          Testimonials
+        </h2>
+        <div class="py-12">
+          <Carousel />
+        </div>
+      </div>
+    </section>
 
-    <div class="basis-1/2 aspect-square relative overflow-hidden max-xl:hidden">
-      <Image src={rana} alt="rana_img" class="w-full h-full" />
-    </div>
+    <!-- FAQ -->
+    <section class="bg-white">
+      <div class="max-container py-12 max-xl:px-6">
+        <Accordion />
+      </div>
+    </section>
+
+    <!-- <Questions /> -->
+
+    <!-- Calendly -->
+
+    <section>
+      <Calendly />
+    </section>
   </section>
+  <style>
+    * {
+      /* border: 1px solid red; */
+    }
 
-<!-- Quote -->
-
-<section>
-  <Quote />
-</section>
-
-<!-- Testimonials -->
-
-<section class="bg-[--secondary]">
-  <div class="max-container py-12 max-xl:px-6">
-    <div class="flex max-md:justify-center">
-      <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
-    </div>
-    <h2
-      class="text-[--primary-text] py-6 max-md:text-4xl max-md:text-center max-md:p-4"
-    >
-      Testimonials
-    </h2>
-    <div class="py-12">
-      <Carousel />
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-
-<!-- <Questions /> -->
-
-<!-- Calendly -->
-
-<section>
-  <Calendly />
-</section>
-
+    .material-symbols-outlined {
+      font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+    }
+  </style>
 </Layout>
-<style>
-  * {
-    /* border: 1px solid red; */
-  }
-
-  .material-symbols-outlined {
-    font-variation-settings:
-      "FILL" 0,
-      "wght" 400,
-      "GRAD" 0,
-      "opsz" 24;
-  }
-</style>
