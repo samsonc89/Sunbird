@@ -220,7 +220,7 @@ import FAQ from "../components/FAQ.astro";
         <Image src={rana} alt="rana_img" class="w-full h-full" />
       </div>
     </div>
-
+  </section>
     <!-- Quote -->
 
     <section>
@@ -248,9 +248,20 @@ import FAQ from "../components/FAQ.astro";
     <!-- FAQ -->
     <section class="bg-white">
       <div class="max-container py-12 max-xl:px-6">
-        <div class="flex justify-between">
-          <h2>Common Questions</h2>
-          <h3>View all FAQs</h3>
+        <div class="flex justify-between max-md:flex-col">
+          <h2 class="max-md:text-4xl max-md:text-center max-md:w-full">Common Questions</h2>
+          <h3 class="max-md:text-center">
+          <a
+            class="body font-semibold group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end max-xl:justify-center pt-2"
+            href="Sunbird/faq"
+          >
+            <span
+              class="bg-left-bottom bg-gradient-to-r from-gray-500 to-gray-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out opacity-75 max-md:text-2xl max-md:pt-2"
+            >
+              View all FAQ
+            </span>
+          </a>
+        </h3>
         </div>
         <div class="m-8">
           <FAQ />
@@ -267,7 +278,6 @@ import FAQ from "../components/FAQ.astro";
         <Calendly />
       </div>
     </section>
-  </section>
   <style>
     * {
       /* border: 1px solid red; */
