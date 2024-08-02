@@ -6,6 +6,10 @@ import test1 from "./images/test1.png";
 import test2 from "./images/test2.png";
 import test3 from "./images/test3.png";
 import calendly from "./images/calendly.png";
+import mh from "./images/MH.png";
+import kt from "./images/KT.png";
+import th from "./images/TH.png";
+import ds from "./images/DS.png";
 
 export {
     hero,
@@ -15,5 +19,9 @@ export {
     test1,
     test2,
     test3,
-    calendly
+    calendly,
+    mh,
+    kt,
+    th,
+    ds
 }
