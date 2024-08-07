@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import Calendly from "../components/Calendly.astro";
-import { kt, th, mh, ds } from "../assets";
+import { kt, th, mh, ds, rana } from "../assets";
 import testimonials from "../data/testimonials.json";
 import TestimonialCard from "../components/TestimonialCard.astro";
 import Carousel from "../components/CarouselComponent.astro";
@@ -37,8 +37,13 @@ const metaData = {
           >
             <div class="flex-col w-full">
               <div class="text-center p-24">
-                <Image src={kt} alt="test1" class="bg-center" width={200}
-                height={200} />
+                <Image
+                  src={kt}
+                  alt="test1"
+                  class="bg-center"
+                  width={200}
+                  height={200}
+                />
 
                 <h6 class="bg-white">
                   “We were so very lucky to work with Rana as early as my son's
@@ -161,6 +166,7 @@ const metaData = {
               </h6>
             </div>
           </div>
+
           <!-- Slider indicators -->
           <div
             class="absolute flex -translate-x-1/2 translate-y-14 space-x-0 rtl:space-x-reverse bottom-5 left-1/2 bg-[--secondary-accent]"
