@@ -1,65 +1,210 @@
 ---
 import testimonials from "../data/testimonials.json";
 import TestimonialCard from "../components/TestimonialCard.astro";
+import { Image } from "astro:assets";
+import { kt, th, mh, ds, rana } from "../assets";
 ---
 
-<section class="bg-[--secondary]">
-  <div class="flex-col overflow-hidden items-center gap-4 md:gap-8 w-full">
-    <div
-      id="carousel-example"
-      class="relative max-md:px-4 w-full lg:w-3/4 mx-auto"
-    >
+  <section class="bg-[--secondary]">
+
       <!-- Carousel -->
 
-
+      <div
+        id="indicators-carousel"
+        class="relative w-full"
+        data-carousel="static"
+      >
         <!-- Carousel wrapper -->
         <div
-          class="relative overflow-hidden lg:w-3/4 mx-auto rounded-lg min-h-[22rem]"
+          class="relative h-96 overflow-hidden rounded-lg md:h-96"
         >
-          {
-            testimonials.map((card, index) => (
-              <TestimonialCard
-                name={card.title}
-                text={card.content}
-                imagePath={card.imagePath}
-                altText={card.altText}
-                index={index + 1}
-              />
-            ))
-          }
+          <!-- Item 1 -->
+          <div
+            class="hidden duration-700 ease-in-out"
+            data-carousel-item="active"
+          >
+            <div class="py-4">
+              <div class="text-center px-24 items-center flex gap-6">
+                <Image
+                  src={kt}
+                  alt="test1"
+                  class="w-full"
+                  width={200}
+                  height={200}
+                />
+
+                <h6 class="bg-white p-12">
+                  “We were so very lucky to work with Rana as early as my son's
+                  diagnosis at seven months old. Things felt overwhelming at
+                  first but Rana was able to ease our minds with her deep and
+                  collective knowledge on speech delays as they pertain to his
+                  diagnosis. It was a comforting and rewarding experience to
+                  work with her, as we always felt cared for and knew our son
+                  was in great hands. She helped our family easily understand
+                  how we could help our son thrive outside of therapy and that
+                  has been priceless. Rana truly has a gift for helping kiddos
+                  realize what they are capable of, and she has dedicated
+                  herself to ensuring families can have meaningful communication
+                  with children who have speech differences or delays! We are
+                  proud to have known Rana, and we are so proud of the work she
+                  is doing in the community!”
+                </h6>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="py- max-lg:hidden">
+              <div class="text-center px-24 items-center flex gap-6">
+                <h6 class="bg-white p-12">
+                  “We were so very lucky to work with Rana as early as my son's
+                  diagnosis at seven months old. Things felt overwhelming at
+                  first but Rana was able to ease our minds with her deep and
+                  collective knowledge on speech delays as they pertain to his
+                  diagnosis. It was a comforting and rewarding experience to
+                  work with her, as we always felt cared for and knew our son
+                  was in great hands. She helped our family easily understand
+                  how we could help our son thrive outside of therapy and that
+                  has been priceless. Rana truly has a gift for helping kiddos
+                  realize what they are capable of, and she has dedicated
+                  herself to ensuring families can have meaningful communication
+                  with children who have speech differences or delays! We are
+                  proud to have known Rana, and we are so proud of the work she
+                  is doing in the community!”
+                </h6>
+
+                <Image
+                  src={th}
+                  alt="test1"
+                  class="w-1/2"
+                  width={300}
+                  height={300}
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="py- max-lg:hidden">
+              <div class="text-center px-24 items-center flex gap-6">
+                <Image src={mh} alt="test1" class="" width={300} height={300} />
+
+                <h6 class="bg-white p-12">
+                  “We were so very lucky to work with Rana as early as my son's
+                  diagnosis at seven months old. Things felt overwhelming at
+                  first but Rana was able to ease our minds with her deep and
+                  collective knowledge on speech delays as they pertain to his
+                  diagnosis. It was a comforting and rewarding experience to
+                  work with her, as we always felt cared for and knew our son
+                  was in great hands. She helped our family easily understand
+                  how we could help our son thrive outside of therapy and that
+                  has been priceless. Rana truly has a gift for helping kiddos
+                  realize what they are capable of, and she has dedicated
+                  herself to ensuring families can have meaningful communication
+                  with children who have speech differences or delays! We are
+                  proud to have known Rana, and we are so proud of the work she
+                  is doing in the community!”
+                </h6>
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="py- max-lg:hidden">
+              <div class="text-center px-24 items-center flex gap-6">
+                <h6 class="bg-white p-12">
+                  “We were so very lucky to work with Rana as early as my son's
+                  diagnosis at seven months old. Things felt overwhelming at
+                  first but Rana was able to ease our minds with her deep and
+                  collective knowledge on speech delays as they pertain to his
+                  diagnosis. It was a comforting and rewarding experience to
+                  work with her, as we always felt cared for and knew our son
+                  was in great hands. She helped our family easily understand
+                  how we could help our son thrive outside of therapy and that
+                  has been priceless. Rana truly has a gift for helping kiddos
+                  realize what they are capable of, and she has dedicated
+                  herself to ensuring families can have meaningful communication
+                  with children who have speech differences or delays! We are
+                  proud to have known Rana, and we are so proud of the work she
+                  is doing in the community!”
+                </h6>
+
+                <Image src={ds} alt="test1" class="" width={300} height={300} />
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="py- max-lg:hidden">
+              <div class="text-center px-24 items-center flex gap-6">
+                <Image src={mh} alt="test1" class="" width={300} height={300} />
+
+                <h6 class="bg-white p-12">
+                  “We were so very lucky to work with Rana as early as my son's
+                  diagnosis at seven months old. Things felt overwhelming at
+                  first but Rana was able to ease our minds with her deep and
+                  collective knowledge on speech delays as they pertain to his
+                  diagnosis. It was a comforting and rewarding experience to
+                  work with her, as we always felt cared for and knew our son
+                  was in great hands. She helped our family easily understand
+                  how we could help our son thrive outside of therapy and that
+                  has been priceless. Rana truly has a gift for helping kiddos
+                  realize what they are capable of, and she has dedicated
+                  herself to ensuring families can have meaningful communication
+                  with children who have speech differences or delays! We are
+                  proud to have known Rana, and we are so proud of the work she
+                  is doing in the community!”
+                </h6>
+              </div>
+            </div>
+          </div>
         </div>
+
         <!-- Slider indicators -->
         <div
-          class="absolute z-30 flex -translate-x-1/2 bottom-0 md:bottom-8 left-1/2 space-x-3 rtl:space-x-reverse"
+          class="absolute flex -translate-x-1/2 translate-y-14 space-x-0 rtl:space-x-reverse bottom-5 left-1/2 bg-[--secondary-accent]"
         >
           <button
-            id="carousel-indicator-1"
             type="button"
-            class="w-3 h-3 rounded-full"
+            class="w-14 h-2 max-md:w-8"
             aria-current="true"
-            aria-label="Slide 1"></button>
+            aria-label="Slide 1"
+            data-carousel-slide-to="0"></button>
           <button
-            id="carousel-indicator-2"
             type="button"
-            class="w-3 h-3 rounded-full"
+            class="w-14 h-2 max-md:w-8"
             aria-current="false"
-            aria-label="Slide 2"></button>
+            aria-label="Slide 2"
+            data-carousel-slide-to="1"></button>
           <button
-            id="carousel-indicator-3"
             type="button"
-            class="w-3 h-3 rounded-full"
+            class="w-14 h-2 max-md:w-8"
             aria-current="false"
-            aria-label="Slide 3"></button>
+            aria-label="Slide 3"
+            data-carousel-slide-to="2"></button>
+          <button
+            type="button"
+            class="w-14 h-2 max-md:w-8"
+            aria-current="false"
+            aria-label="Slide 4"
+            data-carousel-slide-to="3"></button>
+          <button
+            type="button"
+            class="w-14 h-2 max-md:w-8"
+            aria-current="false"
+            aria-label="Slide 5"
+            data-carousel-slide-to="4"></button>
         </div>
 
         <!-- Slider controls -->
         <button
           type="button"
-          class="absolute -top-10 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          id="data-carousel-prev"
+          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
         >
           <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-zinc-300 group-hover:bg-zinc-400 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-400 dark:bg-gray-800/30 group-hover:bg-gray-900/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
           >
             <svg
               class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
@@ -81,10 +226,10 @@ import TestimonialCard from "../components/TestimonialCard.astro";
         <button
           type="button"
           class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          id="data-carousel-next"
+          data-carousel-next
         >
           <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-zinc-300 group-hover:bg-zinc-400 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-400 dark:bg-gray-800/30 group-hover:bg-gray-900/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
           >
             <svg
               class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
@@ -104,106 +249,122 @@ import TestimonialCard from "../components/TestimonialCard.astro";
           </span>
         </button>
 
+        <script>
+          import { Carousel } from "flowbite";
+          import type {
+            CarouselItem,
+            CarouselOptions,
+            CarouselInterface,
+          } from "flowbite";
+          import type { InstanceOptions } from "flowbite";
 
-    <script>
-      import { Carousel } from "flowbite";
-      const carouselElement = document.getElementById("carousel-example");
+          const carouselElement = document.getElementById("carousel-example");
 
-      //Add and subtract items ass needed, just make sure to add to appropriate ID on the HTML
-      const items = [
-        {
-          position: 0,
-          el: document.getElementById("carousel-item-1") as HTMLElement,
-        },
-        {
-          position: 1,
-          el: document.getElementById("carousel-item-2") as HTMLElement,
-        },
-        {
-          position: 2,
-          el: document.getElementById("carousel-item-3") as HTMLElement,
-        },
-        {
-          position: 3,
-          el: document.getElementById("carousel-item-4") as HTMLElement,
-        },
-      ];
-
-      // options with default values
-      const options = {
-        defaultPosition: 0,
-        interval: 3000,
-
-        //Add and subtract items ass needed, just make sure to add to appropriate ID on the HTML
-        indicators: {
-          activeClasses: "bg-zinc-200",
-          inactiveClasses: "bg-zinc-400 hover:bg-zinc-300",
-          items: [
+          const items: CarouselItem[] = [
             {
               position: 0,
-              el: document.getElementById(
-                "carousel-indicator-1",
-              ) as HTMLElement,
+              el: document.getElementById("carousel-item-1") as HTMLElement,
             },
             {
               position: 1,
-              el: document.getElementById(
-                "carousel-indicator-2",
-              ) as HTMLElement,
+              el: document.getElementById("carousel-item-2") as HTMLElement,
             },
             {
               position: 2,
-              el: document.getElementById(
-                "carousel-indicator-3",
-              ) as HTMLElement,
+              el: document.getElementById("carousel-item-3") as HTMLElement,
             },
             {
               position: 3,
-              el: document.getElementById(
-                "carousel-indicator-4",
-              ) as HTMLElement,
+              el: document.getElementById("carousel-item-4") as HTMLElement,
             },
-          ],
-        },
-      };
+          ];
 
-      // instance options object
-      const instanceOptions = {
-        id: "carousel-example",
-        override: true,
-      };
+          // object options with default values
+          const options: CarouselOptions = {
+            defaultPosition: 1,
+            interval: 3000,
 
-      const carousel = new Carousel(
-        carouselElement,
-        items,
-        options,
-        instanceOptions,
-      );
+            indicators: {
+              activeClasses: "bg-white dark:bg-gray-800",
+              inactiveClasses:
+                "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800",
+              items: [
+                {
+                  position: 0,
+                  el: document.getElementById(
+                    "carousel-indicator-1",
+                  ) as HTMLElement,
+                },
+                {
+                  position: 1,
+                  el: document.getElementById(
+                    "carousel-indicator-2",
+                  ) as HTMLElement,
+                },
+                {
+                  position: 2,
+                  el: document.getElementById(
+                    "carousel-indicator-3",
+                  ) as HTMLElement,
+                },
+                {
+                  position: 3,
+                  el: document.getElementById(
+                    "carousel-indicator-4",
+                  ) as HTMLElement,
+                },
+              ],
+            },
 
-      //This starts the cycle
-      carousel.cycle();
+            // callback functions
+            onNext: () => {
+              console.log("next slider item is shown");
+            },
+            onPrev: () => {
+              console.log("previous slider item is shown");
+            },
+            onChange: () => {
+              console.log("new slider item has been shown");
+            },
+          };
 
-      const $prevButton = document.getElementById(
-        "data-carousel-prev",
-      ) as HTMLElement;
-      const $nextButton = document.getElementById(
-        "data-carousel-next",
-      ) as HTMLElement;
+          // instance options object
+          const instanceOptions: InstanceOptions = {
+            id: "carousel-example",
+            override: true,
+          };
 
-      $prevButton.addEventListener("click", () => {
-        carousel.prev();
-      });
+          const carousel: CarouselInterface = new Carousel(
+            carouselElement,
+            items,
+            options,
+            instanceOptions,
+          );
 
-      $nextButton.addEventListener("click", () => {
-        carousel.next();
-      });
-    </script>
-  </div>
-</div>
-</section>
+          carousel.cycle();
+
+          // set event listeners for prev and next buttons
+          const $prevButton = document.getElementById(
+            "data-carousel-prev",
+          ) as HTMLElement;
+          const $nextButton = document.getElementById(
+            "data-carousel-next",
+          ) as HTMLElement;
+
+          $prevButton.addEventListener("click", () => {
+            carousel.prev();
+          });
+
+          $nextButton.addEventListener("click", () => {
+            carousel.next();
+          });
+        </script>
+      </div>
+    </div>
+
 
 <style>
   * {
-    /* border: 1px solid red; */
+    border: 1px solid red;
   }
 </style>
