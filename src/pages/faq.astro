@@ -1,14 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
 import Calendly from "../components/Calendly.astro";
-import { kt, th, mh, ds, rana } from "../assets";
-import testimonials from "../data/testimonials.json";
-import TestimonialCard from "../components/TestimonialCard.astro";
-import Carousel from "../components/CarouselComponent.astro";
-
+import FAQ from "../components/FAQ.astro";
+import { Image } from "astro:assets";
+import { vector } from "../assets";
 const metaData = {
-    title: "Testimonials | Sunbird Speech Therapy",
+    title: "FAQ | Sunbird Speech Therapy",
     description:
         "We'll walk you through step-by-step on how we help you lower your out-of-pocket costs to do your energy efficieny upgrades.",
 };
@@ -16,279 +13,22 @@ const metaData = {
 
 <Layout title={metaData.title} metaDescription={metaData.description}>
     <section class="bg-[--secondary]">
-        <div class="max-container my-16">
-            <h2 class="max-md:text-center max-md:text-2xl">Testimonials</h2>
-
-            <!-- Carousel -->
-
-            <div
-                id="indicators-carousel"
-                class="relative w-full"
-                data-carousel="static"
-            >
-                <!-- Carousel wrapper -->
-                <div class="relative h-96 rounded-lg md:h-96 overflow-hidden">
-                    <div class="">
-                        <!-- Item 1 -->
-                        <div
-                            class="hidden duration-700 ease-in-out"
-                            data-carousel-item="active"
-                        >
-
-                        </div>
-
-                        <!-- Item 2 -->
-                        <div
-                            class="hidden duration-700 ease-in-out"
-                            data-carousel-item
-                        >
-                            <div class="max-lg:hidden"></div>
-                        </div>
-
-                        <!-- Item 3 -->
-                        <div
-                            class="hidden duration-700 ease-in-out"
-                            data-carousel-item
-                        >
-                            <div class="max-lg:hidden"></div>
-                        </div>
-
-                        <!-- Item 4 -->
-                        <div
-                            class="hidden duration-700 ease-in-out"
-                            data-carousel-item
-                        >
-                            <div class="max-lg:hidden"></div>
-                        </div>
-
-                        <!-- Item 5 -->
-                        <div
-                            class="hidden duration-700 ease-in-out"
-                            data-carousel-item
-                        >
-                            <div class="max-lg:hidden"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slider indicators -->
-                <div
-                    class="absolute flex -translate-x-1/2 translate-y-8 space-x-0 rtl:space-x-reverse bottom-1 left-1/2 bg-[--secondary-accent]"
-                >
-                    <button
-                        type="button"
-                        class="w-14 h-2 max-md:w-8"
-                        aria-current="true"
-                        aria-label="Slide 1"
-                        data-carousel-slide-to="0"></button>
-                    <button
-                        type="button"
-                        class="w-14 h-2 max-md:w-8"
-                        aria-current="false"
-                        aria-label="Slide 2"
-                        data-carousel-slide-to="1"></button>
-                    <button
-                        type="button"
-                        class="w-14 h-2 max-md:w-8"
-                        aria-current="false"
-                        aria-label="Slide 3"
-                        data-carousel-slide-to="2"></button>
-                    <button
-                        type="button"
-                        class="w-14 h-2 max-md:w-8"
-                        aria-current="false"
-                        aria-label="Slide 4"
-                        data-carousel-slide-to="3"></button>
-                    <button
-                        type="button"
-                        class="w-14 h-2 max-md:w-8"
-                        aria-current="false"
-                        aria-label="Slide 5"
-                        data-carousel-slide-to="4"></button>
-                </div>
-
-                <!-- Slider controls -->
-                <button
-                    type="button"
-                    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                    data-carousel-prev
-                >
-                    <span
-                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-400 dark:bg-gray-800/30 group-hover:bg-gray-900/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-                    >
-                        <svg
-                            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 6 10"
-                        >
-                            <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 1 1 5l4 4"></path>
-                        </svg>
-                        <span class="sr-only">Previous</span>
-                    </span>
-                </button>
-                <button
-                    type="button"
-                    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                    data-carousel-next
-                >
-                    <span
-                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-400 dark:bg-gray-800/30 group-hover:bg-gray-900/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-                    >
-                        <svg
-                            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 6 10"
-                        >
-                            <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="m1 9 4-4-4-4"></path>
-                        </svg>
-                        <span class="sr-only">Next</span>
-                    </span>
-                </button>
-
-                <script>
-                    import { Carousel } from "flowbite";
-                    import type {
-                        CarouselItem,
-                        CarouselOptions,
-                        CarouselInterface,
-                    } from "flowbite";
-                    import type { InstanceOptions } from "flowbite";
-
-                    const carouselElement =
-                        document.getElementById("carousel-example");
-
-                    const items: CarouselItem[] = [
-                        {
-                            position: 0,
-                            el: document.getElementById(
-                                "carousel-item-1",
-                            ) as HTMLElement,
-                        },
-                        {
-                            position: 1,
-                            el: document.getElementById(
-                                "carousel-item-2",
-                            ) as HTMLElement,
-                        },
-                        {
-                            position: 2,
-                            el: document.getElementById(
-                                "carousel-item-3",
-                            ) as HTMLElement,
-                        },
-                        {
-                            position: 3,
-                            el: document.getElementById(
-                                "carousel-item-4",
-                            ) as HTMLElement,
-                        },
-                    ];
-
-                    // object options with default values
-                    const options: CarouselOptions = {
-                        defaultPosition: 1,
-                        interval: 3000,
-
-                        indicators: {
-                            activeClasses: "bg-white dark:bg-gray-800",
-                            inactiveClasses:
-                                "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800",
-                            items: [
-                                {
-                                    position: 0,
-                                    el: document.getElementById(
-                                        "carousel-indicator-1",
-                                    ) as HTMLElement,
-                                },
-                                {
-                                    position: 1,
-                                    el: document.getElementById(
-                                        "carousel-indicator-2",
-                                    ) as HTMLElement,
-                                },
-                                {
-                                    position: 2,
-                                    el: document.getElementById(
-                                        "carousel-indicator-3",
-                                    ) as HTMLElement,
-                                },
-                                {
-                                    position: 3,
-                                    el: document.getElementById(
-                                        "carousel-indicator-4",
-                                    ) as HTMLElement,
-                                },
-                            ],
-                        },
-
-                        // callback functions
-                        onNext: () => {
-                            console.log("next slider item is shown");
-                        },
-                        onPrev: () => {
-                            console.log("previous slider item is shown");
-                        },
-                        onChange: () => {
-                            console.log("new slider item has been shown");
-                        },
-                    };
-
-                    // instance options object
-                    const instanceOptions: InstanceOptions = {
-                        id: "carousel-example",
-                        override: true,
-                    };
-
-                    const carousel: CarouselInterface = new Carousel(
-                        carouselElement,
-                        items,
-                        options,
-                        instanceOptions,
-                    );
-
-                    carousel.cycle();
-
-                    // set event listeners for prev and next buttons
-                    const $prevButton = document.getElementById(
-                        "data-carousel-prev",
-                    ) as HTMLElement;
-                    const $nextButton = document.getElementById(
-                        "data-carousel-next",
-                    ) as HTMLElement;
-
-                    $prevButton.addEventListener("click", () => {
-                        carousel.prev();
-                    });
-
-                    $nextButton.addEventListener("click", () => {
-                        carousel.next();
-                    });
-                </script>
-            </div>
+        <div class="max-container py-12 max-xl:px-6">
+          <div class="justify-between flex-col">
+            <div class="flex max-md:justify-center">
+                <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
+              </div>
+            <h2 class="max-md:text-4xl max-md:text-center max-md:w-full text-[--primary-text] py-6 max-md:py-4">Common Questions</h2>
+            
+          </div>
+          <div class="m-8">
+            <FAQ />
+          </div>
         </div>
+      </section>
 
         <section>
-            <Carousel />
+            <Calendly />
         </section>
-    </section>
-
-    <style>
-        * {
-            border: 1px solid red;
-        }
-    </style>
+    </div>
 </Layout>
