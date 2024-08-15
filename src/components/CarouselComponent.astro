@@ -5,362 +5,337 @@ import { Image } from "astro:assets";
 import { kt, th, mh, ds, rana } from "../assets";
 ---
 
-  <section class="bg-[--secondary]">
+<section class="bg-[--secondary]">
+  <!-- Carousel -->
 
-      <!-- Carousel -->
+  <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative h-96 overflow-hidden rounded-lg md:h-96">
+      <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <div class="py-4">
+          <div class="text-center px-24 items-center flex gap-6">
+            <Image
+              src={kt}
+              alt="test1"
+              class="w-full"
+              width={200}
+              height={200}
+            />
 
-      <div
-        id="indicators-carousel"
-        class="relative w-full"
-        data-carousel="static"
-      >
-        <!-- Carousel wrapper -->
-        <div
-          class="relative h-96 overflow-hidden rounded-lg md:h-96"
-        >
-          <!-- Item 1 -->
-          <div
-            class="hidden duration-700 ease-in-out"
-            data-carousel-item="active"
-          >
-            <div class="py-4">
-              <div class="text-center px-24 items-center flex gap-6">
-                <Image
-                  src={kt}
-                  alt="test1"
-                  class="w-full"
-                  width={200}
-                  height={200}
-                />
-
-                <h6 class="bg-white p-12">
-                  “We were so very lucky to work with Rana as early as my son's
-                  diagnosis at seven months old. Things felt overwhelming at
-                  first but Rana was able to ease our minds with her deep and
-                  collective knowledge on speech delays as they pertain to his
-                  diagnosis. It was a comforting and rewarding experience to
-                  work with her, as we always felt cared for and knew our son
-                  was in great hands. She helped our family easily understand
-                  how we could help our son thrive outside of therapy and that
-                  has been priceless. Rana truly has a gift for helping kiddos
-                  realize what they are capable of, and she has dedicated
-                  herself to ensuring families can have meaningful communication
-                  with children who have speech differences or delays! We are
-                  proud to have known Rana, and we are so proud of the work she
-                  is doing in the community!”
-                </h6>
-              </div>
-            </div>
+            <h6 class="bg-white p-12">
+              “Rana is a creative and caring speech therapist. She worked for
+              two years with my toddler aged daughter creating activities that
+              engaged my child to help her develop her speech pronunciation.
+              Rana worked wonderfully to engage us in activities to then
+              practice and further cement the areas of speech that needed more
+              practice. She was also great at providing extra resources and
+              learning materials to seek out different services as we
+              progressed. I would recommend Rana to anyone whose child needs
+              help to improve their speech.” ~KT
+            </h6>
           </div>
-          <!-- Item 2 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="py-8 max-lg:hidden">
-              <div class="text-center px-24 items-center flex gap-6">
-                <h6 class="bg-white p-12">
-                  “We were so very lucky to work with Rana as early as my son's
-                  diagnosis at seven months old. Things felt overwhelming at
-                  first but Rana was able to ease our minds with her deep and
-                  collective knowledge on speech delays as they pertain to his
-                  diagnosis. It was a comforting and rewarding experience to
-                  work with her, as we always felt cared for and knew our son
-                  was in great hands. She helped our family easily understand
-                  how we could help our son thrive outside of therapy and that
-                  has been priceless. Rana truly has a gift for helping kiddos
-                  realize what they are capable of, and she has dedicated
-                  herself to ensuring families can have meaningful communication
-                  with children who have speech differences or delays! We are
-                  proud to have known Rana, and we are so proud of the work she
-                  is doing in the community!”
-                </h6>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <div class="py-8 max-lg:hidden">
+          <div class="text-center px-24 items-center flex gap-6">
+            <h6 class="bg-white p-12">
+              “We had the pleasure of working with Rana for nearly three years
+              receiving early intervention speech services. She made an
+              invaluable impact on my son’s speech and language development; she
+              is especially skilled in providing services and resources for
+              children with language delays. I’ve worked with multiple speech
+              therapy providers both personally and professionally, but Rana’s
+              patience, knowledge and genuineness make her stand out among the
+              rest. I’d highly recommend her to anyone seeking quality and
+              effective speech services.” ~TH
+            </h6>
 
-                <div class="w-full">
-                <Image
-                  src={th}
-                  alt="test1"
-                />
-              </div>
-            </div>
-            </div>
-          </div>
-          <!-- Item 3 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="py- max-lg:hidden">
-              <div class="text-center px-24 items-center flex gap-6">
-                <Image src={mh} alt="test1" class="" width={300} height={300} />
-
-                <h6 class="bg-white p-12">
-                  “We were so very lucky to work with Rana as early as my son's
-                  diagnosis at seven months old. Things felt overwhelming at
-                  first but Rana was able to ease our minds with her deep and
-                  collective knowledge on speech delays as they pertain to his
-                  diagnosis. It was a comforting and rewarding experience to
-                  work with her, as we always felt cared for and knew our son
-                  was in great hands. She helped our family easily understand
-                  how we could help our son thrive outside of therapy and that
-                  has been priceless. Rana truly has a gift for helping kiddos
-                  realize what they are capable of, and she has dedicated
-                  herself to ensuring families can have meaningful communication
-                  with children who have speech differences or delays! We are
-                  proud to have known Rana, and we are so proud of the work she
-                  is doing in the community!”
-                </h6>
-              </div>
-            </div>
-          </div>
-          <!-- Item 4 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="py- max-lg:hidden">
-              <div class="text-center px-24 items-center flex gap-6">
-                <h6 class="bg-white p-12">
-                  “We were so very lucky to work with Rana as early as my son's
-                  diagnosis at seven months old. Things felt overwhelming at
-                  first but Rana was able to ease our minds with her deep and
-                  collective knowledge on speech delays as they pertain to his
-                  diagnosis. It was a comforting and rewarding experience to
-                  work with her, as we always felt cared for and knew our son
-                  was in great hands. She helped our family easily understand
-                  how we could help our son thrive outside of therapy and that
-                  has been priceless. Rana truly has a gift for helping kiddos
-                  realize what they are capable of, and she has dedicated
-                  herself to ensuring families can have meaningful communication
-                  with children who have speech differences or delays! We are
-                  proud to have known Rana, and we are so proud of the work she
-                  is doing in the community!”
-                </h6>
-
-                <Image src={ds} alt="test1" class="" width={300} height={300} />
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 5 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="py- max-lg:hidden">
-              <div class="text-center px-24 items-center flex gap-6">
-                <Image src={mh} alt="test1" class="" width={300} height={300} />
-
-                <h6 class="bg-white p-12">
-                  “We were so very lucky to work with Rana as early as my son's
-                  diagnosis at seven months old. Things felt overwhelming at
-                  first but Rana was able to ease our minds with her deep and
-                  collective knowledge on speech delays as they pertain to his
-                  diagnosis. It was a comforting and rewarding experience to
-                  work with her, as we always felt cared for and knew our son
-                  was in great hands. She helped our family easily understand
-                  how we could help our son thrive outside of therapy and that
-                  has been priceless. Rana truly has a gift for helping kiddos
-                  realize what they are capable of, and she has dedicated
-                  herself to ensuring families can have meaningful communication
-                  with children who have speech differences or delays! We are
-                  proud to have known Rana, and we are so proud of the work she
-                  is doing in the community!”
-                </h6>
-              </div>
+            <div class="w-full">
+              <Image
+                src={th}
+                alt="test1"
+                class="object-cover w-full h-48"
+              />
             </div>
           </div>
         </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <div class="py- max-lg:hidden">
+          <div class="text-center px-24 items-center flex gap-6">
+            <Image src={mh} alt="test1" class="" width={300} height={300} />
 
-        <!-- Slider indicators -->
-        <div
-          class="absolute flex -translate-x-1/2 translate-y-14 space-x-0 rtl:space-x-reverse bottom-5 left-1/2 bg-[--secondary-accent]"
-        >
-          <button
-            type="button"
-            class="w-14 h-2 max-md:w-8"
-            aria-current="true"
-            aria-label="Slide 1"
-            data-carousel-slide-to="0"></button>
-          <button
-            type="button"
-            class="w-14 h-2 max-md:w-8"
-            aria-current="false"
-            aria-label="Slide 2"
-            data-carousel-slide-to="1"></button>
-          <button
-            type="button"
-            class="w-14 h-2 max-md:w-8"
-            aria-current="false"
-            aria-label="Slide 3"
-            data-carousel-slide-to="2"></button>
-          <button
-            type="button"
-            class="w-14 h-2 max-md:w-8"
-            aria-current="false"
-            aria-label="Slide 4"
-            data-carousel-slide-to="3"></button>
-          <button
-            type="button"
-            class="w-14 h-2 max-md:w-8"
-            aria-current="false"
-            aria-label="Slide 5"
-            data-carousel-slide-to="4"></button>
+            <h6 class="bg-white p-12">
+              "My daughter began working with Rana at 6 months old after being
+              diagnosed with unilateral sensorineural hearing loss. Rana's calm
+              and kind demeanor immediately put my daughter at ease. As a
+              parent, Rana listened to my concerns and presented clear and
+              achievable goals that involved our whole family. We talked not
+              only about our "homework" but also about my daughter's treatments
+              and what options were available to her. Rana was an advocate,
+              teacher and friend to my daughter and myself. My daughter is now
+              thriving in kindergarten and I attribute much of her success and
+              growth to our time with Rana." ~MH
+            </h6>
+          </div>
         </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <div class="py- max-lg:hidden">
+          <div class="text-center px-24 items-center flex gap-6">
+            <h6 class="bg-white p-12">
+              “Our son was diagnosed with bilateral moderate sensorineural
+              hearing loss as a newborn. We were in the middle of a pandemic and
+              feeling overwhelmed about raising a baby in quarantine, let alone
+              all the services our new baby would require. Rana was our first
+              speech therapy provider and immediately helped to ease our
+              anxieties. She provided excellent education, both for our son and
+              for us as parents. She went above and beyond her requirements,
+              teaching us strategies and techniques to help our son succeed. She
+              was patient, calm, and connected with us in a way that went beyond
+              once a week therapy. Our son recently completed a comprehensive
+              speech and language evaluation in preschool and received
+              outstanding scores. Rana gave us the best foundation for learning,
+              and we credit much of our son’s success to her teaching and
+              guidance!” ~DS
+            </h6>
 
-        <!-- Slider controls -->
-        <button
-          type="button"
-          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-prev
-        >
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-400 dark:bg-gray-800/30 group-hover:bg-gray-900/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-          >
-            <svg
-              class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 1 1 5l4 4"></path>
-            </svg>
-            <span class="sr-only">Previous</span>
-          </span>
-        </button>
-        <button
-          type="button"
-          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-next
-        >
-          <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-400 dark:bg-gray-800/30 group-hover:bg-gray-900/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-          >
-            <svg
-              class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 9 4-4-4-4"></path>
-            </svg>
-            <span class="sr-only">Next</span>
-          </span>
-        </button>
+            <Image src={ds} alt="test1" class="" width={300} height={300} />
+          </div>
+        </div>
+      </div>
 
-        <script>
-          import { Carousel } from "flowbite";
-          import type {
-            CarouselItem,
-            CarouselOptions,
-            CarouselInterface,
-          } from "flowbite";
-          import type { InstanceOptions } from "flowbite";
+      <!-- Item 5 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <div class="py- max-lg:hidden">
+          <div class="text-center px-24 items-center flex gap-6">
+            <Image src={mh} alt="test1" class="" width={300} height={300} />
 
-          const carouselElement = document.getElementById("carousel-example");
-
-          const items: CarouselItem[] = [
-            {
-              position: 0,
-              el: document.getElementById("carousel-item-1") as HTMLElement,
-            },
-            {
-              position: 1,
-              el: document.getElementById("carousel-item-2") as HTMLElement,
-            },
-            {
-              position: 2,
-              el: document.getElementById("carousel-item-3") as HTMLElement,
-            },
-            {
-              position: 3,
-              el: document.getElementById("carousel-item-4") as HTMLElement,
-            },
-          ];
-
-          // object options with default values
-          const options: CarouselOptions = {
-            defaultPosition: 1,
-            interval: 3000,
-
-            indicators: {
-              activeClasses: "bg-white dark:bg-gray-800",
-              inactiveClasses:
-                "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800",
-              items: [
-                {
-                  position: 0,
-                  el: document.getElementById(
-                    "carousel-indicator-1",
-                  ) as HTMLElement,
-                },
-                {
-                  position: 1,
-                  el: document.getElementById(
-                    "carousel-indicator-2",
-                  ) as HTMLElement,
-                },
-                {
-                  position: 2,
-                  el: document.getElementById(
-                    "carousel-indicator-3",
-                  ) as HTMLElement,
-                },
-                {
-                  position: 3,
-                  el: document.getElementById(
-                    "carousel-indicator-4",
-                  ) as HTMLElement,
-                },
-              ],
-            },
-
-            // callback functions
-            onNext: () => {
-              console.log("next slider item is shown");
-            },
-            onPrev: () => {
-              console.log("previous slider item is shown");
-            },
-            onChange: () => {
-              console.log("new slider item has been shown");
-            },
-          };
-
-          // instance options object
-          const instanceOptions: InstanceOptions = {
-            id: "carousel-example",
-            override: true,
-          };
-
-          const carousel: CarouselInterface = new Carousel(
-            carouselElement,
-            items,
-            options,
-            instanceOptions,
-          );
-
-          carousel.cycle();
-
-          // set event listeners for prev and next buttons
-          const $prevButton = document.getElementById(
-            "data-carousel-prev",
-          ) as HTMLElement;
-          const $nextButton = document.getElementById(
-            "data-carousel-next",
-          ) as HTMLElement;
-
-          $prevButton.addEventListener("click", () => {
-            carousel.prev();
-          });
-
-          $nextButton.addEventListener("click", () => {
-            carousel.next();
-          });
-        </script>
+            <h6 class="bg-white p-12">
+              “We were so very lucky to work with Rana as early as my son's
+              diagnosis at seven months old. Things felt overwhelming at first
+              but Rana was able to ease our minds with her deep and collective
+              knowledge on speech delays as they pertain to his diagnosis. It
+              was a comforting and rewarding experience to work with her, as we
+              always felt cared for and knew our son was in great hands. She
+              helped our family easily understand how we could help our son
+              thrive outside of therapy and that has been priceless. Rana truly
+              has a gift for helping kiddos realize what they are capable of,
+              and she has dedicated herself to ensuring families can have
+              meaningful communication with children who have speech differences
+              or delays! We are proud to have known Rana, and we are so proud of
+              the work she is doing in the community!” -WH
+            </h6>
+          </div>
+        </div>
       </div>
     </div>
 
+    <!-- Slider indicators -->
+    <div
+      class="absolute flex -translate-x-1/2 translate-y-14 space-x-0 rtl:space-x-reverse bottom-5 left-1/2 bg-[--secondary-accent]"
+    >
+      <button
+        type="button"
+        class="w-14 h-2 max-md:w-8"
+        aria-current="true"
+        aria-label="Slide 1"
+        data-carousel-slide-to="0"></button>
+      <button
+        type="button"
+        class="w-14 h-2 max-md:w-8"
+        aria-current="false"
+        aria-label="Slide 2"
+        data-carousel-slide-to="1"></button>
+      <button
+        type="button"
+        class="w-14 h-2 max-md:w-8"
+        aria-current="false"
+        aria-label="Slide 3"
+        data-carousel-slide-to="2"></button>
+      <button
+        type="button"
+        class="w-14 h-2 max-md:w-8"
+        aria-current="false"
+        aria-label="Slide 4"
+        data-carousel-slide-to="3"></button>
+      <button
+        type="button"
+        class="w-14 h-2 max-md:w-8"
+        aria-current="false"
+        aria-label="Slide 5"
+        data-carousel-slide-to="4"></button>
+    </div>
+
+    <!-- Slider controls -->
+    <button
+      type="button"
+      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-400 dark:bg-gray-800/30 group-hover:bg-gray-900/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 1 1 5l4 4"></path>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button
+      type="button"
+      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-400 dark:bg-gray-800/30 group-hover:bg-gray-900/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 9 4-4-4-4"></path>
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+
+    <script>
+      import { Carousel } from "flowbite";
+      import type {
+        CarouselItem,
+        CarouselOptions,
+        CarouselInterface,
+      } from "flowbite";
+      import type { InstanceOptions } from "flowbite";
+
+      const carouselElement = document.getElementById("carousel-example");
+
+      const items: CarouselItem[] = [
+        {
+          position: 0,
+          el: document.getElementById("carousel-item-1") as HTMLElement,
+        },
+        {
+          position: 1,
+          el: document.getElementById("carousel-item-2") as HTMLElement,
+        },
+        {
+          position: 2,
+          el: document.getElementById("carousel-item-3") as HTMLElement,
+        },
+        {
+          position: 3,
+          el: document.getElementById("carousel-item-4") as HTMLElement,
+        },
+      ];
+
+      // object options with default values
+      const options: CarouselOptions = {
+        defaultPosition: 1,
+        interval: 3000,
+
+        indicators: {
+          activeClasses: "bg-white dark:bg-gray-800",
+          inactiveClasses:
+            "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800",
+          items: [
+            {
+              position: 0,
+              el: document.getElementById(
+                "carousel-indicator-1",
+              ) as HTMLElement,
+            },
+            {
+              position: 1,
+              el: document.getElementById(
+                "carousel-indicator-2",
+              ) as HTMLElement,
+            },
+            {
+              position: 2,
+              el: document.getElementById(
+                "carousel-indicator-3",
+              ) as HTMLElement,
+            },
+            {
+              position: 3,
+              el: document.getElementById(
+                "carousel-indicator-4",
+              ) as HTMLElement,
+            },
+          ],
+        },
+
+        // callback functions
+        onNext: () => {
+          console.log("next slider item is shown");
+        },
+        onPrev: () => {
+          console.log("previous slider item is shown");
+        },
+        onChange: () => {
+          console.log("new slider item has been shown");
+        },
+      };
+
+      // instance options object
+      const instanceOptions: InstanceOptions = {
+        id: "carousel-example",
+        override: true,
+      };
+
+      const carousel: CarouselInterface = new Carousel(
+        carouselElement,
+        items,
+        options,
+        instanceOptions,
+      );
+
+      carousel.cycle();
+
+      // set event listeners for prev and next buttons
+      const $prevButton = document.getElementById(
+        "data-carousel-prev",
+      ) as HTMLElement;
+      const $nextButton = document.getElementById(
+        "data-carousel-next",
+      ) as HTMLElement;
+
+      $prevButton.addEventListener("click", () => {
+        carousel.prev();
+      });
+
+      $nextButton.addEventListener("click", () => {
+        carousel.next();
+      });
+    </script>
+  </div>
+</section>
 
 <style>
   * {
