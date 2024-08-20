@@ -24,13 +24,18 @@ const metaData = {
 
       <!-- Carousel -->
 
-      <div class="max-md:my-6 flex flex-col max-lg:gap-4">
+      <div class="max-md:my-6 flex-col max-lg:gap-4 grid grid-cols-2 gap-8">
         <!-- Testimonial 1-->
         <div
-          class="flex flex-col lg:flex-row-reverse shadow-2xl rounded-3xl overflow-hidden lg:mt-20 bg-white"
+          class="flex rounded-3xl overflow-hidden gap-4 flex-col"
         >
-          <div class="flex-1">
-            <h6 class="bg-white p-10">
+
+        <div class="max-md:hidden flex items-center justify-center ">
+          <Image src={kt} alt="Service-4" class="h-56 rounded-full" width={300} />
+        </div>
+
+          <div class="flex-1 shadow-2xl">
+            <h6 class="bg-white p-10 rounded-3xl">
               “Rana is a creative and caring speech therapist. She worked for
               two years with my toddler aged daughter creating activities that
               engaged my child to help her develop her speech pronunciation.
@@ -40,22 +45,20 @@ const metaData = {
               learning materials to seek out different services as we
               progressed. I would recommend Rana to anyone whose child needs
               help to improve their speech.” ~KT
-              <!-- <div class="font-bold flex justify-end p-0">
-                    <br />-WH
-                  </div> -->
             </h6>
-          </div>
-          <div class="max-md:hidden">
-            <Image src={kt} alt="Service-4" class="w-full object-fit h-52" />
           </div>
         </div>
 
         <!-- Testimonial 2-->
-
         <div
-          class="flex flex-col lg:flex-row shadow-2xl rounded-3xl overflow-hidden lg:mt-20 bg-white"
+          class="flex shadow-2xl rounded-3xl overflow-hidden gap-4 flex-col"
         >
-          <div class="text-wrapper flex-1">
+
+        <div class="max-md:hidden flex items-center justify-center">
+          <Image src={ds} alt="Service-4" class="h-56" width={300} />
+        </div>
+
+          <div class="flex-1">
             <h6 class="bg-white p-10">
               “Our son was diagnosed with bilateral moderate sensorineural
               hearing loss as a newborn. We were in the middle of a pandemic and
@@ -71,13 +74,7 @@ const metaData = {
               outstanding scores. Rana gave us the best foundation for learning,
               and we credit much of our son’s success to her teaching and
               guidance!” ~DS
-              <!-- <div class="font-bold flex justify-end p-0">
-                    <br />-WH
-                  </div> -->
             </h6>
-          </div>
-          <div class="lg:w-5/12 max-md:hidden flex-1 w-full object-cover h-48">
-            <Image src={ds} alt="Service-4" class="max-lg:w-full" />
           </div>
         </div>
 
@@ -127,9 +124,6 @@ const metaData = {
               teacher and friend to my daughter and myself. My daughter is now
               thriving in kindergarten and I attribute much of her success and
               growth to our time with Rana." ~MH
-              <!-- <div class="font-bold flex justify-end p-0">
-                    <br />-WH
-                  </div> -->
             </h6>
           </div>
           <div class="max-md:hidden h-full">
@@ -178,6 +172,6 @@ const metaData = {
 
   <style>
     * {
-      /* border: 1px solid red; */
+      border: 1px solid red;
     }
   </style>
