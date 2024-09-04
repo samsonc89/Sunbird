@@ -3,19 +3,26 @@ import testimonials from "../data/testimonials.json";
 import TestimonialCard from "../components/TestimonialCard.astro";
 import { Image } from "astro:assets";
 import { kt, th, mh, ds, rana } from "../assets";
+import { Carousel } from "flowbite";
 ---
 
 <section class="bg-[--secondary]">
   <!-- Carousel -->
 
-  <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+  <div id="indicators-carousel" class="relative w-full h-96 max-md:h-[36rem] overflow-x-auto cursor-grab" data-carousel="static">
     <!-- Carousel wrapper -->
-    <div class="relative h-96 overflow-hidden rounded-lg md:h-96">
+    <div class="relative overflow-hidden h-full rounded-lg">
       <!-- Item 1 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
         <div class="bg-white h-full flex items-center justify-center">
-          <div class="text-center px-24 items-center flex gap-6">
-            <Image src={kt} alt="test1" class="aspect-square max-md:hidden" width={300} height={300} />
+          <div class="text-center px-24 max-sm:p-6 items-center flex gap-6">
+            <Image
+              src={kt}
+              alt="test1"
+              class="aspect-square max-lg:hidden"
+              width={300}
+              height={300}
+            />
 
             <h6 class="py-12">
               “Rana is a creative and caring speech therapist. She worked for
@@ -34,7 +41,7 @@ import { kt, th, mh, ds, rana } from "../assets";
       <!-- Item 2 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <div class="bg-white h-full flex items-center justify-center">
-          <div class="text-center px-24 max-md:px-20 items-center flex gap-6">
+          <div class="text-center px-24 max-sm:p-6 items-center flex gap-6">
             <h6 class="py-12">
               “Our son was diagnosed with bilateral moderate sensorineural
               hearing loss as a newborn. We were in the middle of a pandemic and
@@ -52,7 +59,13 @@ import { kt, th, mh, ds, rana } from "../assets";
               guidance!” ~DS
             </h6>
 
-            <Image src={ds} alt="test1" class="aspect-square max-md:hidden" width={300} height={300} />
+            <Image
+              src={ds}
+              alt="test1"
+              class="aspect-square max-lg:hidden"
+              width={300}
+              height={300}
+            />
           </div>
         </div>
       </div>
@@ -60,20 +73,25 @@ import { kt, th, mh, ds, rana } from "../assets";
       <!-- Item 3 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <div class="bg-white h-full flex items-center justify-center">
-          <div class="text-center px-24 items-center flex gap-6">
-
-            <Image src={th} alt="test1" class="aspect-square max-md:hidden" width={300} height={300} />
+          <div class="text-center px-24 max-sm:p-6 items-center flex gap-6">
+            <Image
+              src={th}
+              alt="test1"
+              class="aspect-square max-lg:hidden"
+              width={300}
+              height={300}
+            />
 
             <h6 class="bg-white py-12">
               “We had the pleasure of working with Rana for nearly three years
-              receiving early intervention speech services. She made an invaluable
-              impact on my son’s speech and language development; she is
-              especially skilled in providing services and resources for children
-              with language delays. I’ve worked with multiple speech therapy
-              providers both personally and professionally, but Rana’s patience,
-              knowledge and genuineness make her stand out among the rest. I’d
-              highly recommend her to anyone seeking quality and effective speech
-              services.” ~TH
+              receiving early intervention speech services. She made an
+              invaluable impact on my son’s speech and language development; she
+              is especially skilled in providing services and resources for
+              children with language delays. I’ve worked with multiple speech
+              therapy providers both personally and professionally, but Rana’s
+              patience, knowledge and genuineness make her stand out among the
+              rest. I’d highly recommend her to anyone seeking quality and
+              effective speech services.” ~TH
             </h6>
           </div>
         </div>
@@ -81,27 +99,32 @@ import { kt, th, mh, ds, rana } from "../assets";
       <!-- Item 4 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <div class="bg-white h-full flex items-center justify-center">
-          <div class="text-center px-24 items-center flex gap-6">
+          <div class="text-center px-24 items-center flex gap-6 max-sm:p-6">
             <h6 class="bg-white py-12">
               "My daughter began working with Rana at 6 months old after being
-            diagnosed with unilateral sensorineural hearing loss. Rana's calm
-            and kind demeanor immediately put my daughter at ease. As a parent,
-            Rana listened to my concerns and presented clear and achievable
-            goals that involved our whole family. We talked not only about our
-            "homework" but also about my daughter's treatments and what options
-            were available to her. Rana was an advocate, teacher and friend to
-            my daughter and myself. My daughter is now thriving in kindergarten
-            and I attribute much of her success and growth to our time with
-            Rana." ~MH
+              diagnosed with unilateral sensorineural hearing loss. Rana's calm
+              and kind demeanor immediately put my daughter at ease. As a
+              parent, Rana listened to my concerns and presented clear and
+              achievable goals that involved our whole family. We talked not
+              only about our "homework" but also about my daughter's treatments
+              and what options were available to her. Rana was an advocate,
+              teacher and friend to my daughter and myself. My daughter is now
+              thriving in kindergarten and I attribute much of her success and
+              growth to our time with Rana." ~MH
             </h6>
 
-            <Image src={mh} alt="test1" class="aspect-square max-md:hidden" width={300} height={300} />
+            <Image
+              src={mh}
+              alt="test1"
+              class="aspect-square max-lg:hidden"
+              width={300}
+              height={300}
+            />
           </div>
         </div>
       </div>
 
       <!-- Item 5 -->
-    
     </div>
 
     <!-- Slider indicators -->
@@ -137,7 +160,7 @@ import { kt, th, mh, ds, rana } from "../assets";
     <!-- Slider controls -->
     <button
       type="button"
-      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none "
       data-carousel-prev
     >
       <span
