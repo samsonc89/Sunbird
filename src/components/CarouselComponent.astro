@@ -11,7 +11,7 @@ import { Carousel } from "flowbite";
 
   <div id="indicators-carousel" class="relative w-full h-[24rem] max-md:h-[48rem] cursor-grab" data-carousel="static">
     <!-- Carousel wrapper -->
-    <div class="relative overflow-hidden h-full rounded-lg">
+    <div class="relative overflow-hidden h-full rounded-lg overflow-x-scroll">
       <!-- Item 1 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
         <div class="bg-white h-full flex items-center justify-center">
@@ -26,7 +26,7 @@ import { Carousel } from "flowbite";
             <Image
               src={kt}
               alt="test1"
-              class="hidden aspect-square max-lg:block"
+              class="hidden aspect-square max-lg:block rounded-full"
               width={200}
               height={100}
             />
@@ -76,7 +76,7 @@ import { Carousel } from "flowbite";
             <Image
               src={ds}
               alt="test1"
-              class="aspect-square max-lg:block"
+              class="aspect-square max-lg:block rounded-full"
               width={150}
               height={100}
             />
@@ -98,7 +98,7 @@ import { Carousel } from "flowbite";
             <Image
               src={th}
               alt="test1"
-              class="aspect-square max-lg:block hidden"
+              class="aspect-square max-lg:block hidden rounded-full"
               width={200}
               height={100}
             />
@@ -144,7 +144,7 @@ import { Carousel } from "flowbite";
             <Image
               src={mh}
               alt="test1"
-              class="aspect-square max-lg:block hidden"
+              class="aspect-square max-lg:block hidden rounded-full"
               width={200}
               height={100}
             />
@@ -188,7 +188,7 @@ import { Carousel } from "flowbite";
     <!-- Slider controls -->
     <button
       type="button"
-      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none "
+      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none max-md:hidden overflow-x-scroll"
       data-carousel-prev
     >
       <span
@@ -213,7 +213,7 @@ import { Carousel } from "flowbite";
     </button>
     <button
       type="button"
-      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none max-md:hidden overflow-x-scroll"
       data-carousel-next
     >
       <span
