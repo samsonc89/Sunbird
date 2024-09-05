@@ -32,9 +32,9 @@ import FAQ from "../components/FAQ.astro";
         </h6>
         <div class="max-md:justify-center flex">
           <a href="https://calendly.com/">
-          <Button id="scheduleBtn" type="submit" class="my-6"
-            >Schedule a free consultation
-          </Button>
+            <Button id="scheduleBtn" type="submit" class="my-6"
+              >Schedule a free consultation
+            </Button>
           </a>
         </div>
       </div>
@@ -223,36 +223,40 @@ import FAQ from "../components/FAQ.astro";
       </div>
     </div>
   </section>
-    <!-- Quote -->
+  <!-- Quote -->
 
-    <section>
-      <Quote />
-    </section>
+  <section>
+    <Quote />
+  </section>
 
-    <!-- Testimonials -->
+  <!-- Testimonials -->
 
-    <section class="bg-[--secondary]">
-      <div class="max-container py-12 max-xl:px-6">
-        <div class="flex max-md:justify-center">
-          <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
-        </div>
-        <h2
-          class="text-[--primary-text] py-6 max-md:text-4xl max-md:text-center max-md:p-4"
-        >
-          Testimonials
-        </h2>
-        <div class="py-12">
-          <Carousel />
-        </div>
+  <section class="bg-[--secondary]">
+    <div class="max-container py-12 max-xl:px-6">
+      <div class="flex max-md:justify-center">
+        <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
       </div>
-    </section>
+      <h2
+        class="text-[--primary-text] py-6 max-md:text-4xl max-md:text-center max-md:p-4"
+      >
+        Testimonials
+      </h2>
+      <div class="py-12">
+        <Carousel />
+      </div>
+    </div>
+  </section>
 
-    <!-- FAQ -->
-    <section class="bg-white">
-      <div class="max-container py-12 max-xl:px-6 max-md:px-0">
-        <div class="flex justify-between max-md:flex-col">
-          <h2 class="max-md:text-4xl max-md:text-center max-md:w-full text-[--primary-text]">Common Questions</h2>
-          <h3 class="max-md:text-center">
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="max-container py-12 max-xl:px-6 max-md:px-0">
+      <div class="flex justify-between max-md:flex-col">
+        <h2
+          class="max-md:text-4xl max-md:text-center max-md:w-full text-[--primary-text]"
+        >
+          Common Questions
+        </h2>
+        <h3 class="max-md:text-center">
           <a
             class="body font-semibold group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end max-xl:justify-center pt-2"
             href="Sunbird/faq"
@@ -264,22 +268,22 @@ import FAQ from "../components/FAQ.astro";
             </span>
           </a>
         </h3>
-        </div>
-        <div class="m-8 max-sm:m-4">
-          <FAQ />
-        </div>
       </div>
-    </section>
-
-    <!-- <Questions /> -->
-
-    <!-- Calendly -->
-
-    <section class="py-12 bg-white">
-      <div class="max-container">
-        <Calendly />
+      <div class="m-8 max-sm:m-4">
+        <FAQ />
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- <Questions /> -->
+
+  <!-- Calendly -->
+
+  <section class="py-12 bg-white">
+    <div class="max-container">
+      <Calendly />
+    </div>
+  </section>
   <style>
     * {
       /* border: 1px solid red; */
