@@ -9,9 +9,9 @@ import { Carousel } from "flowbite";
 <section class="bg-[--secondary]">
   <!-- Carousel -->
 
-  <div id="indicators-carousel" class="relative w-full h-[24rem] max-md:h-[48rem] cursor-grab" data-carousel="static">
+  <div id="indicators-carousel" class="relative w-full h-[24rem] max-md:h-[45rem] cursor-grab" data-carousel="static">
     <!-- Carousel wrapper -->
-    <div class="relative overflow-hidden h-full rounded-lg overflow-x-scroll">
+    <div class="relative overflow-hidden h-full rounded-lg">
       <!-- Item 1 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
         <div class="bg-white h-full flex items-center justify-center">
@@ -26,7 +26,7 @@ import { Carousel } from "flowbite";
             <Image
               src={kt}
               alt="test1"
-              class="hidden aspect-square max-lg:block rounded-full"
+              class="hidden aspect-square max-lg:block max-sm:rounded-full"
               width={200}
               height={100}
             />
@@ -48,8 +48,8 @@ import { Carousel } from "flowbite";
       <!-- Item 2 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <div class="bg-white h-full flex items-center justify-center">
-          <div class="text-center px-24 max-sm:p-6 items-center flex gap-6 max-sm:gap-0 max-md:flex-col-reverse">
-            <h6 class="py-12 max-sm:py-4">
+          <div class="text-center px-24 max-sm:p-6 items-center flex gap-6 max-lg:gap-2 max-lg:flex-col-reverse max-lg:p-2">
+            <h6 class="min-lg:py-12 max-sm:p-0 px-14">
               “Our son was diagnosed with bilateral moderate sensorineural
               hearing loss as a newborn. We were in the middle of a pandemic and
               feeling overwhelmed about raising a baby in quarantine, let alone
@@ -76,7 +76,7 @@ import { Carousel } from "flowbite";
             <Image
               src={ds}
               alt="test1"
-              class="aspect-square max-lg:block rounded-full"
+              class="aspect-square max-lg:block rounded-full hidden p-2"
               width={150}
               height={100}
             />
@@ -98,7 +98,7 @@ import { Carousel } from "flowbite";
             <Image
               src={th}
               alt="test1"
-              class="aspect-square max-lg:block hidden rounded-full"
+              class="aspect-square max-lg:block hidden max-sm:rounded-full"
               width={200}
               height={100}
             />
@@ -144,7 +144,7 @@ import { Carousel } from "flowbite";
             <Image
               src={mh}
               alt="test1"
-              class="aspect-square max-lg:block hidden rounded-full"
+              class="aspect-square max-lg:block hidden max-sm:rounded-full"
               width={200}
               height={100}
             />
