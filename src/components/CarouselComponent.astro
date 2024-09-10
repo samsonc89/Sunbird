@@ -360,92 +360,6 @@ import { Carousel } from "flowbite";
       $nextButton.addEventListener("click", () => {
         carousel.next();
       });
-    </script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.querySelector('[data-carousel="static"]') as HTMLElement | null;
-
-        // Check if the carousel element is found
-        if (!carousel) {
-      console.error('Carousel element not found!');
-      return;
-    }
-
-    const items = carousel.querySelectorAll<HTMLElement>('[data-carousel-item]');
-    const prevButton = carousel.querySelector('[data-carousel-prev]') as HTMLButtonElement | null;;
-    const nextButton = carousel.querySelector('[data-carousel-next]') as HTMLButtonElement | null;;
-
-    let currentIndex = 0;
-    let startX = 0;
-    let isDragging = false;
-
-    function showSlide(index: number): void {
-      items.forEach((item, i) => {
-        item.classList.toggle('hidden', i !== index);
-      });
-    }
-
-    function handleSwipeStart(event: TouchEvent | MouseEvent): void {
-      startX = event instanceof TouchEvent ? event.touches[0].clientX : event.clientX;
-      isDragging = true;
-    }
-
-    function handleSwipeMove(event: TouchEvent | MouseEvent): void {
-      if (!isDragging) return;
-      const moveX = event instanceof TouchEvent ? event.touches[0].clientX : event.clientX;
-      const diff = startX - moveX;
-
-      if (diff > 50) {
-        nextSlide();
-        isDragging = false;
-      } else if (diff < -50) {
-        prevSlide();
-        isDragging = false;
-      }
-    }
-
-    function handleSwipeEnd(): void {
-      isDragging = false;
-    }
-
-    function nextSlide(): void {
-      currentIndex = (currentIndex + 1) % items.length;
-      showSlide(currentIndex);
-    }
-
-    function prevSlide(): void {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      showSlide(currentIndex);
-    }
-
-    // Attach event listeners
-    items.forEach((item) => {
-      item.addEventListener('touchstart', handleSwipeStart);
-      item.addEventListener('touchmove', handleSwipeMove);
-      item.addEventListener('touchend', handleSwipeEnd);
-      item.addEventListener('mousedown', handleSwipeStart);
-      item.addEventListener('mousemove', handleSwipeMove);
-      item.addEventListener('mouseup', handleSwipeEnd);
-      item.addEventListener('mouseleave', handleSwipeEnd);
-    });
-
-    // Attach event listeners if buttons exist
-    if (prevButton) {
-      prevButton.addEventListener('click', prevSlide);
-    } else {
-      console.warn('Previous button not found!');
-    }
-
-    if (nextButton) {
-      nextButton.addEventListener('click', nextSlide);
-    } else {
-      console.warn('Next button not found!');
-    }
-
-    // Initialize carousel
-    showSlide(currentIndex);
-  });
 </script>
 
   </div>
@@ -453,6 +367,6 @@ import { Carousel } from "flowbite";
 
 <style>
   * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 </style>
