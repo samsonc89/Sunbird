@@ -93,41 +93,6 @@ import { Carousel } from "flowbite";
         </div>
       </div>
 
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <div class="bg-white h-full flex items-center justify-center">
-          <div
-            class="text-center px-24 max-sm:p-6 items-center flex gap-6 max-md:flex-col"
-          >
-            <Image
-              src={th}
-              alt="test1"
-              class="aspect-square max-lg:hidden"
-              width={300}
-              height={300}
-            />
-            <Image
-              src={th}
-              alt="test1"
-              class="aspect-square max-lg:block hidden max-sm:rounded-full"
-              width={200}
-              height={100}
-            />
-
-            <h6 class="bg-white py-12 max-sm:py-4">
-              “We had the pleasure of working with Rana for nearly three years
-              receiving early intervention speech services. She made an
-              invaluable impact on my son’s speech and language development; she
-              is especially skilled in providing services and resources for
-              children with language delays. I’ve worked with multiple speech
-              therapy providers both personally and professionally, but Rana’s
-              patience, knowledge and genuineness make her stand out among the
-              rest. I’d highly recommend her to anyone seeking quality and
-              effective speech services.” ~TH
-            </h6>
-          </div>
-        </div>
-      </div>
       <!-- Item 4 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <div class="bg-white h-full flex items-center justify-center">
@@ -161,6 +126,42 @@ import { Carousel } from "flowbite";
               width={200}
               height={100}
             />
+          </div>
+        </div>
+      </div>
+
+       <!-- Item 3 -->
+       <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <div class="bg-white h-full flex items-center justify-center">
+          <div
+            class="text-center px-24 max-sm:p-6 items-center flex gap-6 max-md:flex-col"
+          >
+            <Image
+              src={th}
+              alt="test1"
+              class="aspect-square max-lg:hidden"
+              width={300}
+              height={300}
+            />
+            <Image
+              src={th}
+              alt="test1"
+              class="aspect-square max-lg:block hidden max-sm:rounded-full"
+              width={200}
+              height={100}
+            />
+
+            <h6 class="bg-white py-12 max-sm:py-4">
+              “We had the pleasure of working with Rana for nearly three years
+              receiving early intervention speech services. She made an
+              invaluable impact on my son’s speech and language development; she
+              is especially skilled in providing services and resources for
+              children with language delays. I’ve worked with multiple speech
+              therapy providers both personally and professionally, but Rana’s
+              patience, knowledge and genuineness make her stand out among the
+              rest. I’d highly recommend her to anyone seeking quality and
+              effective speech services.” ~TH
+            </h6>
           </div>
         </div>
       </div>
@@ -360,6 +361,93 @@ import { Carousel } from "flowbite";
         carousel.next();
       });
     </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('[data-carousel="static"]') as HTMLElement | null;
+
+        // Check if the carousel element is found
+        if (!carousel) {
+      console.error('Carousel element not found!');
+      return;
+    }
+
+    const items = carousel.querySelectorAll<HTMLElement>('[data-carousel-item]');
+    const prevButton = carousel.querySelector('[data-carousel-prev]') as HTMLButtonElement | null;;
+    const nextButton = carousel.querySelector('[data-carousel-next]') as HTMLButtonElement | null;;
+
+    let currentIndex = 0;
+    let startX = 0;
+    let isDragging = false;
+
+    function showSlide(index: number): void {
+      items.forEach((item, i) => {
+        item.classList.toggle('hidden', i !== index);
+      });
+    }
+
+    function handleSwipeStart(event: TouchEvent | MouseEvent): void {
+      startX = event instanceof TouchEvent ? event.touches[0].clientX : event.clientX;
+      isDragging = true;
+    }
+
+    function handleSwipeMove(event: TouchEvent | MouseEvent): void {
+      if (!isDragging) return;
+      const moveX = event instanceof TouchEvent ? event.touches[0].clientX : event.clientX;
+      const diff = startX - moveX;
+
+      if (diff > 50) {
+        nextSlide();
+        isDragging = false;
+      } else if (diff < -50) {
+        prevSlide();
+        isDragging = false;
+      }
+    }
+
+    function handleSwipeEnd(): void {
+      isDragging = false;
+    }
+
+    function nextSlide(): void {
+      currentIndex = (currentIndex + 1) % items.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide(): void {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      showSlide(currentIndex);
+    }
+
+    // Attach event listeners
+    items.forEach((item) => {
+      item.addEventListener('touchstart', handleSwipeStart);
+      item.addEventListener('touchmove', handleSwipeMove);
+      item.addEventListener('touchend', handleSwipeEnd);
+      item.addEventListener('mousedown', handleSwipeStart);
+      item.addEventListener('mousemove', handleSwipeMove);
+      item.addEventListener('mouseup', handleSwipeEnd);
+      item.addEventListener('mouseleave', handleSwipeEnd);
+    });
+
+    // Attach event listeners if buttons exist
+    if (prevButton) {
+      prevButton.addEventListener('click', prevSlide);
+    } else {
+      console.warn('Previous button not found!');
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener('click', nextSlide);
+    } else {
+      console.warn('Next button not found!');
+    }
+
+    // Initialize carousel
+    showSlide(currentIndex);
+  });
+</script>
+
   </div>
 </section>
 
