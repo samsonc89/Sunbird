@@ -11,8 +11,10 @@ import { Carousel } from "flowbite";
 
   <div
     id="indicators-carousel"
-    class="relative w-full lg:h-[26rem] h-[45rem] cursor-grab"
+    class="relative w-full lg:h-56 h-56"
     data-carousel="static"
+    data-bs-touch="true"
+    data-bs-ride="carousel"
   >
     <!-- Carousel wrapper -->
     <div class="relative overflow-hidden h-full rounded-lg">
@@ -26,33 +28,8 @@ import { Carousel } from "flowbite";
               “Our son was diagnosed with bilateral moderate sensorineural
               hearing loss as a newborn. We were in the middle of a pandemic and
               feeling overwhelmed about raising a baby in quarantine, let alone
-              all the services our new baby would require. Rana was our first
-              speech therapy provider and immediately helped to ease our
-              anxieties. She provided excellent education, both for our son and
-              for us as parents. She went above and beyond her requirements,
-              teaching us strategies and techniques to help our son succeed. She
-              was patient, calm, and connected with us in a way that went beyond
-              once a week therapy. Our son recently completed a comprehensive
-              speech and language evaluation in preschool and received
-              outstanding scores. Rana gave us the best foundation for learning,
-              and we credit much of our son’s success to her teaching and
-              guidance!” ~DS
+              all the services our new baby would require.” <br>~DS</br>
             </h6>
-
-            <Image
-              src={ds}
-              alt="test1"
-              class="aspect-square max-lg:hidden"
-              width={300}
-              height={300}
-            />
-            <Image
-              src={ds}
-              alt="test1"
-              class="aspect-square max-lg:block rounded-full hidden p-2"
-              width={150}
-              height={100}
-            />
           </div>
         </div>
       </div>
@@ -63,31 +40,11 @@ import { Carousel } from "flowbite";
           <div
             class="text-center px-24 max-sm:p-4 items-center flex gap-6 max-md:flex-col"
           >
-            <Image
-              src={kt}
-              alt="test1"
-              class="aspect-square max-lg:hidden"
-              width={300}
-              height={300}
-            />
-            <Image
-              src={kt}
-              alt="test1"
-              class="hidden aspect-square max-lg:block max-sm:rounded-full"
-              width={200}
-              height={100}
-            />
-
             <h6 class="py-12 max-sm:py-4">
               “Rana is a creative and caring speech therapist. She worked for
               two years with my toddler aged daughter creating activities that
-              engaged my child to help her develop her speech pronunciation.
-              Rana worked wonderfully to engage us in activities to then
-              practice and further cement the areas of speech that needed more
-              practice. She was also great at providing extra resources and
-              learning materials to seek out different services as we
-              progressed. I would recommend Rana to anyone whose child needs
-              help to improve their speech.” ~KT
+              engaged my child to help her develop her speech pronunciation...
+               <br>~KT</br>
             </h6>
           </div>
         </div>
@@ -102,71 +59,33 @@ import { Carousel } from "flowbite";
             <h6 class="bg-white py-12 max-sm:py-6">
               "My daughter began working with Rana at 6 months old after being
               diagnosed with unilateral sensorineural hearing loss. Rana's calm
-              and kind demeanor immediately put my daughter at ease. As a
-              parent, Rana listened to my concerns and presented clear and
-              achievable goals that involved our whole family. We talked not
-              only about our "homework" but also about my daughter's treatments
-              and what options were available to her. Rana was an advocate,
-              teacher and friend to my daughter and myself. My daughter is now
-              thriving in kindergarten and I attribute much of her success and
-              growth to our time with Rana." ~MH
+              and kind demeanor immediately put my daughter at ease. <br>~MH</br>
             </h6>
-
-            <Image
-              src={mh}
-              alt="test1"
-              class="aspect-square max-lg:hidden"
-              width={300}
-              height={300}
-            />
-            <Image
-              src={mh}
-              alt="test1"
-              class="aspect-square max-lg:block hidden max-sm:rounded-full"
-              width={200}
-              height={100}
-            />
           </div>
         </div>
       </div>
 
-       <!-- Item 3 -->
-       <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <div class="bg-white h-full flex items-center justify-center">
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <div class="bg-black h-full flex items-center justify-center opacity-75">
           <div
-            class="text-center px-24 max-sm:p-6 items-center flex gap-6 max-md:flex-col"
+            class="text-center px-24 max-sm:p-6 items-center flex gap-6 max-lg:gap-2 max-lg:flex-col-reverse max-lg:p-2"
           >
-            <Image
-              src={th}
-              alt="test1"
-              class="aspect-square max-lg:hidden"
-              width={300}
-              height={300}
-            />
-            <Image
-              src={th}
-              alt="test1"
-              class="aspect-square max-lg:block hidden max-sm:rounded-full"
-              width={200}
-              height={100}
-            />
-
-            <h6 class="bg-white py-12 max-sm:py-4">
-              “We had the pleasure of working with Rana for nearly three years
-              receiving early intervention speech services. She made an
-              invaluable impact on my son’s speech and language development; she
-              is especially skilled in providing services and resources for
-              children with language delays. I’ve worked with multiple speech
-              therapy providers both personally and professionally, but Rana’s
-              patience, knowledge and genuineness make her stand out among the
-              rest. I’d highly recommend her to anyone seeking quality and
-              effective speech services.” ~TH
-            </h6>
+          <h3 class="max-md:text-center flex items-center">
+            <a
+              class="body font-semibold group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end max-xl:justify-center"
+              href="Sunbird/testimonials"
+            >
+              <span
+                class="opacity-75 max-md:text-2xl text-white"
+              >
+                Read More 
+              </span>
+              <span class="material-symbols-outlined flex text-white items-center opacity-75 max-md:text-2xl p-2 max-md:py-0"> arrow_circle_right</span>
+            </a>
+          </h3>
           </div>
         </div>
       </div>
-
-      <!-- Item 5 -->
     </div>
 
     <!-- Slider indicators -->
@@ -202,7 +121,7 @@ import { Carousel } from "flowbite";
     <!-- Slider controls -->
     <button
       type="button"
-      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none max-md:hidden overflow-x-scroll"
+      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none max-md:hidden"
       data-carousel-prev
     >
       <span
@@ -227,7 +146,7 @@ import { Carousel } from "flowbite";
     </button>
     <button
       type="button"
-      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none max-md:hidden overflow-x-scroll"
+      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none max-md:hidden"
       data-carousel-next
     >
       <span
