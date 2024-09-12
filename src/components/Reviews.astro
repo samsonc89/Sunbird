@@ -3,7 +3,7 @@
 import data from '../data/reviews.json';
 ---
 
-<section class="reviews-wrapper blur max-container">
+<section class="reviews-wrapper">
   <h2 class="sr-only">Reviews</h2>
   <div class="reviews-container container-xs">
     <button class="review-btn grid-sm review-btn--prev" id="prev" aria-label="Previous Review">
@@ -53,3 +53,8 @@ import data from '../data/reviews.json';
 
 <script src={('../js/reviews.js')} type="module"></script>
 
+<style>
+  * {
+    border: 1px solid red;
+  }
+</style>
