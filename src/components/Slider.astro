@@ -83,3 +83,39 @@
         </button>
     </div>
 </div> ```
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousel = document.querySelector('[data-carousel="static"]');
+      let startX: number | null = null; // Explicitly declare the type of startX as number or null
+  
+      // Start touch event
+      carousel?.addEventListener('touchstart', (event) => {
+        const e = event as TouchEvent; // Type cast the event to TouchEvent
+        startX = e.touches[0].clientX; // Set startX to the initial touch position
+      });
+  
+      // Move touch event
+      carousel?.addEventListener('touchmove', (event) => {
+        const e = event as TouchEvent; // Type cast the event to TouchEvent
+        if (startX === null) return; // Check if startX is set
+  
+        const endX = e.touches[0].clientX; // Get the current touch position
+        const diffX = startX - endX; // Calculate the difference in X direction
+  
+        // Check if swipe distance is significant enough (adjust sensitivity as needed)
+        if (Math.abs(diffX) > 50) { 
+          if (diffX > 0) {
+            // Swipe left
+            document.querySelector('[data-carousel-next]')?.dispatchEvent(new Event('click'));
+          } else {
+            // Swipe right
+            document.querySelector('[data-carousel-prev]')?.dispatchEvent(new Event('click'));
+          }
+          startX = null; // Reset startX after swipe
+        }
+      });
+    });
+  </script>
+  
+  
