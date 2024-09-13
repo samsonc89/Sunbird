@@ -1,85 +1,269 @@
-
-<div class="slider-container">
-  <div class="slide">
-    <img
-      src="https://lh3.googleusercontent.com/pw/ACtC-3cXixh8cfQDKrEJl4TqYD2Ijtzofy50AxJCr7iR3zpawbXtCFSb7pGJCdNsE0RRtxgsdoK-ymi18eI5ODXR3IOqcaoMoWKKxahKlsRfe9TAN2Nt6N_JD6t__N7FsOKPshBcyxfR2tNC-2_H5Xq_QeBpvw=w1560-h929-no?authuser=0"
-    />
-  </div>
-  <div class="slide">
-    <img
+<div
+  id="indicators-carousel"
+  class="relative w-full lg:h-56 h-56"
+  data-carousel="static"
+  data-bs-touch="true"
+>
+  <div class="slider-container relative overflow-hidden h-full">
+    <!-- Item 1 -->
+    <div class="slide">
+      <!-- <img
       src="https://lh3.googleusercontent.com/pw/ACtC-3eayS-NfeEWhiQgXGKtCxzzwHt3UgffDdc6fRexH9brTiw1bFXAjjziKpO1IXU5cBwvtTUlFAcZDmtEQeL5hqttZcyU2VftiYlFlIdFd23B7IUVi95gqEzoApUNOjKGrv7i9BCvMekeWiCySUA9BNyjig=w1320-h979-no?authuser=0"
-    />
-  </div>
-  <div class="slide">
-    <img
+    /> -->
+      <img src="" />
+      <h6 class="text-center rounded-lg">
+        “Rana is a creative and caring speech therapist. She worked for two
+        years with my toddler aged daughter creating activities that engaged my
+        child to help her develop her speech pronunciation...
+        <br />~KT
+      </h6>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="slide">
+      <!-- <img
+      src="https://lh3.googleusercontent.com/pw/ACtC-3eayS-NfeEWhiQgXGKtCxzzwHt3UgffDdc6fRexH9brTiw1bFXAjjziKpO1IXU5cBwvtTUlFAcZDmtEQeL5hqttZcyU2VftiYlFlIdFd23B7IUVi95gqEzoApUNOjKGrv7i9BCvMekeWiCySUA9BNyjig=w1320-h979-no?authuser=0"
+    /> -->
+      <img src="" />
+      <h6 class="">
+        “Rana is a creative and caring speech therapist. She worked for two
+        years with my toddler aged daughter creating activities that engaged my
+        child to help her develop her speech pronunciation...
+        <br />~KT
+      </h6>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="slide">
+      <!-- <img
       src="https://lh3.googleusercontent.com/pw/ACtC-3fBk1O3JzIeEa-rGZ7nDTH9A0fjEmUM9nMkkIIGpQvXR2xJ6bBuyhvxrIX1oZdELrwjbmY1zkIaNyAQ_FxJsC5Tg0Q9S3LTidjq7JkOSHbH5CGozAnKJixtEMTOT82abXeqK7Im8VfjXO2f42dUQBGmSw=w718-h979-no?authuser=0"
-    />
+    /> -->
+      <img src="" />
+      <h6 class="">
+        “Rana is a creative and caring speech therapist. She worked for two
+        years with my toddler aged daughter creating activities that engaged my
+        child to help her develop her speech pronunciation...
+        <br />~KT
+      </h6>
+    </div>
   </div>
-  <div class="slide">
+
+  <!-- Slider indicators -->
+  <div
+    class="absolute flex -translate-x-1/2 translate-y-14 space-x-0 rtl:space-x-reverse bottom-5 left-1/2 bg-[--secondary-accent]"
+  >
+    <button
+      type="button"
+      class="w-14 h-2 max-md:w-8"
+      aria-current="true"
+      aria-label="Slide 1"
+      data-carousel-slide-to="0"></button>
+    <button
+      type="button"
+      class="w-14 h-2 max-md:w-8"
+      aria-current="false"
+      aria-label="Slide 2"
+      data-carousel-slide-to="1"></button>
+    <button
+      type="button"
+      class="w-14 h-2 max-md:w-8"
+      aria-current="false"
+      aria-label="Slide 3"
+      data-carousel-slide-to="2"></button>
+    <button
+      type="button"
+      class="w-14 h-2 max-md:w-8"
+      aria-current="false"
+      aria-label="Slide 4"
+      data-carousel-slide-to="3"></button>
+  </div>
+</div>
+
+<!-- Item 4 -->
+<!-- <div class="slide">
     <img
       src="https://lh3.googleusercontent.com/pw/ACtC-3f0GPsI83b1C4PtLZkZL7nyL0L8i7YfoTAAR-5HPgyWHwe8P4--fa7bpPfK0IbJ7-fguR9nvFdFRM1f3Yj1QxWkyjzE1JY8B1Zs75WA65u55QpfTp8050mOEaGwTiFnHFQdl9C77rW0IJIXGtwFNwoe3Q=w1560-h878-no?authuser=0"
     />
-  </div>
-  <div class="slide">
+  </div> -->
+
+<!-- Item 5 -->
+<!-- <div class="slide">
     <img
       src="https://lh3.googleusercontent.com/pw/ACtC-3f7G2vV77t8yi03uKKgstftngql_GQ_ELtpnqQslSN0WL_PWriugNmMV47fFXqaNTPe6pGW8RcI8Q7tIua7f3a1vL4ynrGYsNvxX0zl8v1HSlsLkrEx6IORQIqTXAhJF_mTYi9_vh0_SmqxHIJVN4UcLQ=w719-h979-no?authuser=0"
       alt=""
     />
-  </div>
-</div>
+  </div> -->
 
+<script>
+  import { Carousel } from "flowbite";
+  import type {
+    CarouselItem,
+    CarouselOptions,
+    CarouselInterface,
+  } from "flowbite";
+  import type { InstanceOptions } from "flowbite";
+
+  const carouselElement = document.getElementById("carousel-example");
+
+  const items: CarouselItem[] = [
+    {
+      position: 0,
+      el: document.getElementById("carousel-item-1") as HTMLElement,
+    },
+    {
+      position: 1,
+      el: document.getElementById("carousel-item-2") as HTMLElement,
+    },
+    {
+      position: 2,
+      el: document.getElementById("carousel-item-3") as HTMLElement,
+    },
+    {
+      position: 3,
+      el: document.getElementById("carousel-item-4") as HTMLElement,
+    },
+  ];
+
+  // object options with default values
+  const options: CarouselOptions = {
+    defaultPosition: 1,
+    interval: 3000,
+
+    indicators: {
+      activeClasses: "bg-white dark:bg-gray-800",
+      inactiveClasses:
+        "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800",
+      items: [
+        {
+          position: 0,
+          el: document.getElementById("carousel-indicator-1") as HTMLElement,
+        },
+        {
+          position: 1,
+          el: document.getElementById("carousel-indicator-2") as HTMLElement,
+        },
+        {
+          position: 2,
+          el: document.getElementById("carousel-indicator-3") as HTMLElement,
+        },
+        {
+          position: 3,
+          el: document.getElementById("carousel-indicator-4") as HTMLElement,
+        },
+      ],
+    },
+
+    // callback functions
+    onNext: () => {
+      console.log("next slider item is shown");
+    },
+    onPrev: () => {
+      console.log("previous slider item is shown");
+    },
+    onChange: () => {
+      console.log("new slider item has been shown");
+    },
+  };
+
+  // instance options object
+  const instanceOptions: InstanceOptions = {
+    id: "carousel-example",
+    override: true,
+  };
+
+  const carousel: CarouselInterface = new Carousel(
+    carouselElement,
+    items,
+    options,
+    instanceOptions,
+  );
+
+  carousel.cycle();
+
+  // set event listeners for prev and next buttons
+  const $prevButton = document.getElementById(
+    "data-carousel-prev",
+  ) as HTMLElement;
+  const $nextButton = document.getElementById(
+    "data-carousel-next",
+  ) as HTMLElement;
+
+  $prevButton.addEventListener("click", () => {
+    carousel.prev();
+  });
+
+  $nextButton.addEventListener("click", () => {
+    carousel.next();
+  });
+</script>
 
 <script src="/src/js/slider.js"></script>
 
 <style>
-
-  .slider-container {
-  height: 100vh;
-  display: inline-flex;
-  overflow: hidden;
-  transform: translateX(0);
-  transition: transform 0.3s ease-out;
-  cursor: grab;
-}
-
-.slide {
-  max-height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  user-select: none;
+  * {
+    /* border: 1px solid red; */
   }
 
-.slide img {
-  max-width: 100%;
-  max-height: 60%;
-  transition: transform 0.3s ease-in-out;
-}
+  .slider-container {
+    max-height: 100%;
+    display: inline-flex;
+    overflow: hidden;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+    cursor: grab;
+  }
 
-.slide h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
+  .slide {
+    background-color: var(secondary);
+    max-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    user-select: none;
+  }
 
-.slide h4 {
-  font-size: 1.3rem;
-}
+  .slide img {
+    max-width: 100%;
+    max-height: 60%;
+    transition: transform 0.3s ease-in-out;
+  }
 
-.btn {
-  background-color: #444;
-  color: #fff;
-  text-decoration: none;
-  padding: 1rem 1.5rem;
-}
+  .slide h6 {
+    padding: 1rem;
+    background-color: white;
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
 
-.grabbing {
-  cursor: grabbing;
-}
+  .slide h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
 
-.grabbing .slide img {
-  transform: scale(0.9);
-}
+  .slide h4 {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+  }
+
+  .grabbing {
+    cursor: grabbing;
+  }
+
+  .grabbing .slide img {
+    transform: scale(0.9);
+  }
+
+  .grabbing .slide h6 {
+    transform: scale(0.9);
+  }
 </style>
