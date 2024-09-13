@@ -12,6 +12,7 @@ let isDragging = false,
   prevTranslate = 0,
   animationID = 0,
   currentIndex = 0
+  
 
 slides.forEach((slide, index) => {
   const slideImage = slide.querySelector('img')
@@ -88,3 +89,72 @@ function setPositionByIndex() {
   prevTranslate = currentTranslate
   setSliderPosition()
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.querySelector('.carousel'); // Get the carousel element
+  let isDown = false;  // Track if the user is dragging
+  let startX = 0;  // Initial X position when dragging starts
+  let scrollLeft = 0;  // Initial scroll position when dragging starts
+
+  // Mouse down event to start dragging
+  carousel.addEventListener('mousedown', (event) => {
+    isDown = true;  // Set dragging flag
+    carousel.classList.add('active');  // Optional: Add a class to indicate active dragging
+    startX = event.pageX - carousel.offsetLeft;  // Store initial X position
+    scrollLeft = carousel.scrollLeft;  // Store initial scroll position
+  });
+
+  // Mouse leave event to stop dragging
+  carousel.addEventListener('mouseleave', () => {
+    isDown = false;  // Reset dragging flag
+    carousel.classList.remove('active');  // Optional: Remove active class
+  });
+
+  // Mouse up event to stop dragging
+  carousel.addEventListener('mouseup', () => {
+    isDown = false;  // Reset dragging flag
+    carousel.classList.remove('active');  // Optional: Remove active class
+    snapToSlide(); // Snap to the closest slide after dragging
+  });
+
+  // Mouse move event to drag the carousel
+  carousel.addEventListener('mousemove', (event) => {
+    if (!isDown) return; // Only run if dragging
+    event.preventDefault();
+    const x = event.pageX - carousel.offsetLeft;  // Calculate current X position
+    const walk = (x - startX) * 2;  // Calculate distance to scroll
+    carousel.scrollLeft = scrollLeft - walk;  // Set new scroll position
+  });
+
+  // Touch start event for touch devices
+  carousel.addEventListener('touchstart', (event) => {
+    isDown = true;  // Set dragging flag
+    startX = event.touches[0].pageX - carousel.offsetLeft;  // Store initial X position for touch
+    scrollLeft = carousel.scrollLeft;  // Store initial scroll position
+  });
+
+  // Touch end event to stop dragging
+  carousel.addEventListener('touchend', () => {
+    isDown = false;  // Reset dragging flag
+    snapToSlide(); // Snap to the closest slide after dragging
+  });
+
+  // Touch move event to drag the carousel
+  carousel.addEventListener('touchmove', (event) => {
+    if (!isDown) return;  // Only run if dragging
+    const x = event.touches[0].pageX - carousel.offsetLeft;  // Calculate current X position for touch
+    const walk = (x - startX) * 2;  // Calculate distance to scroll
+    carousel.scrollLeft = scrollLeft - walk;  // Set new scroll position
+  });
+
+  // Function to snap to the closest slide
+  function snapToSlide() {
+    const slideWidth = carousel.clientWidth;  // Get the width of each slide
+    const scrollPosition = carousel.scrollLeft;  // Get the current scroll position
+    const closestSlide = Math.round(scrollPosition / slideWidth);  // Calculate the closest slide index
+    carousel.scrollTo({
+      left: closestSlide * slideWidth,  // Scroll to the closest slide
+      behavior: 'smooth'  // Use smooth scrolling
+    });
+  }
+});
