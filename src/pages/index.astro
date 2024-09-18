@@ -128,7 +128,11 @@ import Slider from "../components/Slider.astro";
     <div class="max-container py-16 max-md:py-0 max-xl:px-6">
       <div class="flex gap-8 max-md:flex-col">
         <div class="basis-1/2 overflow-hidden max-lg:hidden">
-          <Image src={philosophy} alt="philosophy_img" class="h-full" />
+          <Image
+            src={philosophy}
+            alt="philosophy_img"
+            class="h-full object-cover"
+          />
         </div>
 
         <div
