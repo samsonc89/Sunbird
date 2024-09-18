@@ -1,6 +1,7 @@
 ---
 import Image from "astro/components/Image.astro";
 import Button from "./Button.astro";
+import { logo } from "../assets";
 ---
 
 <nav class="">
@@ -9,7 +10,7 @@ import Button from "./Button.astro";
   >
     <div class="flex justify-between w-full items-center">
       <a href="/Sunbird">
-        <h4 class="p-2 mt-4">Logo</h4>
+        <Image src={logo} alt="logo" class="w-1/2 lg:w-2/5" />
       </a>
 
       <!-- Hamburger -->
@@ -32,7 +33,7 @@ import Button from "./Button.astro";
       id="navbar-cta"
     >
       <ul
-        class="flex font-medium p-4 lg:p-0 mt-2 border-8 border-[--primary] rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 gap-2 max-md:shadow-xl w-full max-lg:flex-col"
+        class="flex font-medium text-sm p-4 lg:p-0 mt-2 border-8 border-[--primary] rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 gap-2 max-md:shadow-xl w-full max-lg:flex-col"
       >
         <li>
           <a
