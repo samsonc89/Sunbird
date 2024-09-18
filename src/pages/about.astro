@@ -1,87 +1,82 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import rana from "../assets/images/rana.png";
+import rana from "../assets/images/rana.jpg";
 import Quote from "../components/Quote.astro";
 import Calendly from "../components/Calendly.astro";
 
 const metaData = {
-    title: "Meet Rana | Sunbird Speech Therapy",
-    description:
-        "We'll walk you through step-by-step on how we help you lower your out-of-pocket costs to do your energy efficieny upgrades.",
+  title: "Meet Rana | Sunbird Speech Therapy",
+  description:
+    "We'll walk you through step-by-step on how we help you lower your out-of-pocket costs to do your energy efficieny upgrades.",
 };
 ---
 
 <Layout title={metaData.title} metaDescription={metaData.description}>
-    <section class="bg-[--secondary]">
-        <div
-            class="max-container flex py-16 max-md:py-8 max-md:space-x-0 -space-x-48 max-xl:px-6 max-md:flex-col-reverse"
-        >
-            <div
-                class="my-24 max-md:my-0 bg-white opacity-85 py-6 px-4 basis-full"
-            >
-                <h2 class="max-md:text-center">Hi! I`m Rana.</h2>
-                <h5 class="max-md:text-base max-md:text-center">MA, CCC-SLP, LSLS Cert. AVT</h5>
-                <p class="py-4 max-md:text-base max-md:text-center">
-                    Hello! I am a bilingual (English/Arabic) Speech-Language
-                    Pathologist and the founder of Sunbird Speech Therapy.
-                    Recognizing the unique journey of each child, I am committed
-                    to fostering a supportive environment where your child`s
-                    communication skills can flourish.
-                </p>
+  <section class="bg-[--secondary]">
+    <div
+      class="max-container flex py-16 max-md:py-8 max-md:space-x-0 -space-x-48 max-xl:px-6 max-md:flex-col-reverse"
+    >
+      <div class="my-24 max-md:my-0 bg-white opacity-85 py-6 px-4 basis-full">
+        <h2 class="max-md:text-center">Hi! I`m Rana.</h2>
+        <h5 class="max-md:text-base max-md:text-center">
+          MA, CCC-SLP, LSLS Cert. AVT
+        </h5>
+        <p class="py-4 max-md:text-base max-md:text-center">
+          Hello! I am a bilingual (English/Arabic) Speech-Language Pathologist
+          and the founder of Sunbird Speech Therapy. Recognizing the unique
+          journey of each child, I am committed to fostering a supportive
+          environment where your child`s communication skills can flourish.
+        </p>
 
-                <p class="py-4 max-md:text-base max-md:text-center">
-                    With over 10 years of experience, I`ve had the privilege of
-                    supporting children of all ages, from infants to young
-                    adults. My professional background encompasses early
-                    intervention programs, schools and pediatric hospitals.
-                    These varied settings have provided me with invaluable
-                    insights, which I integrate into my practice.
-                </p>
-                <p class="py-4 max-md:text-base max-md:text-center">
-                    In 2021, I became a certified Listening and Spoken Language
-                    Specialist Auditory-Verbal Therapist (LSLS Cert. AVT),
-                    dedicated to helping children who are deaf and hard of
-                    hearing master spoken language. My specialization deepened
-                    my understanding of language acquisition and highlighted the
-                    crucial role of parent coaching for successful
-                    interventions. I aim to build collaborative and supportive
-                    partnerships with caregivers, offering practical and
-                    effective tools to enhance your child`s language
-                    development.
-                </p>
+        <p class="py-4 max-md:text-base max-md:text-center">
+          With over 10 years of experience, I`ve had the privilege of supporting
+          children of all ages, from infants to young adults. My professional
+          background encompasses early intervention programs, schools and
+          pediatric hospitals. These varied settings have provided me with
+          invaluable insights, which I integrate into my practice.
+        </p>
+        <p class="py-4 max-md:text-base max-md:text-center">
+          In 2021, I became a certified Listening and Spoken Language Specialist
+          Auditory-Verbal Therapist (LSLS Cert. AVT), dedicated to helping
+          children who are deaf and hard of hearing master spoken language. My
+          specialization deepened my understanding of language acquisition and
+          highlighted the crucial role of parent coaching for successful
+          interventions. I aim to build collaborative and supportive
+          partnerships with caregivers, offering practical and effective tools
+          to enhance your child`s language development.
+        </p>
 
-                <p class="py-4 max-md:text-base max-md:text-center">
-                    It`s an honor to be a part of your child`s developmental
-                    journey, and I look forward to contributing to their success
-                    alongside you!
-                </p>
+        <p class="py-4 max-md:text-base max-md:text-center">
+          It`s an honor to be a part of your child`s developmental journey, and
+          I look forward to contributing to their success alongside you!
+        </p>
 
-                <p class="p-4 max-md:text-base max-md:text-end">
-                    Warm regards, <br />Rana
-                </p>
-            </div>
+        <p class="p-4 max-md:text-base max-md:text-end">
+          Warm regards, <br />Rana
+        </p>
+      </div>
 
-            <div class="basis-full overflow-hidden max-md:py-6 pl-4">
-                <Image src={rana} alt="rana_img" class="w-full h-full" />
-            </div>
-        </div>
-    </section>
+      <div class="basis-full overflow-hidden max-md:py-6 pl-4">
+        <Image src={rana} alt="rana_img" class="h-full object-cover" />
+      </div>
+    </div>
+  </section>
 
-    <!-- Quote -->
+  <!-- Quote -->
 
-    <section>
-        <Quote />
-    </section>
-    <!-- Calendly -->
+  <section>
+    <Quote />
+  </section>
+  <!-- Calendly -->
 
-    <section>
-        <Calendly />
-    </section>
+  <section>
+    <Calendly />
+  </section>
 </Layout>
 
 <style>
-    * {
-        /* border: 1px solid red; */
-    }
+  * {
+    /* border: 1px solid red; */
+  }
 </style>
