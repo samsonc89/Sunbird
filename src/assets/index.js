@@ -7,7 +7,7 @@ import test2 from "./images/test2.png";
 import test3 from "./images/test3.png";
 import calendly from "./images/calendly.png";
 import mh from "./images/MH.png";
-import kt from "./images/KT.png";
+import kt from "./images/KT.jpg";
 import th from "./images/TH.png";
 import ds from "./images/DS.png";
 import logo from "./images/logo.png";
