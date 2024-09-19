@@ -6,6 +6,7 @@ import { kt, th, mh, ds, vector } from "../assets";
 import testimonials from "../data/testimonials.json";
 import TestimonialCard from "../components/TestimonialCard.astro";
 import Carousel from "../components/CarouselComponent.astro";
+import Test from "../components/Test.astro";
 
 const metaData = {
   title: "Testimonials | Sunbird Speech Therapy",
@@ -103,13 +104,15 @@ const metaData = {
       </div>
       </div>
 
-      <div class="py-12">
-        <Carousel />
-      </div>
-
       <section class="mt-8">
         <Calendly />
       </section>
+    </div>
+  </section>
+
+  <section>
+    <div class="overflow-hidden">
+      <Test />
     </div>
   </section>
 </Layout>
