@@ -208,7 +208,7 @@ import Test from "../components/Test.astro";
         <p class="flex mt-8">
           <a
             class="body font-semibold text-white group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end max-xl:justify-center"
-            href="Sunbird/about"
+            href="/Sunbird/about"
           >
             <span
               class="bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out opacity-75 max-md:text-base"
@@ -222,7 +222,7 @@ import Test from "../components/Test.astro";
       <div
         class="basis-1/2 aspect-square relative overflow-hidden max-xl:hidden"
       >
-        <Image src={rana} alt="rana_img" class="w-full h-full" />
+        <Image src={rana} alt="rana_img" class="h-full ogject-cover" />
       </div>
     </div>
   </section>
@@ -313,7 +313,9 @@ import Test from "../components/Test.astro";
             >
               View all FAQs
             </span>
-            <span class="material-symbols-outlined text-[--primary-text] pt-2"> arrow_right_alt </span>
+            <span class="material-symbols-outlined text-[--primary-text] pt-2">
+              arrow_right_alt
+            </span>
           </a>
         </h4>
       </div>
