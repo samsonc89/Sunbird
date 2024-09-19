@@ -1,105 +1,115 @@
 <div class="slider-container">
     <div class="slide">
+        <div class="bg-white">
         <img src="" />
         <h6 class="text-center rounded-lg">
-          “Our son was diagnosed with bilateral moderate sensorineural
-          hearing loss as a newborn. We were in the middle of a pandemic and
-          feeling overwhelmed about raising a baby in quarantine, let alone
-          all the services our new baby would require.” <br>~DS</br>
+            “Our son was diagnosed with bilateral moderate sensorineural hearing
+            loss as a newborn. We were in the middle of a pandemic and feeling
+            overwhelmed about raising a baby in quarantine, let alone all the
+            services our new baby would require.” <br />~DS
         </h6>
+    </div>
     </div>
     <div class="slide">
+        <div class="bg-white">
         <img src="" />
-        <h6 class="">
-          “Rana is a creative and caring speech therapist. She worked for two
-          years with my toddler aged daughter creating activities that engaged my
-          child to help her develop her speech pronunciation...
-          <br />~KT
+        <h6 class="text-center rounded-lg">
+            “Rana is a creative and caring speech therapist. She worked for two
+            years with my toddler aged daughter creating activities that engaged
+            my child to help her develop her speech pronunciation...
+            <br />~KT
         </h6>
+    </div>
     </div>
     <div class="slide">
+        <div class="bg-white">
         <img src="" />
-        <h6 class="">
-          “Rana is a creative and caring speech therapist. She worked for two
-          years with my toddler aged daughter creating activities that engaged my
-          child to help her develop her speech pronunciation...
-          <br />~KT
+        <h6 class="text-center rounded-lg">
+            “Rana is a creative and caring speech therapist. She worked for two
+            years with my toddler aged daughter creating activities that engaged
+            my child to help her develop her speech pronunciation...
+            <br />~KT
         </h6>
     </div>
-  </div>
+    </div>
+</div>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        /* border: 1px solid red; */
+    }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-      border: 1px solid red;
-}
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        /* overflow: hidden; */
+        line-height: 1.7;
+    }
 
-html,
-body {
-  font-family: 'Open Sans', sans-serif;
-  height: 100%;
-  width: 100%;
-  /* overflow: hidden; */
-  background-color: #333;
-  color: #fff;
-  line-height: 1.7;
-}
+    .slider-container {
+        max-height: 100%;
+        display: inline-flex;
+        overflow: hidden;
+        transform: translateX(0);
+        transition: transform 0.3s ease-out;
+        cursor: grab;
+    }
 
-.slider-container {
-  height: 100vh;
-  display: inline-flex;
-  overflow: hidden;
-  transform: translateX(0);
-  transition: transform 0.3s ease-out;
-  cursor: grab;
-}
+    .slide {
+        max-height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+    }
 
-.slide {
-  max-height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  user-select: none;
-}
+    .slide img {
+        max-width: 100%;
+        max-height: 60%;
+        transition: transform 0.3s ease-in-out;
+    }
 
-.slide img {
-  max-width: 100%;
-  max-height: 60%;
-  transition: transform 0.3s ease-in-out;
-}
+    .slide h6 {
+    padding: 1rem;
+    background-color: white;
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
 
-.slide h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
+    .slide h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
 
-.slide h4 {
-  font-size: 1.3rem;
-}
+    .slide h4 {
+        font-size: 1.3rem;
+    }
 
-.btn {
-  background-color: #444;
-  color: #fff;
-  text-decoration: none;
-  padding: 1rem 1.5rem;
-}
+    .btn {
+        background-color: #444;
+        color: #fff;
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+    }
 
-.grabbing {
-  cursor: grabbing;
-}
+    .grabbing {
+        cursor: grabbing;
+    }
 
-.grabbing .slide img {
-  transform: scale(0.9);
-}
+    .grabbing .slide img {
+        transform: scale(0.9);
+    }
 
-  </style>
-  
+    .grabbing .slide h6 {
+    transform: scale(0.9);
+  }
+</style>
 
-  <script src="/src/js/test.js"></script>
+<script src="/src/js/test.js"></script>
