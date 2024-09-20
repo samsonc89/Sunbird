@@ -1,13 +1,12 @@
 <div
   id="indicators-carousel"
-  class="relative w-full lg:h-56 h-56"
+  class="relative lg:h-56 h-56"
   data-carousel="static"
   data-bs-touch="true"
 >
   <div class="slider-container">
     <!-- Item 1 -->
     <div class="slide">
-      <img src="" />
       <h6 class="text-center rounded-lg">
         “Our son was diagnosed with bilateral moderate sensorineural
         hearing loss as a newborn. We were in the middle of a pandemic and
@@ -18,8 +17,7 @@
 
     <!-- Item 2 -->
     <div class="slide">
-      <img src="" />
-      <h6 class="">
+      <h6 class="text-center rounded-lg">
         “Rana is a creative and caring speech therapist. She worked for two
         years with my toddler aged daughter creating activities that engaged my
         child to help her develop her speech pronunciation...
@@ -29,8 +27,7 @@
 
     <!-- Item 3 -->
     <div class="slide">
-      <img src="" />
-      <h6 class="">
+      <h6 class="text-center rounded-lg">
         “Rana is a creative and caring speech therapist. She worked for two
         years with my toddler aged daughter creating activities that engaged my
         child to help her develop her speech pronunciation...
@@ -175,71 +172,4 @@
 
 <script src="/src/js/slider.js"></script>
 
-<style>
-  * {
-    /* border: 1px solid red; */
-  }
-
-  .slider-container {
-    max-height: 100%;
-    display: inline-flex;
-    overflow: hidden;
-    transform: translateX(0);
-    transition: transform 0.3s ease-out;
-    cursor: grab;
-  }
-
-  .slide {
-    background-color: var(secondary);
-    max-height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    user-select: none;
-  }
-
-  .slide img {
-    max-width: 100%;
-    max-height: 60%;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .slide h6 {
-    padding: 1rem;
-    background-color: white;
-    max-width: 100%;
-    max-height: 100%;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .slide h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .slide h4 {
-    font-size: 1.3rem;
-  }
-
-  .btn {
-    background-color: #444;
-    color: #fff;
-    text-decoration: none;
-    padding: 1rem 1.5rem;
-  }
-
-  .grabbing {
-    cursor: grabbing;
-  }
-
-  .grabbing .slide img {
-    transform: scale(0.9);
-  }
-
-  .grabbing .slide h6 {
-    transform: scale(0.9);
-  }
-</style>
+<script src="/src/css/slider.css"></script>

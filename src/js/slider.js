@@ -14,7 +14,7 @@ let isDragging = false,
   currentIndex = 0
 
 slides.forEach((slide, index) => {
-  const slideImage = slide.querySelector('img')
+  const slideImage = slide.querySelector('h6')
   slideImage.addEventListener('dragstart', (e) => e.preventDefault())
 
   // Touch events

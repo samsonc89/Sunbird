@@ -233,7 +233,7 @@ import Test from "../components/Test.astro";
   </section>
 
   <!-- Slider -->
-  <section class="bg-[--secondary] hidden max-md:block">
+  <!-- <section class="bg-[--secondary] hidden max-md:block">
     <div class="py-12">
       <div class="flex max-md:justify-center">
         <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
@@ -244,30 +244,36 @@ import Test from "../components/Test.astro";
         >
           Testimonials
         </h2>
-      </div>
-      <section>
+      </div> -->
+      <!-- <section>
         <div class="overflow-hidden">
           <Slider />
         </div>
+      </section> -->
+
+      <!-- <section class="overflow-hidden">
+        <div class="py-12 my-16 max-md:block hidden">
+          <Test />
+        </div>
       </section>
     </div>
-  </section>
+  </section> -->
 
   <!-- Testimonials -->
 
-  <section class="bg-[--secondary] block max-md:hidden">
+  <section class="bg-[--secondary]">
     <div class="max-container py-12 max-xl:m-4">
       <div class="flex max-md:justify-center">
         <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
       </div>
-      <div class="flex justify-between items-end max-md:flex-col">
+      <div class="flex justify-between items-end max-sm:flex-col max-sm:items-center">
         <h2
           class="text-[--primary-text] max-md:text-4xl max-md:text-center max-md:p-4"
         >
           Testimonials
         </h2>
         <h4
-          class="max-md:text-center text-[--primary-text] flex items-center max-md:hidden"
+          class="max-md:text-center text-[--primary-text] flex items-center"
         >
           <a
             class="body font-semibold group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex items-center"
@@ -287,8 +293,14 @@ import Test from "../components/Test.astro";
       </div> -->
 
       <section>
+        <div class="overflow-hidden py-12 my-16 max-md:block hidden">
+          <Slider />
+        </div>
+      </section>
+      
+      <section class="max-md:hidden block">
         <div class="overflow-hidden py-12 my-16">
-          <Test />
+          <Carousel />
         </div>
       </section>
     </div>
