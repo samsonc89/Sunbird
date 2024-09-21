@@ -245,13 +245,13 @@ import Test from "../components/Test.astro";
           Testimonials
         </h2>
       </div> -->
-      <!-- <section>
+  <!-- <section>
         <div class="overflow-hidden">
           <Slider />
         </div>
       </section> -->
 
-      <!-- <section class="overflow-hidden">
+  <!-- <section class="overflow-hidden">
         <div class="py-12 my-16 max-md:block hidden">
           <Test />
         </div>
@@ -266,15 +266,15 @@ import Test from "../components/Test.astro";
       <div class="flex max-md:justify-center">
         <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
       </div>
-      <div class="flex justify-between items-end max-sm:flex-col max-sm:items-center">
+      <div
+        class="flex justify-between items-end max-sm:flex-col max-sm:items-center"
+      >
         <h2
           class="text-[--primary-text] max-md:text-4xl max-md:text-center max-md:p-4"
         >
           Testimonials
         </h2>
-        <h4
-          class="max-md:text-center text-[--primary-text] flex items-center"
-        >
+        <h4 class="max-md:text-center text-[--primary-text] flex items-center">
           <a
             class="body font-semibold group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex items-center"
             href="/Sunbird/testimonials"
@@ -297,7 +297,7 @@ import Test from "../components/Test.astro";
           <Slider />
         </div>
       </section>
-      
+
       <section class="max-md:hidden block">
         <div class="overflow-hidden py-12 my-16">
           <Carousel />
@@ -342,9 +342,7 @@ import Test from "../components/Test.astro";
   <!-- Calendly -->
 
   <section class="py-12 bg-white">
-    <div class="max-container">
-      <Calendly />
-    </div>
+    <Calendly />
   </section>
   <style>
     * {

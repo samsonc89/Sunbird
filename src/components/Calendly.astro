@@ -1,10 +1,18 @@
 ---
-import { Image } from "astro:assets";
-import calendly from "../assets/images/calendly.png";
+
 ---
 
-<div
-  class="py-16 flex justify-center bg-[--primary] rounded-2xl max-md:px-4 max-md:rounded-none"
->
-  <Image src={calendly} alt="calendly_img" />
+<div class="max-container bg-[--primary] rounded-2xl">
+  <!-- Calendly inline widget begin -->
+  <div
+    class="calendly-inline-widget"
+    data-url="https://calendly.com/rana-xs2x/consultation"
+    style="min-width:320px;height:700px;"
+  >
+  </div>
+  <script
+    type="text/javascript"
+    src="https://assets.calendly.com/assets/external/widget.js"
+    async></script>
+  <!-- Calendly inline widget end -->
 </div>
