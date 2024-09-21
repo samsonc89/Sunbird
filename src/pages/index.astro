@@ -175,37 +175,37 @@ import Test from "../components/Test.astro";
         <h2 class="text-white py-4 max-md:text-4xl max-xl:text-6xl">
           Meet <br class="min-lg:hidden" />Rana Barghouty
         </h2>
-        <h5 class="text-white pb-4 max-md:text-base opacity-75">
+        <h6 class="text-white pb-4 max-md:text-base opacity-75">
           MA, CCC-SLP, LSLS Cert. AVT
-        </h5>
+        </h6>
 
         <div
           class="max-xl:block hidden justify-between w-full max-md:pl-4 max-xl:pl-12"
         >
-          <Image src={rana} alt="rana_img" class="w-full h-full" />
+          <Image src={rana} alt="rana_img" class="h-full object-cover" />
         </div>
 
-        <p class="py-4 text-white max-md:text-base">
+        <h5 class="py-4 text-white max-md:text-base">
           Hello! I am a bilingual (English/Arabic) Speech-Language Pathologist
           and the founder of Sunbird Speech Therapy. Recognizing the unique
           journey of each child, I am committed to fostering a supportive
           environment where your child`s communication skills can flourish.
-        </p>
+        </h5>
 
-        <p class="py-4 text-white max-md:text-base max-md:hidden">
+        <h5 class="py-4 text-white max-md:text-base max-md:hidden">
           With over 10 years of experience, I`ve had the privilege of supporting
           children of all ages, from infants to young adults. My professional
           background encompasses early intervention programs, schools and
           pediatric hospitals. These varied settings have provided me with
           invaluable insights, which I integrate into my practice.
-        </p>
+        </h5>
 
-        <p class="py-4 text-white max-md:text-base max-md:hidden">
+        <h5 class="py-4 text-white max-md:text-base max-md:hidden">
           It`s an honor to be a part of your child`s developmental journey, and
           I look forward to contributing to their success alongside you!
-        </p>
+        </h5>
 
-        <p class="flex mt-8">
+        <h5 class="flex mt-8">
           <a
             class="body font-semibold text-white group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end max-xl:justify-center"
             href="/Sunbird/about"
@@ -216,13 +216,11 @@ import Test from "../components/Test.astro";
               Read more about me →
             </span>
           </a>
-        </p>
+        </h5>
       </div>
 
-      <div
-        class="basis-1/2 aspect-square relative overflow-hidden max-xl:hidden"
-      >
-        <Image src={rana} alt="rana_img" class="h-full ogject-cover" />
+      <div class="basis-1/2 relative overflow-hidden max-xl:hidden">
+        <Image src={rana} alt="rana_img" class="h-full object-cover" />
       </div>
     </div>
   </section>
