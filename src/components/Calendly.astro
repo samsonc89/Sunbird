@@ -2,17 +2,37 @@
 
 ---
 
-<div id="calendly" class="max-container bg-[--primary] rounded-2xl">
+<div
+  id="calendly"
+  class="max-container bg-[--primary] lg:min-h-full lg:rounded-2xl"
+>
   <!-- Calendly inline widget begin -->
   <div
     class="calendly-inline-widget"
     data-url="https://calendly.com/rana-xs2x/consultation"
-    style="min-width:320px;height:700px;"
+    style="min-width:220px;height:700px;"
   >
   </div>
   <script
     type="text/javascript"
     src="https://assets.calendly.com/assets/external/widget.js"
     async></script>
+  <style>
+    @media screen and (max-width: 600px) {
+      /* Adjust 600px to your mobile breakpoint */
+
+      .calendly-inline-widget {
+        height: 865px !important;
+        padding: 1.5rem;
+      }
+    }
+    @media screen and (min-width: 601px) and (max-width: 780px) {
+      /* Adjust 600px to your mobile breakpoint */
+
+      .calendly-inline-widget {
+        height: 950px !important;
+      }
+    }
+  </style>
   <!-- Calendly inline widget end -->
 </div>
