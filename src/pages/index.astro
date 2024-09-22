@@ -17,7 +17,7 @@ import Test from "../components/Test.astro";
 
   <section class="bg-[--primary]">
     <div
-      class="max-container max-xl:px-6 flex justify-between py-20 max-md:py-8 gap-8 max-lg:flex-col max-md:text-center"
+      class="max-container max-xl:px-6 flex items-center justify-between py-20 max-md:py-8 gap-8 max-lg:flex-col"
     >
       <div class="basis-1/2">
         <h6 class="opacity-40 text-white max-md:py-4">
@@ -26,11 +26,11 @@ import Test from "../components/Test.astro";
         <h1 class="text-white pb-4 max-md:text-4xl max-xl:text-6xl">
           Welcome to Sunbird Speech Therapy!
         </h1>
-        <h6 class="text-white py-4">
+        <p class="text-white py-4">
           Your go-to provider for pediatric speech and language services and
           resources. In-home services available in Bay Area locations and online
           services available statewide.
-        </h6>
+        </p>
         <div class="max-md:justify-center flex">
           <a href="https://calendly.com/">
             <Button id="scheduleBtn" type="submit" class="my-6"
@@ -62,7 +62,7 @@ import Test from "../components/Test.astro";
 
       <h2 class="text-[--primary-text] max-md:text-4xl max-md:p-4">Services</h2>
 
-      <div class="flex gap-16 mt-16 max-lg:gap-2 max-md:flex-col">
+      <div class="flex gap-16 mt-12 max-lg:gap-2 flex-col lg:flex-row">
         <div class="p-6">
           <span
             class="material-symbols-outlined text-5xl text-[--primary-accent]"
@@ -185,27 +185,27 @@ import Test from "../components/Test.astro";
           <Image src={rana} alt="rana_img" class="h-full object-cover" />
         </div>
 
-        <h5 class="py-4 text-white max-md:text-base">
+        <p class="py-4 text-white max-md:text-base">
           Hello! I am a bilingual (English/Arabic) Speech-Language Pathologist
           and the founder of Sunbird Speech Therapy. Recognizing the unique
           journey of each child, I am committed to fostering a supportive
           environment where your child`s communication skills can flourish.
-        </h5>
+        </p>
 
-        <h5 class="py-4 text-white max-md:text-base max-md:hidden">
+        <p class="py-4 text-white max-md:text-base max-md:hidden">
           With over 10 years of experience, I`ve had the privilege of supporting
           children of all ages, from infants to young adults. My professional
           background encompasses early intervention programs, schools and
           pediatric hospitals. These varied settings have provided me with
           invaluable insights, which I integrate into my practice.
-        </h5>
+        </p>
 
-        <h5 class="py-4 text-white max-md:text-base max-md:hidden">
+        <p class="py-4 text-white max-md:text-base max-md:hidden">
           It`s an honor to be a part of your child`s developmental journey, and
           I look forward to contributing to their success alongside you!
-        </h5>
+        </p>
 
-        <h5 class="flex mt-8">
+        <p class="flex mt-8">
           <a
             class="body font-semibold text-white group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end max-xl:justify-center"
             href="/Sunbird/about"
@@ -216,7 +216,7 @@ import Test from "../components/Test.astro";
               Read more about me →
             </span>
           </a>
-        </h5>
+        </p>
       </div>
 
       <div class="basis-1/2 relative overflow-hidden max-xl:hidden">
