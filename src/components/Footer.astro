@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import { logoBW } from "../assets";
+---
+
 <footer>
   <section class="max-container py-8 max-md:py-4">
     <div
@@ -6,10 +11,9 @@
       <div
         class="flex max-sm:w-full items-center justify-between w-2/5 max-md:flex-col max-md:items-start"
       >
-        <a href="/SunbirdSpeechTherapy">
-          <h4 class="p-2">Logo</h4>
+        <a href="/Sunbird">
+          <Image src={logoBW} class="w-1/2 lg:w-full" alt="logo-black" />
         </a>
-
         <!-- Navlinks -->
 
         <div

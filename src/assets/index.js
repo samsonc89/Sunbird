@@ -11,6 +11,7 @@ import kt from "./images/KT.jpg";
 import th from "./images/TH.png";
 import ds from "./images/DS.png";
 import logo from "./images/logo.png";
+import logoBW from "./images/logoBW.png";
 import logoSm from "./images/logo_s.png";
 
 export {
@@ -27,5 +28,6 @@ export {
   th,
   ds,
   logo,
+  logoBW,
   logoSm,
 };
