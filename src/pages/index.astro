@@ -17,7 +17,7 @@ import Test from "../components/Test.astro";
 
   <section class="bg-[--primary]">
     <div
-      class="max-container max-xl:px-6 flex items-center justify-between py-20 max-md:py-8 gap-8 max-lg:flex-col"
+      class="max-container max-xl:px-6 flex items-center justify-between lg:py-20 py-8 gap-8 max-lg:flex-col"
     >
       <div class="basis-1/2">
         <h6 class="opacity-40 text-white max-md:py-4">
@@ -32,7 +32,7 @@ import Test from "../components/Test.astro";
           services available statewide.
         </p>
         <div class="max-md:justify-center flex">
-          <a href="https://calendly.com/">
+          <a href="#calendly">
             <Button id="scheduleBtn" type="submit" class="my-6"
               >Schedule a free consultation
             </Button>
@@ -40,7 +40,7 @@ import Test from "../components/Test.astro";
         </div>
       </div>
       <div
-        class="basis-1/2 aspect-square relative overflow-hidden max-lg:hidden"
+        class="basis-1/2 lg:aspect-square relative overflow-hidden max-lg:hidden"
       >
         <Image src={hero} alt="hero_img" class="absolute -top-16" />
       </div>
@@ -72,11 +72,11 @@ import Test from "../components/Test.astro";
 
           <h4 class="text-black my-4">Consultation</h4>
 
-          <h6 class="text-[--secondary-text] my-6">
+          <p class="text-[--secondary-text] my-6">
             If you have concerns about your child`s speech or language
             development, or if you have any questions about our services, please
             schedule a free 15-minute consultation.
-          </h6>
+          </p>
         </div>
 
         <div class="p-6">
@@ -88,11 +88,11 @@ import Test from "../components/Test.astro";
 
           <h4 class="text-black my-4">Evaluation</h4>
 
-          <h6 class="text-[--secondary-text] my-6">
+          <p class="text-[--secondary-text] my-6">
             We conduct comprehensive speech and language evaluations using both
             formal and informal assessments to determine your child`s current
             skills and needs.
-          </h6>
+          </p>
         </div>
 
         <div class="p-6">
@@ -104,7 +104,7 @@ import Test from "../components/Test.astro";
 
           <h4 class="text-black my-4">Therapy</h4>
 
-          <h6 class="text-[--secondary-text] my-6">
+          <p class="text-[--secondary-text] my-6">
             Based on the initial evaluation, we will create a personalized plan
             with specific goals for your child. Therapy sessions are available
             online, in-home <a href="/Sunbird/faq">
@@ -112,7 +112,7 @@ import Test from "../components/Test.astro";
                 See FAQ
               </span>
             </a> or through a hybrid model.
-          </h6>
+          </p>
         </div>
       </div>
     </div>
