@@ -168,31 +168,31 @@ import Test from "../components/Test.astro";
   <!-- About -->
 
   <section class="bg-[--primary]">
-    <div class="max-container py-16 flex gap-8 max-xl:px-6 max-xl:flex-col">
+    <div
+      class="max-container py-16 flex gap-8 max-xl:px-6 flex-col lg:flex-row"
+    >
       <div
         class="flex-col basis-1/2 justify-between gap-12 pr-16 max-xl:p-0 max-xl:text-center"
       >
-        <h2 class="text-white max-md:text-4xl max-xl:text-6xl">
-          Meet <br class="min-lg:hidden" />Rana Barghouty
+        <h2 class="text-white">
+          Meet <br class="lg:hidden" />Rana Barghouty
         </h2>
         <h6 class="text-white py-4 max-md:text-base opacity-75">
           MA, CCC-SLP, LSLS Cert. AVT
         </h6>
 
-        <div
-          class="max-xl:block hidden justify-between w-full max-md:pl-4 max-xl:pl-12"
-        >
+        <div class="block lg:hidden w-full">
           <Image src={rana} alt="rana_img" class="h-full object-cover" />
         </div>
 
-        <p class="py-4 text-white max-md:text-base">
+        <p class="py-4 text-white">
           Hello! I am a bilingual (English/Arabic) Speech-Language Pathologist
           and the founder of Sunbird Speech Therapy. Recognizing the unique
           journey of each child, I am committed to fostering a supportive
           environment where your child`s communication skills can flourish.
         </p>
 
-        <p class="py-4 text-white max-md:text-base max-md:hidden">
+        <p class="py-4 text-white">
           With over 10 years of experience, I`ve had the privilege of supporting
           children of all ages, from infants to young adults. My professional
           background encompasses early intervention programs, schools and
@@ -200,12 +200,12 @@ import Test from "../components/Test.astro";
           invaluable insights, which I integrate into my practice.
         </p>
 
-        <p class="py-4 text-white max-md:text-base max-md:hidden">
+        <p class="py-4 text-white">
           It`s an honor to be a part of your child`s developmental journey, and
           I look forward to contributing to their success alongside you!
         </p>
 
-        <p class="flex mt-16">
+        <p class="flex mt-16 lg:mt-32">
           <a
             class="body font-semibold text-white group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex justify-end max-xl:justify-center"
             href="/Sunbird/about"
@@ -219,7 +219,7 @@ import Test from "../components/Test.astro";
         </p>
       </div>
 
-      <div class="basis-1/2 relative overflow-hidden max-xl:hidden">
+      <div class="basis-1/2 relative overflow-hidden lg:block hidden">
         <Image src={rana} alt="rana_img" class="h-full object-cover" />
       </div>
     </div>
