@@ -9,12 +9,11 @@ import Quote from "../components/Quote.astro";
 import Calendly from "../components/Calendly.astro";
 import FAQ from "../components/FAQ.astro";
 import Slider from "../components/Slider.astro";
-import Test from "../components/Test.astro";
 ---
 
 <Layout title="Sunbird Speech Therapy">
-  <!-- Hero -->
 
+  <!-- Hero -->
   <section class="bg-[--primary]">
     <div
       class="max-container max-xl:px-6 flex items-center justify-between lg:py-20 py-8 gap-8 max-lg:flex-col"
@@ -53,7 +52,6 @@ import Test from "../components/Test.astro";
   </div>
 
   <!-- Services -->
-
   <section class="bg-[--secondary]" id="services">
     <div class="max-container py-12 max-xl:px-6 max-md:text-center">
       <div class="flex max-md:justify-center">
@@ -119,7 +117,6 @@ import Test from "../components/Test.astro";
   </section>
 
   <!-- Philosophy -->
-
   <div class="overflow-hidden hidden max-lg:block">
     <Image src={philosophy} alt="philosophy_img" />
   </div>
@@ -166,7 +163,6 @@ import Test from "../components/Test.astro";
   </section>
 
   <!-- About -->
-
   <section class="bg-[--primary]">
     <div
       class="max-container py-12 flex gap-8 max-xl:px-6 flex-col lg:flex-row"
@@ -230,37 +226,9 @@ import Test from "../components/Test.astro";
     <Quote />
   </section>
 
-  <!-- Slider -->
-  <!-- <section class="bg-[--secondary] hidden max-md:block">
-    <div class="py-12">
-      <div class="flex max-md:justify-center">
-        <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
-      </div>
-      <div class="flex justify-between max-md:flex-col">
-        <h2
-          class="text-[--primary-text] py-6 max-md:text-4xl max-md:text-center max-md:p-4"
-        >
-          Testimonials
-        </h2>
-      </div> -->
-  <!-- <section>
-        <div class="overflow-hidden">
-          <Slider />
-        </div>
-      </section> -->
-
-  <!-- <section class="overflow-hidden">
-        <div class="py-12 my-16 max-md:block hidden">
-          <Test />
-        </div>
-      </section>
-    </div>
-  </section> -->
-
   <!-- Testimonials -->
-
-  <section class="bg-[--secondary]">
-    <div class="max-container pt-12 max-xl:m-4">
+  <section class="bg-[--secondary] py-12">
+    <div class="max-container max-xl:m-4">
       <div class="flex max-md:justify-center">
         <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
       </div>
@@ -282,7 +250,7 @@ import Test from "../components/Test.astro";
             >
               Read More
             </span>
-            <span class="material-symbols-outlined"> arrow_right_alt </span>
+            <span class="material-symbols-outlined pt-1"> arrow_right_alt </span>
           </a>
         </h4>
       </div>
@@ -295,7 +263,7 @@ import Test from "../components/Test.astro";
     </div>
 
     <section>
-      <div class="overflow-hidden py-8 max-md:block hidden w-full">
+      <div class="overflow-hidden max-md:block hidden">
         <Slider />
       </div>
     </section>
