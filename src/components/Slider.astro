@@ -1,13 +1,13 @@
 <div
   id="indicators-carousel"
-  class="relative lg:h-56 h-56"
+  class="relative lg:h-64 h-64"
   data-carousel="static"
   data-bs-touch="true"
 >
-  <div class="slider-container">
+  <div class="slider-container flex gap-6 mx-6 max-sm:mx-3">
     <!-- Item 1 -->
     <div class="slide">
-      <h6 class="text-center rounded-lg">
+      <h6 class="text-center rounded-lg p-4 ml-4">
         “Our son was diagnosed with bilateral moderate sensorineural
         hearing loss as a newborn. We were in the middle of a pandemic and
         feeling overwhelmed about raising a baby in quarantine, let alone
@@ -16,159 +16,24 @@
     </div>
 
     <!-- Item 2 -->
-    <div class="slide">
-      <h6 class="text-center rounded-lg">
-        “Rana is a creative and caring speech therapist. She worked for two
-        years with my toddler aged daughter creating activities that engaged my
-        child to help her develop her speech pronunciation...
-        <br />~KT
+    <div class="slide ml-6">
+      <h6 class="text-center rounded-lg ">
+        “Rana is a creative and caring speech therapist. She worked for
+        two years with my toddler aged daughter creating activities that
+        engaged my child to help her develop her speech pronunciation...
+         <br>~KT</br>
       </h6>
     </div>
 
     <!-- Item 3 -->
-    <div class="slide">
+    <div class="slide ml-3.5">
       <h6 class="text-center rounded-lg">
-        “Rana is a creative and caring speech therapist. She worked for two
-        years with my toddler aged daughter creating activities that engaged my
-        child to help her develop her speech pronunciation...
-        <br />~KT
+        "My daughter began working with Rana at 6 months old after being
+        diagnosed with unilateral sensorineural hearing loss. Rana's calm
+        and kind demeanor immediately put my daughter at ease. <br>~MH</br>
       </h6>
     </div>
   </div>
-
-  <!-- Slider indicators -->
-  <div
-    class="absolute flex -translate-x-1/2 translate-y-14 space-x-0 rtl:space-x-reverse bottom-5 left-1/2 bg-[--secondary-accent]"
-  >
-    <button
-      type="button"
-      class="w-14 h-2 max-md:w-8"
-      aria-current="true"
-      aria-label="Slide 1"
-      data-carousel-slide-to="0"></button>
-    <button
-      type="button"
-      class="w-14 h-2 max-md:w-8"
-      aria-current="false"
-      aria-label="Slide 2"
-      data-carousel-slide-to="1"></button>
-    <button
-      type="button"
-      class="w-14 h-2 max-md:w-8"
-      aria-current="false"
-      aria-label="Slide 3"
-      data-carousel-slide-to="2"></button>
-    <button
-      type="button"
-      class="w-14 h-2 max-md:w-8"
-      aria-current="false"
-      aria-label="Slide 4"
-      data-carousel-slide-to="3"></button>
-  </div>
-</div>
-
-<script>
-  import { Carousel } from "flowbite";
-  import type {
-    CarouselItem,
-    CarouselOptions,
-    CarouselInterface,
-  } from "flowbite";
-  import type { InstanceOptions } from "flowbite";
-
-  const carouselElement = document.getElementById("carousel-example");
-
-  const items: CarouselItem[] = [
-    {
-      position: 0,
-      el: document.getElementById("carousel-item-1") as HTMLElement,
-    },
-    {
-      position: 1,
-      el: document.getElementById("carousel-item-2") as HTMLElement,
-    },
-    {
-      position: 2,
-      el: document.getElementById("carousel-item-3") as HTMLElement,
-    },
-    {
-      position: 3,
-      el: document.getElementById("carousel-item-4") as HTMLElement,
-    },
-  ];
-
-  // object options with default values
-  const options: CarouselOptions = {
-    defaultPosition: 1,
-    interval: 3000,
-
-    indicators: {
-      activeClasses: "bg-white dark:bg-gray-800",
-      inactiveClasses:
-        "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800",
-      items: [
-        {
-          position: 0,
-          el: document.getElementById("carousel-indicator-1") as HTMLElement,
-        },
-        {
-          position: 1,
-          el: document.getElementById("carousel-indicator-2") as HTMLElement,
-        },
-        {
-          position: 2,
-          el: document.getElementById("carousel-indicator-3") as HTMLElement,
-        },
-        {
-          position: 3,
-          el: document.getElementById("carousel-indicator-4") as HTMLElement,
-        },
-      ],
-    },
-
-    // callback functions
-    onNext: () => {
-      console.log("next slider item is shown");
-    },
-    onPrev: () => {
-      console.log("previous slider item is shown");
-    },
-    onChange: () => {
-      console.log("new slider item has been shown");
-    },
-  };
-
-  // instance options object
-  const instanceOptions: InstanceOptions = {
-    id: "carousel-example",
-    override: true,
-  };
-
-  const carousel: CarouselInterface = new Carousel(
-    carouselElement,
-    items,
-    options,
-    instanceOptions,
-  );
-
-  carousel.cycle();
-
-  // set event listeners for prev and next buttons
-  const $prevButton = document.getElementById(
-    "data-carousel-prev",
-  ) as HTMLElement;
-  const $nextButton = document.getElementById(
-    "data-carousel-next",
-  ) as HTMLElement;
-
-  $prevButton.addEventListener("click", () => {
-    carousel.prev();
-  });
-
-  $nextButton.addEventListener("click", () => {
-    carousel.next();
-  });
-</script>
 
 <script src="/src/js/slider.js"></script>
 

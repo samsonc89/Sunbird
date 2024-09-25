@@ -260,12 +260,12 @@ import Test from "../components/Test.astro";
   <!-- Testimonials -->
 
   <section class="bg-[--secondary]">
-    <div class="max-container py-12 max-xl:m-4">
+    <div class="max-container pt-12 max-xl:m-4">
       <div class="flex max-md:justify-center">
         <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
       </div>
       <div
-        class="flex justify-between items-end max-sm:flex-col max-sm:items-center"
+        class="flex justify-between items-end max-md:flex-col max-md:items-center"
       >
         <h2
           class="text-[--primary-text] max-md:text-4xl max-md:text-center max-md:p-4"
@@ -286,15 +286,6 @@ import Test from "../components/Test.astro";
           </a>
         </h4>
       </div>
-      <!-- <div class="py-12 my-16">
-        <Carousel />
-      </div> -->
-
-      <section>
-        <div class="overflow-hidden py-12 my-16 max-md:block hidden">
-          <Slider />
-        </div>
-      </section>
 
       <section class="max-md:hidden block">
         <div class="overflow-hidden py-12 my-16">
@@ -302,6 +293,12 @@ import Test from "../components/Test.astro";
         </div>
       </section>
     </div>
+
+    <section>
+      <div class="overflow-hidden py-8 max-md:block hidden">
+        <Slider />
+      </div>
+    </section>
   </section>
 
   <!-- FAQ -->
