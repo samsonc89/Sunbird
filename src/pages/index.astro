@@ -12,7 +12,6 @@ import Slider from "../components/Slider.astro";
 ---
 
 <Layout title="Sunbird Speech Therapy">
-
   <!-- Hero -->
   <section class="bg-[--primary]">
     <div
@@ -250,7 +249,9 @@ import Slider from "../components/Slider.astro";
             >
               Read More
             </span>
-            <span class="material-symbols-outlined pt-1"> arrow_right_alt </span>
+            <span class="material-symbols-outlined pt-1">
+              arrow_right_alt
+            </span>
           </a>
         </h4>
       </div>
@@ -264,7 +265,7 @@ import Slider from "../components/Slider.astro";
 
     <section>
       <div class="overflow-hidden max-md:block hidden">
-        <Slider />
+        <Slider client:load />
       </div>
     </section>
   </section>
