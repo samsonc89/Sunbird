@@ -2,7 +2,7 @@
   This JS is from the following project:
   https://github.com/bushblade/Full-Screen-Touch-Slider
 */
-
+document.addEventListener('DOMContentLoaded', () => {
   const slider = document.querySelector('.slider-container'),
   slides = Array.from(document.querySelectorAll('.slide'));
 if (slider) {
@@ -93,3 +93,7 @@ function setPositionByIndex() {
   prevTranslate = currentTranslate
   setSliderPosition()
 }
+
+console.log(document.querySelector('.slider-container')); // Should return the element, or null if not found
+
+});
