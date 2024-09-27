@@ -230,7 +230,7 @@ import Slider from "../components/Slider.astro";
   <!-- Testimonials -->
 
   <section class="bg-[--secondary] py-12">
-    <div class="max-container max-xl:m-4">
+    <div class="max-container">
       <div class="flex max-md:justify-center">
         <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
       </div>
@@ -242,7 +242,9 @@ import Slider from "../components/Slider.astro";
         >
           Testimonials
         </h2>
-        <h4 class="max-md:text-center text-[--primary-text] flex items-center">
+        <h4
+          class="max-md:text-center text-[--primary-text] md:flex items-center hidden"
+        >
           <a
             class="body font-semibold group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex items-center"
             href="/Sunbird/testimonials"
@@ -273,6 +275,27 @@ import Slider from "../components/Slider.astro";
         <Slider />
       </div>
     </section>
+    <div class="w-full flex justify-center px-6">
+      <h4
+        class="max-md:text-center text-[--primary-text] md:hidden flex items-center"
+      >
+        <a
+          class="body font-semibold group transition-all duration-300 ease-in-out hover:-translate-y-1 w-full flex items-center"
+          href="/Sunbird/testimonials"
+        >
+          <span
+            class="bg-left-bottom bg-gradient-to-r from-gray-500 to-gray-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out opacity-75"
+          >
+            Read More
+          </span>
+          <span
+            class="material-symbols-outlined pt-1 text-[--primary-text] opacity-75"
+          >
+            arrow_right_alt
+          </span>
+        </a>
+      </h4>
+    </div>
   </section>
 
   <!-- FAQ -->
