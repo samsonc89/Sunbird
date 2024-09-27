@@ -76,7 +76,7 @@ slides.forEach((slide, index) => {
   slide.addEventListener('mousemove', (event: MouseEvent) => touchMove(event));
 });
 
-// Disable context menu
+Disable context menu
 window.oncontextmenu = function (event) {
   event.preventDefault();
   event.stopPropagation();
@@ -95,6 +95,18 @@ function touchStart(event: MouseEvent | TouchEvent, index: number) {
   // Apply grabbing effect to all sliders in NodeList
   sliders.forEach(slider => slider.classList.add('grabbing'));
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.slider-container');
+    if (slider) {
+        slider.classList.add('grabbing');
+    } else {
+        console.error('Slider container not found');
+    }
+});
+
+console.log(document.querySelector('.slider-container')); // Check what this outputs
+
 
 function touchEnd() {
   isDragging = false;
