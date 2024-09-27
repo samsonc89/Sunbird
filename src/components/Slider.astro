@@ -76,7 +76,7 @@ slides.forEach((slide, index) => {
   slide.addEventListener('mousemove', (event: MouseEvent) => touchMove(event));
 });
 
-Disable context menu
+// Disable context menu
 window.oncontextmenu = function (event) {
   event.preventDefault();
   event.stopPropagation();
