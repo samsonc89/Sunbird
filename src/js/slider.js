@@ -3,8 +3,13 @@
   https://github.com/bushblade/Full-Screen-Touch-Slider
 */
 
-const slider = document.querySelector('.slider-container'),
-  slides = Array.from(document.querySelectorAll('.slide'))
+  const slider = document.querySelector('.slider-container'),
+  slides = Array.from(document.querySelectorAll('.slide'));
+if (slider) {
+    slider.classList.add('grabbing');
+} else {
+    console.error('Slider container not found');
+}
 
 let isDragging = false,
   startPos = 0,
