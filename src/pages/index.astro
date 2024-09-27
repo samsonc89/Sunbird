@@ -55,15 +55,15 @@ import Slider from "../components/Slider.astro";
   <!-- Services -->
 
   <section class="bg-[--secondary]" id="services">
-    <div class="max-container py-12 max-xl:px-6 max-md:text-center">
+    <div class="max-container py-12 gap-8 max-xl:px-6 max-md:text-center">
       <div class="flex max-md:justify-center">
         <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
       </div>
 
       <h2 class="text-[--primary-text] max-md:p-4">Services</h2>
 
-      <div class="flex gap-16 mt-12 max-lg:gap-2 flex-col lg:flex-row">
-        <div class="p-6">
+      <div class="flex gap-16 mt-12 max-lg:gap-2 flex-col md:flex-row">
+        <div class="">
           <span
             class="material-symbols-outlined text-5xl text-[--primary-accent]"
           >
@@ -72,14 +72,14 @@ import Slider from "../components/Slider.astro";
 
           <h4 class="text-black my-4">Consultation</h4>
 
-          <p class="text-[--secondary-text] my-6">
+          <p class="py-4 text-[--secondary-text]">
             If you have concerns about your child`s speech or language
             development, or if you have any questions about our services, please
             schedule a free 15-minute consultation.
           </p>
         </div>
 
-        <div class="p-6">
+        <div class="">
           <span
             class="material-symbols-outlined text-5xl text-[--primary-accent]"
           >
@@ -88,14 +88,14 @@ import Slider from "../components/Slider.astro";
 
           <h4 class="text-black my-4">Evaluation</h4>
 
-          <p class="text-[--secondary-text] my-6">
+          <p class="py-4 text-[--secondary-text]">
             We conduct comprehensive speech and language evaluations using both
             formal and informal assessments to determine your child`s current
             skills and needs.
           </p>
         </div>
 
-        <div class="p-6">
+        <div class="">
           <span
             class="material-symbols-outlined text-5xl text-[--primary-accent]"
           >
@@ -104,7 +104,7 @@ import Slider from "../components/Slider.astro";
 
           <h4 class="text-black my-4">Therapy</h4>
 
-          <p class="text-[--secondary-text] my-6">
+          <p class="py-4 text-[--secondary-text]">
             Based on the initial evaluation, we will create a personalized plan
             with specific goals for your child. Therapy sessions are available
             online, in-home <a href="/Sunbird/faq">
@@ -135,7 +135,7 @@ import Slider from "../components/Slider.astro";
         </div>
 
         <div
-          class="flex-col basis-1/2 max-lg:basis-full justify-between gap-12 max-md:text-center max-xl:px-6 max-md:pb-12"
+          class="flex-col basis-1/2 max-lg:basis-full justify-between gap-12 max-md:text-center max-xl:p-0 max-xl:text-center"
         >
           <h2 class="capitalize text-[--primary-text] max-md:pt-12">
             our philosophy
@@ -232,7 +232,7 @@ import Slider from "../components/Slider.astro";
 
   <!-- Testimonials -->
 
-  <section class="bg-[--secondary]">
+  <section class="bg-[--secondary] py-12">
     <div class="max-container pt-12 max-xl:m-4">
       <div class="flex max-md:justify-center">
         <Image src={vector} alt="vector" class="py-6 max-md:p-4" />
@@ -255,7 +255,7 @@ import Slider from "../components/Slider.astro";
             >
               Read More
             </span>
-            <span class="material-symbols-outlined pt-1">
+            <span class="material-symbols-outlined pt-1 text-[--primary-text] opacity-75">
               arrow_right_alt
             </span>
           </a>
@@ -263,7 +263,7 @@ import Slider from "../components/Slider.astro";
       </div>
 
       <section class="max-md:hidden block">
-        <div class="overflow-hidden py-12 my-16">
+        <div class="overflow-hidden py-12">
           <Carousel />
         </div>
       </section>
@@ -295,7 +295,7 @@ import Slider from "../components/Slider.astro";
             >
               View all FAQs
             </span>
-            <span class="material-symbols-outlined text-[--primary-text]">
+            <span class="material-symbols-outlined text-[--primary-text] opacity-75 pt-1">
               arrow_right_alt
             </span>
           </a>
