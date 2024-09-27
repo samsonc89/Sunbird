@@ -37,8 +37,18 @@
 <!-- <script src="/src/js/slider.js"></script> -->
 
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
   const sliders = document.querySelectorAll<HTMLElement>('.slider-container'); // Specify HTMLElement
+    if (sliders.length === 0) {
+        console.error('No slider containers found');
+        return; // Exit early if no sliders are found
+    }
+
 const slides = Array.from(document.querySelectorAll<HTMLElement>('.slide')); // Specify HTMLElement
+  if (slides.length === 0) {
+        console.error('No slides found');
+        return; // Exit early if no slides are found
+    }
 
 let isDragging = false,
   startPos = 0,
@@ -130,6 +140,7 @@ function setPositionByIndex() {
   prevTranslate = currentTranslate;
   setSliderPosition();
 }
+});
 
 </script>
 
