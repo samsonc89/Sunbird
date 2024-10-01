@@ -94,3 +94,5 @@ function setPositionByIndex() {
 console.log(document.querySelector('.slider-container')); // Should return the element, or null if not found
 
 });
+
+console.log("Slider script loaded successfully");
