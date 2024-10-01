@@ -1,7 +1,4 @@
-/*
-  This JS is from the following project:
-  https://github.com/bushblade/Full-Screen-Touch-Slider
-*/
+
 document.addEventListener('DOMContentLoaded', () => {
   const slider = document.querySelector('.slider-container'),
   slides = Array.from(document.querySelectorAll('.slide'));
@@ -96,4 +93,16 @@ function setPositionByIndex() {
 
 console.log(document.querySelector('.slider-container')); // Should return the element, or null if not found
 
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log("DOM fully loaded and parsed");
+  const slider = document.querySelector('.slider-container');
+  
+  if (slider) {
+    console.log("Slider element found");
+    slider.classList.add('slide');
+  } else {
+    console.error("Slider element not found");
+  }
 });
