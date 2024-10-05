@@ -9,8 +9,8 @@ import { logo } from "../assets";
     class="w-full items-center flex justify-between max-lg:flex-wrap p-4 max-w-screen-xl mx-auto max-container"
   >
     <div class="flex justify-between w-full items-center">
-      <a href="/Sunbird">
-        <Image src={logo} alt="logo" class="w-1/2 lg:w-2/5" />
+      <a href="/Sunbird" class="">
+        <Image src={logo} alt="logo" class="w-1/2" />
       </a>
 
       <!-- Hamburger -->
@@ -33,7 +33,7 @@ import { logo } from "../assets";
       id="navbar-cta"
     >
       <ul
-        class="flex font-medium text-sm p-4 lg:p-0 mt-2 border-8 border-[--primary] rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 gap-2 max-md:shadow-xl w-full max-lg:flex-col"
+        class="flex font-medium text-sm p-4 lg:p-0 mt-2 border-8 border-[--primary] rounded-lg lg:space-x-3 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 gap-2 max-md:shadow-xl w-full max-lg:flex-col"
       >
         <li>
           <a
@@ -112,8 +112,13 @@ import { logo } from "../assets";
   </div>
 
   <style>
-    * {
-      /* border: 1px solid red; */
+    li {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.15em;
+    }
+    li::before {
+      margin-left: 0;
     }
   </style>
 </nav>
