@@ -6,7 +6,7 @@ import calendly from "./images/calendly.png";
 import mh from "./images/MH.png";
 import kt from "./images/KT.jpg";
 import th from "./images/TH.png";
-import wh from "./images/wH.jpeg";
+import wh from "./images/WH.jpeg";
 import ds from "./images/DS.png";
 import logo from "./images/logo.png";
 import logoBW from "./images/logoBW.png";
