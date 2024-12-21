@@ -5,7 +5,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://samsonc89.github.io",
+  site: "https://www.sunbirdspeechtherapy.com",
   base: "/Sunbird",
-  integrations: [tailwind(), react()]
+  integrations: [tailwind(), react()],
 });
