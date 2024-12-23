@@ -10,5 +10,5 @@ export default defineConfig({
   base: "/",
   integrations: [tailwind(), react()],
   output: "server",
-  adapter: cloudflare()
+  adapter: cloudflare(),
 });
